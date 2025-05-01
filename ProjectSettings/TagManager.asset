@@ -42,6 +42,9 @@ TagManager:
   - name: Background
     uniqueID: 1186455393
     locked: 0
+  - name: Floor
+    uniqueID: 997237259
+    locked: 0
   - name: Triggers
     uniqueID: 2647855373
     locked: 0
