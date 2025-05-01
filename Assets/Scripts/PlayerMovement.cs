@@ -23,6 +23,16 @@ public class PatientMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
+        // Regra de prioridade para andar em somente uma direção
+        if (vertical != 0) 
+        {
+            horizontal = 0;
+        } 
+        else if (horizontal != 0) 
+        {
+            vertical = 0;
+        }
+
         animator.SetFloat("Horizontal", horizontal);
         animator.SetFloat("Vertical", vertical);
         animator.SetBool("IsWalking", horizontal != 0 || vertical != 0);
@@ -41,7 +51,7 @@ public class PatientMovement : MonoBehaviour
         Vector2 movement = new Vector2(
             animator.GetFloat("Horizontal"),
             animator.GetFloat("Vertical")
-        ).normalized;
+        );
 
         rb.linearVelocity = movement * speed;
     }
