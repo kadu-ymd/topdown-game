@@ -1,0 +1,924 @@
+fileFormatVersion: 2
+guid: 056c0b45156b1344785e3198d651d9d1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3452052882359620396
+    second: patient_portrait_0
+  - first:
+      213: 5629500348584087371
+    second: patient_portrait_1
+  - first:
+      213: 4319417697085141629
+    second: patient_portrait_2
+  - first:
+      213: 2729798736911116290
+    second: patient_portrait_3
+  - first:
+      213: -8221592042971904751
+    second: patient_portrait_4
+  - first:
+      213: -7697213038458724545
+    second: patient_portrait_5
+  - first:
+      213: 7678886742954990323
+    second: patient_portrait_6
+  - first:
+      213: 7018400097454118317
+    second: patient_portrait_7
+  - first:
+      213: -415876846050834654
+    second: patient_portrait_8
+  - first:
+      213: 1755203119156835357
+    second: patient_portrait_9
+  - first:
+      213: -1544160171873379476
+    second: patient_portrait_10
+  - first:
+      213: 8936037804517432300
+    second: patient_portrait_11
+  - first:
+      213: -1350685516022967609
+    second: patient_portrait_12
+  - first:
+      213: 7218134414465123114
+    second: patient_portrait_13
+  - first:
+      213: -7993919924726980940
+    second: patient_portrait_14
+  - first:
+      213: -5313094528717922541
+    second: patient_portrait_15
+  - first:
+      213: -4264163441791184130
+    second: patient_portrait_16
+  - first:
+      213: -9155003582565229603
+    second: patient_portrait_17
+  - first:
+      213: -4386525448903947289
+    second: patient_portrait_18
+  - first:
+      213: 4534713762138212548
+    second: patient_portrait_19
+  - first:
+      213: 4074847342159542904
+    second: patient_portrait_20
+  - first:
+      213: -2335709172246869444
+    second: patient_portrait_21
+  - first:
+      213: 7746395551427079521
+    second: patient_portrait_22
+  - first:
+      213: -2595495974575985222
+    second: patient_portrait_23
+  - first:
+      213: 7533483008981603540
+    second: patient_portrait_24
+  - first:
+      213: 7149899692553723141
+    second: patient_portrait_25
+  - first:
+      213: 8336003369249001449
+    second: patient_portrait_26
+  - first:
+      213: 3922120185371737770
+    second: patient_portrait_27
+  - first:
+      213: -6447111445700264526
+    second: patient_portrait_28
+  - first:
+      213: 8796187555627554330
+    second: patient_portrait_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: patient_portrait_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 145
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dc67197138d710d0800000000000000
+      internalID: -3452052882359620396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 145
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4fca4c9db0002e40800000000000000
+      internalID: 5629500348584087371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 145
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72bb4f9287a1fb30800000000000000
+      internalID: 4319417697085141629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 145
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208a5e5fc7132e520800000000000000
+      internalID: 2729798736911116290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_4
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 145
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1154b76c89907ed80800000000000000
+      internalID: -8221592042971904751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 145
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f992ae5810e2590800000000000000
+      internalID: -7697213038458724545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_6
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 145
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fad948eec2e09a60800000000000000
+      internalID: 7678886742954990323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_7
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 145
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da5d15c14bd566160800000000000000
+      internalID: 7018400097454118317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_8
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 145
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22784d046328a3af0800000000000000
+      internalID: -415876846050834654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_9
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 145
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d14300affebbb5810800000000000000
+      internalID: 1755203119156835357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 81
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6b5e27418a029ae0800000000000000
+      internalID: -1544160171873379476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_11
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 83
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceb19bdb90f230c70800000000000000
+      internalID: 8936037804517432300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_12
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 83
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c29f2eeda6614de0800000000000000
+      internalID: -1350685516022967609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_13
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 81
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a234733b107fb2460800000000000000
+      internalID: 7218134414465123114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_14
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 79
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be1bbb9e24ef0190800000000000000
+      internalID: -7993919924726980940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_15
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 81
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f52b51da81446b0800000000000000
+      internalID: -5313094528717922541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_16
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 81
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef254d331f5a2d4c0800000000000000
+      internalID: -4264163441791184130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_17
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 81
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddb55c73fb4e2f080800000000000000
+      internalID: -9155003582565229603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_18
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 81
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb8ed3585eef13c0800000000000000
+      internalID: -4386525448903947289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_19
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 81
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c8c256042a8eee30800000000000000
+      internalID: 4534713762138212548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_20
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 17
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a3d577114cc8830800000000000000
+      internalID: 4074847342159542904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_21
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 17
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a8a9902e4e59fd0800000000000000
+      internalID: -2335709172246869444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_22
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 17
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d2a7c36b9b08b60800000000000000
+      internalID: 7746395551427079521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_23
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 17
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd2173a922fafbd0800000000000000
+      internalID: -2595495974575985222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_24
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 17
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d41acfe1ee4c8860800000000000000
+      internalID: 7533483008981603540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_25
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 17
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50dd65a73eb893360800000000000000
+      internalID: 7149899692553723141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_26
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 17
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9efcb86f5ee6fa370800000000000000
+      internalID: 8336003369249001449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_27
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 17
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaeb87f378b2e6630800000000000000
+      internalID: 3922120185371737770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_28
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 17
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd3ea36c424786a0800000000000000
+      internalID: -6447111445700264526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: patient_portrait_29
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 17
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1654e64af5521a70800000000000000
+      internalID: 8796187555627554330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 21ce56b154518dc459adae518bb46f97
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      patient_portrait_0: -3452052882359620396
+      patient_portrait_1: 5629500348584087371
+      patient_portrait_10: -1544160171873379476
+      patient_portrait_11: 8936037804517432300
+      patient_portrait_12: -1350685516022967609
+      patient_portrait_13: 7218134414465123114
+      patient_portrait_14: -7993919924726980940
+      patient_portrait_15: -5313094528717922541
+      patient_portrait_16: -4264163441791184130
+      patient_portrait_17: -9155003582565229603
+      patient_portrait_18: -4386525448903947289
+      patient_portrait_19: 4534713762138212548
+      patient_portrait_2: 4319417697085141629
+      patient_portrait_20: 4074847342159542904
+      patient_portrait_21: -2335709172246869444
+      patient_portrait_22: 7746395551427079521
+      patient_portrait_23: -2595495974575985222
+      patient_portrait_24: 7533483008981603540
+      patient_portrait_25: 7149899692553723141
+      patient_portrait_26: 8336003369249001449
+      patient_portrait_27: 3922120185371737770
+      patient_portrait_28: -6447111445700264526
+      patient_portrait_29: 8796187555627554330
+      patient_portrait_3: 2729798736911116290
+      patient_portrait_30: -1529137592
+      patient_portrait_4: -8221592042971904751
+      patient_portrait_5: -7697213038458724545
+      patient_portrait_6: 7678886742954990323
+      patient_portrait_7: 7018400097454118317
+      patient_portrait_8: -415876846050834654
+      patient_portrait_9: 1755203119156835357
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

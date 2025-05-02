@@ -41,7 +41,7 @@ public class PatientMovement : MonoBehaviour
         {
             animator.SetFloat("LastHorizontal", horizontal);
             animator.SetFloat("LastVertical", vertical);
-        }   
+        }
         Debug.Log($"IsWalking: {animator.GetBool("IsWalking")}, LastVertical: {animator.GetFloat("LastVertical")}, LastHorizontal: {animator.GetFloat("LastHorizontal")}");
      
     }
