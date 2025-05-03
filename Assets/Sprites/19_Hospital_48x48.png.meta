@@ -2653,7 +2653,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 299
-        y: 4514
+        y: 4513
         width: 35
         height: 65
       alignment: 0
@@ -3268,7 +3268,7 @@ TextureImporter:
       name: 19_Hospital_48x48_81
       rect:
         serializedVersion: 2
-        x: 338
+        x: 339
         y: 4328
         width: 44
         height: 65

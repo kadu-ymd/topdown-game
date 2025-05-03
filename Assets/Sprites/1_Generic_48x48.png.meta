@@ -3455,9 +3455,9 @@ TextureImporter:
       name: 1_Generic_48x48_127
       rect:
         serializedVersion: 2
-        x: 291
-        y: 932
-        width: 44
+        x: 292
+        y: 931
+        width: 42
         height: 72
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3609,9 +3609,9 @@ TextureImporter:
       name: 1_Generic_48x48_134
       rect:
         serializedVersion: 2
-        x: 671
+        x: 672
         y: 653
-        width: 48
+        width: 46
         height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3631,9 +3631,9 @@ TextureImporter:
       name: 1_Generic_48x48_135
       rect:
         serializedVersion: 2
-        x: 719
+        x: 720
         y: 605
-        width: 49
+        width: 48
         height: 77
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
