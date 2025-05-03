@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviour {
         this.EkeySpriteRenderer.enabled = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D gameObject) {
+    private void OnTriggerStay2D(Collider2D gameObject) {
         if (gameObject.CompareTag("Interactable")) {
             this.EkeySpriteRenderer.enabled = true;
         }

@@ -24,7 +24,7 @@ public class DoorManager : MonoBehaviour {
             if (!this.isOpen & currentAnimState.IsName("Idle")) {
                 this.spriteCollider.enabled = false;
                 this.isOpen = true;
-            } else if (this.isOpen & currentAnimState.IsName("DoorOpenFront")) {
+            } else if (this.isOpen & currentAnimState.IsName("OpenDoor")) {
                 this.spriteCollider.enabled = true;
                 this.isOpen = false;
             }
