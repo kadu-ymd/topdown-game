@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class PatientMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     private Animator animator;
-    private Rigidbody2D rb;
-    private Transform transform;
+    public static Rigidbody2D rb;
+    private Transform tf;
     public float speed = 5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -12,7 +12,7 @@ public class PatientMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        transform = GetComponent<Transform>();
+        tf = GetComponent<Transform>();
 
         // Para o personagem começar de frente
         animator.SetFloat("LastHorizontal", 0f);
@@ -54,6 +54,6 @@ public class PatientMovement : MonoBehaviour
         );
 
         rb.linearVelocity = movement * speed;
-        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
+        tf.position = new Vector3(tf.position.x, tf.position.y, tf.position.y);
     }
 }
