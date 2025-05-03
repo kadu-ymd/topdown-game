@@ -4,6 +4,7 @@ public class PatientMovement : MonoBehaviour
 {
     private Animator animator;
     private Rigidbody2D rb;
+    private Transform transform;
     public float speed = 5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -11,6 +12,7 @@ public class PatientMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        transform = GetComponent<Transform>();
 
         // Para o personagem começar de frente
         animator.SetFloat("LastHorizontal", 0f);
@@ -41,9 +43,7 @@ public class PatientMovement : MonoBehaviour
         {
             animator.SetFloat("LastHorizontal", horizontal);
             animator.SetFloat("LastVertical", vertical);
-        }
-        Debug.Log($"IsWalking: {animator.GetBool("IsWalking")}, LastVertical: {animator.GetFloat("LastVertical")}, LastHorizontal: {animator.GetFloat("LastHorizontal")}");
-     
+        }     
     }
 
     void FixedUpdate() 
@@ -54,5 +54,6 @@ public class PatientMovement : MonoBehaviour
         );
 
         rb.linearVelocity = movement * speed;
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
     }
 }
