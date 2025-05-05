@@ -22,28 +22,37 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        if (Time.timeScale > 0.0)
+        {
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            float vertical = Input.GetAxisRaw("Vertical");
 
-        // Regra de prioridade para andar em somente uma direção
-        if (vertical != 0) 
-        {
-            horizontal = 0;
-        } 
-        else if (horizontal != 0) 
-        {
-            vertical = 0;
+            // Regra de prioridade para andar em somente uma direção
+            if (vertical != 0) 
+            {
+                horizontal = 0;
+            } 
+            else if (horizontal != 0) 
+            {
+                vertical = 0;
+            }
+
+            animator.SetFloat("Horizontal", horizontal);
+            animator.SetFloat("Vertical", vertical);
+            animator.SetBool("IsWalking", horizontal != 0 || vertical != 0);
+
+            if (horizontal != 0 || vertical != 0)
+            {
+                animator.SetFloat("LastHorizontal", horizontal);
+                animator.SetFloat("LastVertical", vertical);
+            }     
         }
-
-        animator.SetFloat("Horizontal", horizontal);
-        animator.SetFloat("Vertical", vertical);
-        animator.SetBool("IsWalking", horizontal != 0 || vertical != 0);
-
-        if (horizontal != 0 || vertical != 0)
+        else
         {
-            animator.SetFloat("LastHorizontal", horizontal);
-            animator.SetFloat("LastVertical", vertical);
-        }     
+            animator.SetFloat("Horizontal", 0);
+            animator.SetFloat("Vertical", 0);
+            animator.SetBool("IsWalking", false);
+        }
     }
 
     void FixedUpdate() 

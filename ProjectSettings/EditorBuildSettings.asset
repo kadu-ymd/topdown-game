@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: dc4da6d61f8dab2418035bc957e78cd4
   - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
     path: Assets/Scenes/InitialRoom.unity
     guid: 45d1698e49fb55f4f8f62a30a088dcdc
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/SecondRoom.unity
+    guid: 4ed531167ddaf50449e0ab5dfd65630e
+  - enabled: 1
+    path: Assets/Scenes/ThirdRoom.unity
+    guid: 9b067ffc09d679247bc4f1d7812fa100
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
