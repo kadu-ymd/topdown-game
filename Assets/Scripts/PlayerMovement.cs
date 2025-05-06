@@ -7,12 +7,19 @@ public class PlayerMovement : MonoBehaviour
     private Transform tf;
     public float speed = 5f;
 
+    private AudioSource playerAudioSource;
+    public AudioClip walkingSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         tf = GetComponent<Transform>();
+
+        playerAudioSource = GetComponent<AudioSource>();
+        playerAudioSource.clip = walkingSound;
+        playerAudioSource.loop = true;
 
         // Para o personagem começar de frente
         animator.SetFloat("LastHorizontal", 0f);
@@ -42,7 +49,18 @@ public class PlayerMovement : MonoBehaviour
 
                 animator.SetFloat("Horizontal", horizontal);
                 animator.SetFloat("Vertical", vertical);
-                animator.SetBool("IsWalking", horizontal != 0 || vertical != 0);
+                bool isWalking = horizontal != 0 || vertical != 0;
+                animator.SetBool("IsWalking", isWalking);
+
+                if (isWalking && !playerAudioSource.isPlaying)
+                {
+                    Debug.Log("Start audio");
+                    playerAudioSource.Play();
+                }
+                else if (!isWalking && playerAudioSource.isPlaying)
+                {
+                    playerAudioSource.Stop();
+                }
 
                 if (horizontal != 0 || vertical != 0)
                 {
@@ -65,6 +83,10 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Horizontal", 0);
             animator.SetFloat("Vertical", 0);
             animator.SetBool("IsWalking", false);
+            if (playerAudioSource.isPlaying)
+            {
+                playerAudioSource.Stop();
+            }
         }
     }
 
