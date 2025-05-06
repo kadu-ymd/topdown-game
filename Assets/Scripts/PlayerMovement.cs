@@ -24,28 +24,41 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Time.timeScale > 0.0)
         {
-            float horizontal = Input.GetAxisRaw("Horizontal");
-            float vertical = Input.GetAxisRaw("Vertical");
+            if (!animator.GetBool("IsShooting"))
+            {
 
-            // Regra de prioridade para andar em somente uma direção
-            if (vertical != 0) 
-            {
-                horizontal = 0;
-            } 
-            else if (horizontal != 0) 
-            {
-                vertical = 0;
+                float horizontal = Input.GetAxisRaw("Horizontal");
+                float vertical = Input.GetAxisRaw("Vertical");
+
+                // Regra de prioridade para andar em somente uma direção
+                if (vertical != 0) 
+                {
+                    horizontal = 0;
+                } 
+                else if (horizontal != 0) 
+                {
+                    vertical = 0;
+                }
+
+                animator.SetFloat("Horizontal", horizontal);
+                animator.SetFloat("Vertical", vertical);
+                animator.SetBool("IsWalking", horizontal != 0 || vertical != 0);
+
+                if (horizontal != 0 || vertical != 0)
+                {
+                    animator.SetFloat("LastHorizontal", horizontal);
+                    animator.SetFloat("LastVertical", vertical);
+                }     
             }
 
-            animator.SetFloat("Horizontal", horizontal);
-            animator.SetFloat("Vertical", vertical);
-            animator.SetBool("IsWalking", horizontal != 0 || vertical != 0);
-
-            if (horizontal != 0 || vertical != 0)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                animator.SetFloat("LastHorizontal", horizontal);
-                animator.SetFloat("LastVertical", vertical);
-            }     
+                animator.SetBool("IsShooting", true);
+            } 
+            else if (Input.GetKeyUp(KeyCode.Space))
+            {
+                animator.SetBool("IsShooting", false);
+            }
         }
         else
         {
@@ -57,12 +70,18 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate() 
     {
-        Vector2 movement = new Vector2(
-            animator.GetFloat("Horizontal"),
-            animator.GetFloat("Vertical")
-        );
+        if (!animator.GetBool("IsShooting"))
+        {
+            Vector2 movement = new Vector2(
+                animator.GetFloat("Horizontal"),
+                animator.GetFloat("Vertical")
+            );
 
-        rb.linearVelocity = movement * speed;
+            rb.linearVelocity = movement * speed;
+        } else {
+            rb.linearVelocity = Vector2.zero; // Para o personagem enquanto atira
+        }
+
         tf.position = new Vector3(tf.position.x, tf.position.y, tf.position.y);
     }
 }
