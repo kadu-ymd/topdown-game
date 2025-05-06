@@ -4,17 +4,36 @@ using UnityEngine.SceneManagement;
 public class PauseMenuManager : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+    public GameObject settingsMenuUI;
 
     public void ResumeGame()
     {
-        Time.timeScale = 1; // Resume the game
-        pauseMenuUI.SetActive(false); // Hide the pause menu
+        Time.timeScale = 1;
+        pauseMenuUI.SetActive(false);
+    }
+
+    public void SettingsOpen()
+    {
+        settingsMenuUI.SetActive(true);
+        if (pauseMenuUI != null)
+        {
+            pauseMenuUI.SetActive(false);
+        }
+    }
+
+    public void SettingsClose()
+    {
+        settingsMenuUI.SetActive(false);
+        if (pauseMenuUI != null)
+        {
+            pauseMenuUI.SetActive(true);
+        }
     }
 
     public void PauseGame()
     {
-        Time.timeScale = 0; // Pause the game
-        pauseMenuUI.SetActive(true); // Show the pause menu
+        Time.timeScale = 0;
+        pauseMenuUI.SetActive(true);
     }
 
     public void MainMenu()
