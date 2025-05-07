@@ -13,6 +13,7 @@ public class GuardMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        tf = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         fieldOfView = GetComponent<FieldOfView>();
@@ -67,6 +68,7 @@ public class GuardMovement : MonoBehaviour
             animator.SetBool("IsWalking", false);
             fieldOfView.angleRotation = 0f;
         }
+
         tf.position = new Vector3(tf.position.x, tf.position.y, tf.position.y);
     }
 
