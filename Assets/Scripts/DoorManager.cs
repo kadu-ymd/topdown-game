@@ -41,6 +41,9 @@ public class DoorManager : MonoBehaviour {
         if (this.isLocked) {
             if (unlockWithOpenAttempts > 0) {
                 openAttempts++;
+                if (openAttempts == 1) {
+                    ThoughtManager.ShowThought("Acho que se eu forçar a porta, ela pode abrir...");
+                }
                 if (openAttempts >= unlockWithOpenAttempts) {
                     this.isLocked = false;
                     this.animator.SetBool("isLocked", false);
