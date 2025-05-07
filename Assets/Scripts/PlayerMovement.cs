@@ -7,12 +7,19 @@ public class PlayerMovement : MonoBehaviour
     private Transform tf;
     public float speed = 5f;
 
+    private AudioSource playerAudioSource;
+    public AudioClip walkingSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         tf = GetComponent<Transform>();
+
+        playerAudioSource = GetComponent<AudioSource>();
+        playerAudioSource.clip = walkingSound;
+        playerAudioSource.loop = true;
 
         // Para o personagem começar de frente
         animator.SetFloat("LastHorizontal", 0f);
@@ -24,45 +31,79 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Time.timeScale > 0.0)
         {
-            float horizontal = Input.GetAxisRaw("Horizontal");
-            float vertical = Input.GetAxisRaw("Vertical");
+            if (!animator.GetBool("IsShooting"))
+            {
 
-            // Regra de prioridade para andar em somente uma direção
-            if (vertical != 0) 
-            {
-                horizontal = 0;
-            } 
-            else if (horizontal != 0) 
-            {
-                vertical = 0;
+                float horizontal = Input.GetAxisRaw("Horizontal");
+                float vertical = Input.GetAxisRaw("Vertical");
+
+                // Regra de prioridade para andar em somente uma direção
+                if (vertical != 0) 
+                {
+                    horizontal = 0;
+                } 
+                else if (horizontal != 0) 
+                {
+                    vertical = 0;
+                }
+
+                animator.SetFloat("Horizontal", horizontal);
+                animator.SetFloat("Vertical", vertical);
+                bool isWalking = horizontal != 0 || vertical != 0;
+                animator.SetBool("IsWalking", isWalking);
+
+                if (isWalking && !playerAudioSource.isPlaying)
+                {
+                    Debug.Log("Start audio");
+                    playerAudioSource.Play();
+                }
+                else if (!isWalking && playerAudioSource.isPlaying)
+                {
+                    playerAudioSource.Stop();
+                }
+
+                if (horizontal != 0 || vertical != 0)
+                {
+                    animator.SetFloat("LastHorizontal", horizontal);
+                    animator.SetFloat("LastVertical", vertical);
+                }     
             }
 
-            animator.SetFloat("Horizontal", horizontal);
-            animator.SetFloat("Vertical", vertical);
-            animator.SetBool("IsWalking", horizontal != 0 || vertical != 0);
-
-            if (horizontal != 0 || vertical != 0)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                animator.SetFloat("LastHorizontal", horizontal);
-                animator.SetFloat("LastVertical", vertical);
-            }     
+                animator.SetBool("IsShooting", true);
+            } 
+            else if (Input.GetKeyUp(KeyCode.Space))
+            {
+                animator.SetBool("IsShooting", false);
+            }
         }
         else
         {
             animator.SetFloat("Horizontal", 0);
             animator.SetFloat("Vertical", 0);
             animator.SetBool("IsWalking", false);
+            if (playerAudioSource.isPlaying)
+            {
+                playerAudioSource.Stop();
+            }
         }
     }
 
     void FixedUpdate() 
     {
-        Vector2 movement = new Vector2(
-            animator.GetFloat("Horizontal"),
-            animator.GetFloat("Vertical")
-        );
+        if (!animator.GetBool("IsShooting"))
+        {
+            Vector2 movement = new Vector2(
+                animator.GetFloat("Horizontal"),
+                animator.GetFloat("Vertical")
+            );
 
-        rb.linearVelocity = movement * speed;
+            rb.linearVelocity = movement * speed;
+        } else {
+            rb.linearVelocity = Vector2.zero; // Para o personagem enquanto atira
+        }
+
         tf.position = new Vector3(tf.position.x, tf.position.y, tf.position.y);
     }
 }
