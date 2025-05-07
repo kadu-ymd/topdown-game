@@ -625,7 +625,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Eu acho que eu deveria ir por ali...
+  m_text: ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 038066982a3e78b4ba6245b0bcdb86e1, type: 2}
   m_sharedMaterial: {fileID: 3683637119586220760, guid: 038066982a3e78b4ba6245b0bcdb86e1, type: 2}

@@ -71,14 +71,17 @@ public class PlayerMovement : MonoBehaviour
                 }     
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && !animator.GetBool("IsShooting"))
+            if (PlayerPrefs.GetInt("Gun") == 1) 
             {
-                animator.SetBool("IsShooting", true);
-                StartCoroutine(DelayedShoot(0.5f)); // Espera 0:50s da animação de tiro
-            } 
-            else if (Input.GetKeyUp(KeyCode.Space))
-            {
-                animator.SetBool("IsShooting", false);
+                if (Input.GetKeyDown(KeyCode.Space) && !animator.GetBool("IsShooting"))
+                {
+                    animator.SetBool("IsShooting", true);
+                    StartCoroutine(DelayedShoot(0.5f)); // Espera 0:50s da animação de tiro
+                } 
+                else if (Input.GetKeyUp(KeyCode.Space))
+                {
+                    animator.SetBool("IsShooting", false);
+                }
             }
         }
         else

@@ -21,6 +21,12 @@ public class ThoughtManager : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            HideThought();
+        }
+    }
+
     public static void ShowThought(string thoughtText) {
         instance.gameObject.SetActive(true);
         thoughtTextTMP.text = thoughtText;

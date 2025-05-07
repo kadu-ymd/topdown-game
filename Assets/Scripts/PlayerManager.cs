@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour {
 
@@ -19,6 +20,12 @@ public class PlayerManager : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D gameObject) {
         if (gameObject.CompareTag("Interactable")) {
             this.EkeySpriteRenderer.enabled = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D gameObject) {
+        if (gameObject.gameObject.CompareTag("Enemy")) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 

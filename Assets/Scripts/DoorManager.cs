@@ -10,6 +10,7 @@ public class DoorManager : MonoBehaviour {
     public AudioClip closeSound; 
     private bool isOpen = false;
     public bool isLocked;
+    public string lockedText = "A porta está trancada, preciso de algo para abri-la...";
     public string unlockerItemName;
     public int unlockWithOpenAttempts;
     private int openAttempts = 0;
@@ -53,7 +54,7 @@ public class DoorManager : MonoBehaviour {
                     this.isLocked = false;
                     this.animator.SetBool("isLocked", false);
                 } else {
-                    Debug.LogWarning("You need to collect the " + unlockerItemName + " item to unlock the door.");
+                    ThoughtManager.ShowThought(lockedText);
                 }
             }
         }

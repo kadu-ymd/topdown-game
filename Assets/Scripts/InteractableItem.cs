@@ -9,6 +9,10 @@ public class InteractableItem : MonoBehaviour {
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
+        if (itemDisplay == null && !string.IsNullOrEmpty(collectableItemName))  {
+            Debug.LogError("ItemDisplayManager não atribuído. A interação não funcionará corretamente.");
+            return;
+        }
         if (!string.IsNullOrEmpty(collectableItemName)) {
             if (!PlayerPrefs.HasKey(collectableItemName)) {
                 PlayerPrefs.SetInt(collectableItemName, 0);
@@ -20,7 +24,11 @@ public class InteractableItem : MonoBehaviour {
     }
 
     void Interact() {
-        itemDisplay.EnterDisplay(onIteractionText);
+        if (string.IsNullOrEmpty(collectableItemName) || PlayerPrefs.GetInt(collectableItemName) == 0) {
+            itemDisplay.EnterDisplay(onIteractionText);
+        } else {
+            ThoughtManager.ShowThought("Não há mais nada de importante aqui.");
+        }
         if (!string.IsNullOrEmpty(collectableItemName) && PlayerPrefs.GetInt(collectableItemName) == 0) {
             PlayerPrefs.SetInt(collectableItemName, 1);
             PlayerPrefs.Save(); 

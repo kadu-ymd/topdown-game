@@ -9,6 +9,12 @@ public class ItemDisplayManager : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            ExitDisplay();
+        }
+    }
+
     public void EnterDisplay(string exitDisplayText = null) {
         pauseMenuPrefab.SetActive(false);
         gameObject.SetActive(true);
