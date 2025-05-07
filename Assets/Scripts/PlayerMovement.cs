@@ -54,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
 
                 if (isWalking && !playerAudioSource.isPlaying)
                 {
-                    Debug.Log("Start audio");
                     playerAudioSource.Play();
                 }
                 else if (!isWalking && playerAudioSource.isPlaying)
