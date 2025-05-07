@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8858867456657590138}
   - component: {fileID: 8431027438572362810}
   - component: {fileID: 1648266345609388401}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 12a0c4b378b3fea4682eb2a664a33c18, type: 2}
+  m_Sprite: {fileID: 1341784801951443994, guid: f630aa9f767be0246a4a1dc7e79b9e8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -326,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8545580417259947091}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet Source Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1915533633693451348}
   - component: {fileID: 3899521767878360894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: E key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 4419187698280059234}
   - component: {fileID: 8091728634097409521}
   - component: {fileID: 4299926648007976919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
