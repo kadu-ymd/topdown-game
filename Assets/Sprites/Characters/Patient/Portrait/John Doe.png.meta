@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: 1c4a0032e368d9a479d6c34a9079f96d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1962812706248813346
+    second: John Doe_0
+  - first:
+      213: 2413616981039992711
+    second: John Doe_1
+  - first:
+      213: 6819326310607319672
+    second: John Doe_2
+  - first:
+      213: -334313294710681243
+    second: John Doe_3
+  - first:
+      213: 2695388715319336952
+    second: John Doe_4
+  - first:
+      213: 5994702996378250759
+    second: John Doe_5
+  - first:
+      213: 8345116195844573679
+    second: John Doe_6
+  - first:
+      213: -7782829791821502343
+    second: John Doe_7
+  - first:
+      213: -1148740303748662643
+    second: John Doe_8
+  - first:
+      213: 4510456341993582112
+    second: John Doe_9
+  - first:
+      213: 916229945318002453
+    second: John Doe_10
+  - first:
+      213: 4247216575579192930
+    second: John Doe_11
+  - first:
+      213: -4643376230489344159
+    second: John Doe_12
+  - first:
+      213: 122320747879915912
+    second: John Doe_13
+  - first:
+      213: 3537087365576616494
+    second: John Doe_14
+  - first:
+      213: 3627032035809961439
+    second: John Doe_15
+  - first:
+      213: 8690155606034373796
+    second: John Doe_16
+  - first:
+      213: -6094189159268470947
+    second: John Doe_17
+  - first:
+      213: 8730157506368592541
+    second: John Doe_18
+  - first:
+      213: -8499216832090212506
+    second: John Doe_19
+  - first:
+      213: 3139629393666730262
+    second: John Doe_20
+  - first:
+      213: 5495680189200247122
+    second: John Doe_21
+  - first:
+      213: 2327853601806334611
+    second: John Doe_22
+  - first:
+      213: -1739389284306580483
+    second: John Doe_23
+  - first:
+      213: -2076966418119711199
+    second: John Doe_24
+  - first:
+      213: 1964643191035783931
+    second: John Doe_25
+  - first:
+      213: -1183155442587146519
+    second: John Doe_26
+  - first:
+      213: -3876133683414254319
+    second: John Doe_27
+  - first:
+      213: 8907284914821962375
+    second: John Doe_28
+  - first:
+      213: -1924311559311088016
+    second: John Doe_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: John Doe_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 145
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed49a6b3e30b2c4e0800000000000000
+      internalID: -1962812706248813346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 145
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f4dba3bd3ee7120800000000000000
+      internalID: 2413616981039992711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_2
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 145
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 872793f262d13ae50800000000000000
+      internalID: 6819326310607319672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 145
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 561541964d74c5bf0800000000000000
+      internalID: -334313294710681243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_4
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 145
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ff943c71c1f76520800000000000000
+      internalID: 2695388715319336952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_5
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 145
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e68192d96713350800000000000000
+      internalID: 5994702996378250759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_6
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 145
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9ccae37fecfc370800000000000000
+      internalID: 8345116195844573679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_7
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 145
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 978e62f1a85ddf390800000000000000
+      internalID: -7782829791821502343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_8
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 145
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8af2efa7cade00f0800000000000000
+      internalID: -1148740303748662643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_9
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 145
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e6f67452c589e30800000000000000
+      internalID: 4510456341993582112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_10
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f4147e74a17bc00800000000000000
+      internalID: 916229945318002453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_11
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 83
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e7c8709f421fa30800000000000000
+      internalID: 4247216575579192930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_12
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 83
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167b0378be96f8fb0800000000000000
+      internalID: -4643376230489344159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_13
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 881ea06721292b100800000000000000
+      internalID: 122320747879915912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_14
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 79
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a67bcf732461130800000000000000
+      internalID: 3537087365576616494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_15
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 81
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd52a637b6ec55230800000000000000
+      internalID: 3627032035809961439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_16
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 81
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ac5c843b72a99870800000000000000
+      internalID: 8690155606034373796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_17
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5f24cf7f371d6ba0800000000000000
+      internalID: -6094189159268470947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_18
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a5f486fffb72970800000000000000
+      internalID: 8730157506368592541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_19
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 81
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 667fd3e6257bc0a80800000000000000
+      internalID: -8499216832090212506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_20
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 17
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61961ef8c44329b20800000000000000
+      internalID: 3139629393666730262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_21
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 17
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 259ae64c304944c40800000000000000
+      internalID: 5495680189200247122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_22
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 17
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39ab7c074823e4020800000000000000
+      internalID: 2327853601806334611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_23
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 17
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb09ce59a27cd7e0800000000000000
+      internalID: -1739389284306580483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_24
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 17
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1262f850c022d23e0800000000000000
+      internalID: -2076966418119711199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_25
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 17
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfae318b290d34b10800000000000000
+      internalID: 1964643191035783931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_26
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 17
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e6e582c466949fe0800000000000000
+      internalID: -1183155442587146519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_27
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 17
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11dba2a93f4353ac0800000000000000
+      internalID: -3876133683414254319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_28
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 17
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a982def680d9b70800000000000000
+      internalID: 8907284914821962375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe_29
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 17
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076a51e05d87b45e0800000000000000
+      internalID: -1924311559311088016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      John Doe_0: -1962812706248813346
+      John Doe_1: 2413616981039992711
+      John Doe_10: 916229945318002453
+      John Doe_11: 4247216575579192930
+      John Doe_12: -4643376230489344159
+      John Doe_13: 122320747879915912
+      John Doe_14: 3537087365576616494
+      John Doe_15: 3627032035809961439
+      John Doe_16: 8690155606034373796
+      John Doe_17: -6094189159268470947
+      John Doe_18: 8730157506368592541
+      John Doe_19: -8499216832090212506
+      John Doe_2: 6819326310607319672
+      John Doe_20: 3139629393666730262
+      John Doe_21: 5495680189200247122
+      John Doe_22: 2327853601806334611
+      John Doe_23: -1739389284306580483
+      John Doe_24: -2076966418119711199
+      John Doe_25: 1964643191035783931
+      John Doe_26: -1183155442587146519
+      John Doe_27: -3876133683414254319
+      John Doe_28: 8907284914821962375
+      John Doe_29: -1924311559311088016
+      John Doe_3: -334313294710681243
+      John Doe_4: 2695388715319336952
+      John Doe_5: 5994702996378250759
+      John Doe_6: 8345116195844573679
+      John Doe_7: -7782829791821502343
+      John Doe_8: -1148740303748662643
+      John Doe_9: 4510456341993582112
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
