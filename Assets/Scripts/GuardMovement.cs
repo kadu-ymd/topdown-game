@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class GuardMovement : MonoBehaviour
 {
-    private float atention_level;
+    public float atention_level;
     private bool stalk;
     public float speed;
+    private Transform tf;
     private Rigidbody2D rb;
     private Animator animator;
     private FieldOfView fieldOfView;
@@ -66,6 +67,7 @@ public class GuardMovement : MonoBehaviour
             animator.SetBool("IsWalking", false);
             fieldOfView.angleRotation = 0f;
         }
+        tf.position = new Vector3(tf.position.x, tf.position.y, tf.position.y);
     }
 
     // Update is called once per frame
