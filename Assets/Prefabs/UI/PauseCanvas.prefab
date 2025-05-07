@@ -200,7 +200,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game Paused
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: -9100147973359076248, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -336,7 +336,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: -9100147973359076248, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &528324179479354421
 RectTransform:
   m_ObjectHideFlags: 0
@@ -764,7 +764,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: -9100147973359076248, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -975,7 +975,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Resume
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: -9100147973359076248, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

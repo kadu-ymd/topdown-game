@@ -207,7 +207,6 @@ MonoBehaviour:
   bulletSrcPoint: {fileID: 8545580417259947091}
   speed: 5
   walkingSound: {fileID: 8300000, guid: e27303e61d7faa04ab541caae2a5fcb5, type: 3}
-  shootingSound: {fileID: 8300000, guid: 94fb15519d88be84ba86a11967ea4cc0, type: 3}
 --- !u!114 &8431027438572362810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b445a706495a794992fc73dc3d7085c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EkeySpriteRenderer: {fileID: 0}
+  EkeySpriteRenderer: {fileID: 3899521767878360894}
 --- !u!82 &1648266345609388401
 AudioSource:
   m_ObjectHideFlags: 0

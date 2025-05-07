@@ -329,8 +329,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Como funciona a arma?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
-  m_sharedMaterial: {fileID: -9100147973359076248, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -686,8 +686,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Eu deveria anotar as coisas para eu n\xE3o me esquecer... De novo..."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
-  m_sharedMaterial: {fileID: -9100147973359076248, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -767,6 +767,7 @@ GameObject:
   - component: {fileID: 7791428015970536380}
   - component: {fileID: 7435377409890206216}
   - component: {fileID: 5657255425964676881}
+  - component: {fileID: 8022028111494578604}
   m_Layer: 5
   m_Name: BookCanvas
   m_TagString: Untagged
@@ -858,6 +859,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8022028111494578604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5531257019751759864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e8f37f3fa881d14da1c2ec0638fc563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuPrefab: {fileID: 4183417758524894208, guid: fd4842e1608c86543b944b3f500da7ad, type: 3}
+  defaultExitDisplayText: Vou anotar sobre isso no meu caderno
 --- !u!1 &5697590878784335178
 GameObject:
   m_ObjectHideFlags: 0
