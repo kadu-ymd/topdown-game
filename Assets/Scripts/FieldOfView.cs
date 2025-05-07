@@ -6,7 +6,6 @@ public class FieldOfView : MonoBehaviour
     [Range(0, 360)]
     public float angle;
     
-    public LayerMask targetMask;
     public LayerMask obstructionMask;
     public static bool canSeePlayer;
     private GuardMovement guardScript;

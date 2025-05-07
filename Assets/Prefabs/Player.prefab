@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8858867456657590138}
   - component: {fileID: 8431027438572362810}
   - component: {fileID: 1648266345609388401}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -207,7 +207,6 @@ MonoBehaviour:
   bulletSrcPoint: {fileID: 8545580417259947091}
   speed: 5
   walkingSound: {fileID: 8300000, guid: e27303e61d7faa04ab541caae2a5fcb5, type: 3}
-  shootingSound: {fileID: 8300000, guid: 94fb15519d88be84ba86a11967ea4cc0, type: 3}
 --- !u!114 &8431027438572362810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8545580417259947091}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet Source Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1915533633693451348}
   - component: {fileID: 3899521767878360894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: E key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +447,7 @@ GameObject:
   - component: {fileID: 4419187698280059234}
   - component: {fileID: 8091728634097409521}
   - component: {fileID: 4299926648007976919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
