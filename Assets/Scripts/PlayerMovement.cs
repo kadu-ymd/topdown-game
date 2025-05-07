@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject bulletPrefab;
+    public Transform bulletSrcPoint;
+
     private Animator animator;
     public static Rigidbody2D rb;
     private Transform tf;
@@ -54,7 +57,6 @@ public class PlayerMovement : MonoBehaviour
 
                 if (isWalking && !playerAudioSource.isPlaying)
                 {
-                    Debug.Log("Start audio");
                     playerAudioSource.Play();
                 }
                 else if (!isWalking && playerAudioSource.isPlaying)
@@ -69,9 +71,10 @@ public class PlayerMovement : MonoBehaviour
                 }     
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && !animator.GetBool("IsShooting"))
             {
                 animator.SetBool("IsShooting", true);
+                StartCoroutine(DelayedShoot(0.5f)); // Espera 0:50s da animação de tiro
             } 
             else if (Input.GetKeyUp(KeyCode.Space))
             {
@@ -90,6 +93,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void Shoot()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, bulletSrcPoint.position, Quaternion.identity);
+        
+        // Direção do tiro baseada na última direção do player
+        Vector2 shootDirection = new Vector2(
+            animator.GetFloat("LastHorizontal"),
+            animator.GetFloat("LastVertical")
+        );
+
+        BulletController controller = bullet.GetComponent<BulletController>();
+        controller.direction = shootDirection;
+        Debug.Log($"Disparo na direção: {shootDirection}");
+    }
+
     void FixedUpdate() 
     {
         if (!animator.GetBool("IsShooting"))
@@ -106,4 +124,12 @@ public class PlayerMovement : MonoBehaviour
 
         tf.position = new Vector3(tf.position.x, tf.position.y, tf.position.y);
     }
+
+    System.Collections.IEnumerator DelayedShoot(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Shoot();
+        animator.SetBool("IsShooting", false);
+    }
+    
 }
