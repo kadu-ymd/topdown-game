@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 8
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
-  m_sharedMaterial: {fileID: -9100147973359076248, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 038066982a3e78b4ba6245b0bcdb86e1, type: 2}
+  m_sharedMaterial: {fileID: 3683637119586220760, guid: 038066982a3e78b4ba6245b0bcdb86e1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -425,8 +425,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Exames recentes
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
-  m_sharedMaterial: {fileID: -9100147973359076248, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 038066982a3e78b4ba6245b0bcdb86e1, type: 2}
+  m_sharedMaterial: {fileID: 3683637119586220760, guid: 038066982a3e78b4ba6245b0bcdb86e1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -636,8 +636,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Idade: 32 anos\n\nSexo: Masculino \n\nTipo sangu\xEDneo: O+"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
-  m_sharedMaterial: {fileID: -9100147973359076248, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 038066982a3e78b4ba6245b0bcdb86e1, type: 2}
+  m_sharedMaterial: {fileID: 3683637119586220760, guid: 038066982a3e78b4ba6245b0bcdb86e1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1266,8 +1266,8 @@ MonoBehaviour:
   m_text: "Data: 12/04/2025\n\nPress\xE3o arterial: 125/80 mmHg\n\nFrequ\xEAncia
     card\xEDaca: 68 bpm\n\nSatura\xE7\xE3o de oxig\xEAnio: 98%"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
-  m_sharedMaterial: {fileID: -9100147973359076248, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 038066982a3e78b4ba6245b0bcdb86e1, type: 2}
+  m_sharedMaterial: {fileID: 3683637119586220760, guid: 038066982a3e78b4ba6245b0bcdb86e1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1650,7 +1650,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7120901065304977360}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.41888067}
+  m_LocalPosition: {x: 0, y: 0, z: 0.4188807}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1658,8 +1658,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71.43689, y: 86.16666}
-  m_SizeDelta: {x: 205, y: 9}
+  m_AnchoredPosition: {x: 67.98369, y: 80.72984}
+  m_SizeDelta: {x: 205, y: 27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &722112324361552234
 CanvasRenderer:
@@ -1691,8 +1691,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Paciente: Rafael Silva Costa'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
-  m_sharedMaterial: {fileID: -9100147973359076248, guid: f723440174c152f4a931aa8e13dc860a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 038066982a3e78b4ba6245b0bcdb86e1, type: 2}
+  m_sharedMaterial: {fileID: 3683637119586220760, guid: 038066982a3e78b4ba6245b0bcdb86e1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1722,7 +1722,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2090,9 +2090,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5368506111632933059}
+  - {fileID: 4425642670199624651}
   - {fileID: 6210457293617441656}
   - {fileID: 1234911810972192957}
-  - {fileID: 4425642670199624651}
   - {fileID: 986935804238985979}
   - {fileID: 9022724164089776870}
   m_Father: {fileID: 6477958842389635779}
