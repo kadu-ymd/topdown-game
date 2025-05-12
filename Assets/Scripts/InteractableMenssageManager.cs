@@ -36,9 +36,11 @@ public class InteractableMenssageManager : MonoBehaviour {
     }
 
     public void Interact() {
-        if (parentAnimator != null) {
-            this.parentAnimator.SetTrigger("Interact");
+        if (Time.timeScale > 0f) {
+            if (parentAnimator != null) {
+                this.parentAnimator.SetTrigger("Interact");
+            }
+            ThoughtManager.ShowThought(onIteractionText);
         }
-        ThoughtManager.ShowThought(onIteractionText);
     }
 }

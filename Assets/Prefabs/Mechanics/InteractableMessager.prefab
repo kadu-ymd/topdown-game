@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8222825949107985594}
   - component: {fileID: 4873532073824501016}
   - component: {fileID: 362749001338844572}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: InteractableMessager
   m_TagString: Interactable
   m_Icon: {fileID: 0}

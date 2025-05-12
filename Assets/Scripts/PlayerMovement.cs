@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator animator;
     public static Rigidbody2D rb;
-    private Transform tf;
     public float speed = 5f;
 
     private AudioSource playerAudioSource;
@@ -18,7 +17,6 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        tf = GetComponent<Transform>();
 
         playerAudioSource = GetComponent<AudioSource>();
         playerAudioSource.clip = walkingSound;
@@ -108,7 +106,6 @@ public class PlayerMovement : MonoBehaviour
 
         BulletController controller = bullet.GetComponent<BulletController>();
         controller.direction = shootDirection;
-        Debug.Log($"Disparo na direção: {shootDirection}");
     }
 
     void FixedUpdate() 
@@ -125,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = Vector2.zero; // Para o personagem enquanto atira
         }
 
-        tf.position = new Vector3(tf.position.x, tf.position.y, tf.position.y);
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
     }
 
     System.Collections.IEnumerator DelayedShoot(float delay)

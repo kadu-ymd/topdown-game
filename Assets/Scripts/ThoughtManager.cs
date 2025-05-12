@@ -3,11 +3,11 @@ using TMPro;
 
 public class ThoughtManager : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private static ThoughtManager instance;
+    private static ThoughtManager thoughtManagerInstance;
     private static TMP_Text thoughtTextTMP;
 
     void Awake() {
-        if (instance == null) instance = this;
+        if (thoughtManagerInstance == null) thoughtManagerInstance = this;
     }
 
     void Start() {
@@ -22,19 +22,21 @@ public class ThoughtManager : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Escape) && PlayerPrefs.GetString("CurrentUI") == "Thought") {
             HideThought();
         }
     }
 
     public static void ShowThought(string thoughtText) {
-        instance.gameObject.SetActive(true);
+        thoughtManagerInstance.gameObject.SetActive(true);
         thoughtTextTMP.text = thoughtText;
         Time.timeScale = 0f;
+        PlayerPrefs.SetString("CurrentUI", "Thought");
     }
 
     public void HideThought() {
         gameObject.SetActive(false);
         Time.timeScale = 1f;
+        PlayerPrefs.SetString("CurrentUI", "None");
     }
 }

@@ -2168,10 +2168,10 @@ TextureImporter:
       name: 19_Hospital_48x48_31
       rect:
         serializedVersion: 2
-        x: 242
-        y: 4709
-        width: 187
-        height: 118
+        x: 288
+        y: 4800
+        width: 96
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5006,10 +5006,10 @@ TextureImporter:
       name: 19_Hospital_48x48_160
       rect:
         serializedVersion: 2
-        x: 527
-        y: 3539
-        width: 241
-        height: 206
+        x: 534
+        y: 3684
+        width: 90
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11650,9 +11650,9 @@ TextureImporter:
       name: 19_Hospital_48x48_462
       rect:
         serializedVersion: 2
-        x: 431
+        x: 433
         y: 4751
-        width: 49
+        width: 47
         height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -11796,6 +11796,50 @@ TextureImporter:
       bones: []
       spriteID: b07ba256d400a194e82ff20e35bee6a7
       internalID: 1164428183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_Hospital_48x48_469
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 3540
+        width: 90
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5b49d307faa22449a7aa4e74384ae2
+      internalID: -200056404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_Hospital_48x48_470
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 4710
+        width: 191
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73cc84be7543cb489a2d5a4a395a57e
+      internalID: 1349296061
       vertices: []
       indices: 
       edges: []
@@ -12225,7 +12269,9 @@ TextureImporter:
       19_Hospital_48x48_466: -872005036
       19_Hospital_48x48_467: -1008992648
       19_Hospital_48x48_468: 1164428183
+      19_Hospital_48x48_469: -200056404
       19_Hospital_48x48_47: 884200885451927698
+      19_Hospital_48x48_470: 1349296061
       19_Hospital_48x48_48: -3309521736633990538
       19_Hospital_48x48_49: -7418206090354047194
       19_Hospital_48x48_5: 2091434419290351826

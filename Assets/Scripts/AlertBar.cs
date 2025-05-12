@@ -5,16 +5,16 @@ public class AlertBar : MonoBehaviour
 {
     public Slider slider;
     public Image fillImage;
-    private GuardMovement guard;
+    private EnemyMoviment enemy;
 
     void Start()
     {
-        guard = transform.parent.GetComponent<GuardMovement>();
+        enemy = transform.parent.GetComponent<EnemyMoviment>();
     }
 
     void Update()
     {
-        float atention = Mathf.Clamp01(guard.atention_level / 2f);
+        float atention = Mathf.Clamp01(enemy.atention_level / 2f);
         slider.value = atention;
 
         SetColor(atention);

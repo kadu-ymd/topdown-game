@@ -8,7 +8,6 @@ public class FieldOfView : MonoBehaviour
     
     public LayerMask obstructionMask;
     public static bool canSeePlayer;
-    private GuardMovement guardScript;
     public float angleRotation;
 
     Vector2 RotateVector(Vector2 original, float angleDegrees)
@@ -45,7 +44,6 @@ public class FieldOfView : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Obstacle");
                     canSeePlayer = false;
                 }
             }

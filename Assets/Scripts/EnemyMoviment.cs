@@ -1,11 +1,10 @@
 using UnityEngine;
 
-public class GuardMovement : MonoBehaviour
+public class EnemyMoviment : MonoBehaviour
 {
     public float atention_level;
     private bool stalk;
     public float speed;
-    private Transform tf;
     private Rigidbody2D rb;
     private Animator animator;
     private FieldOfView fieldOfView;
@@ -65,7 +64,6 @@ public class GuardMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        tf = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         fieldOfView = GetComponent<FieldOfView>();
@@ -94,7 +92,11 @@ public class GuardMovement : MonoBehaviour
             fieldOfView.angleRotation = 0f;
         }
         target = SetFlagsAnimation(target);
-        //tf.position = new Vector3(tf.position.x, tf.position.y, tf.position.y);
+    }
+
+    private void LateUpdate()
+    {
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
     }
 
     // Update is called once per frame
@@ -116,14 +118,6 @@ public class GuardMovement : MonoBehaviour
         if (atention_level <= 0)
         {
             stalk = false;
-        }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Player foi pego!");
         }
     }
 }

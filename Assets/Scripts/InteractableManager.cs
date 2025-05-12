@@ -37,11 +37,13 @@ public class InteractableManager : MonoBehaviour {
     }
 
     public void Interact() {
-        if (parentAnimator != null) {
-            this.parentAnimator.SetTrigger("Interact");
-        }
-        if (parentManager != null) {
-            parentManager.Invoke("Interact", 0f);
+        if (Time.timeScale > 0f) { 
+            if (parentAnimator != null) {
+                this.parentAnimator.SetTrigger("Interact");
+            }
+            if (parentManager != null) {
+                parentManager.Invoke("Interact", 0f);
+            }
         }
     }
 }
