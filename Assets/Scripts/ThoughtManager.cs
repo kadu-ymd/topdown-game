@@ -5,6 +5,8 @@ public class ThoughtManager : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private static ThoughtManager thoughtManagerInstance;
     private static TMP_Text thoughtTextTMP;
+    private static AudioSource audioSource;
+    public AudioClip thoughtSound;
 
     void Awake() {
         if (thoughtManagerInstance == null) thoughtManagerInstance = this;
@@ -19,6 +21,7 @@ public class ThoughtManager : MonoBehaviour {
         }
         if (thoughtTextTMP == null)  Debug.LogError("Thought Text TMP not found. Please ensure it is named 'ThoughtText' in the scene.");
         gameObject.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -32,6 +35,7 @@ public class ThoughtManager : MonoBehaviour {
         thoughtTextTMP.text = thoughtText;
         Time.timeScale = 0f;
         PlayerPrefs.SetString("CurrentUI", "Thought");
+        audioSource.PlayOneShot(thoughtManagerInstance.thoughtSound);
     }
 
     public void HideThought() {
