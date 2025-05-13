@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         // Para o personagem começar de frente
         animator.SetFloat("LastHorizontal", 0f);
         animator.SetFloat("LastVertical", -1f);
+        animator.SetBool("IsHit", false);
     }
 
     // Update is called once per frame
@@ -81,6 +82,12 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetBool("IsShooting", false);
                 }
             }
+
+            if (Input.GetKeyDown(KeyCode.E) && !animator.GetBool("IsHit"))
+            {
+                animator.SetBool("IsHit", true);
+                StartCoroutine(ResetHitFlag(0.25f));
+            }
         }
         else
         {
@@ -131,5 +138,12 @@ public class PlayerMovement : MonoBehaviour
         Shoot();
         animator.SetBool("IsShooting", false);
     }
+
+    System.Collections.IEnumerator ResetHitFlag(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        animator.SetBool("IsHit", false);
+    }
+
     
 }
