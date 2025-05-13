@@ -48,7 +48,7 @@ public class DoorManager : MonoBehaviour {
                 if (openAttempts >= unlockWithOpenAttempts) {
                     this.isLocked = false;
                     this.animator.SetBool("isLocked", false);
-                }
+                } 
             } else if (!string.IsNullOrEmpty(unlockerItemName)) {
                 if (PlayerPrefs.GetInt(unlockerItemName) == 1) {
                     this.isLocked = false;
@@ -72,4 +72,9 @@ public class DoorManager : MonoBehaviour {
             }
         }
     }
+
+    public void PlayLockedSound() {
+        PlaySound(closeSound);
+    }
+
 }
