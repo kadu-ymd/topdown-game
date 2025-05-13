@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class EnemyMoviment : MonoBehaviour
 {
+    private AudioSource audioSource;
+    public float maxAttention = 2f;
+
     public float atention_level;
     private bool stalk;
     public float speed;
@@ -67,6 +70,7 @@ public class EnemyMoviment : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         fieldOfView = GetComponent<FieldOfView>();
+        audioSource = GetComponent<AudioSource>();
         initialPosition = rb.position;
     }
 
@@ -118,6 +122,19 @@ public class EnemyMoviment : MonoBehaviour
         if (atention_level <= 0)
         {
             stalk = false;
+        }
+        
+        float volumePercent = Mathf.Clamp01(atention_level / maxAttention);
+        audioSource.volume = volumePercent;
+
+        // Controle de play/stop automático
+        if (volumePercent > 0f && !audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+        else if (volumePercent <= 0f && audioSource.isPlaying)
+        {
+            audioSource.Stop();
         }
     }
 }
