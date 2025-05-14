@@ -1479,6 +1479,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -4632,10 +4658,10 @@ TextureImporter:
       name: 19_Hospital_48x48_143
       rect:
         serializedVersion: 2
-        x: 104
-        y: 3791
-        width: 83
-        height: 47
+        x: 105
+        y: 3792
+        width: 81
+        height: 45
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6618,7 +6644,7 @@ TextureImporter:
         height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 8, y: 22, z: 7, w: 5}
       customData: 
       outline: []
       physicsShape: []
@@ -10773,7 +10799,7 @@ TextureImporter:
         x: 536
         y: 422
         width: 77
-        height: 203
+        height: 57
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11696,7 +11722,7 @@ TextureImporter:
         serializedVersion: 2
         x: 145
         y: 4755
-        width: 47
+        width: 48
         height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -12272,6 +12298,7 @@ TextureImporter:
       19_Hospital_48x48_469: -200056404
       19_Hospital_48x48_47: 884200885451927698
       19_Hospital_48x48_470: 1349296061
+      19_Hospital_48x48_471: 55458176
       19_Hospital_48x48_48: -3309521736633990538
       19_Hospital_48x48_49: -7418206090354047194
       19_Hospital_48x48_5: 2091434419290351826
