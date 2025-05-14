@@ -14,6 +14,8 @@ public class PhaseInit : MonoBehaviour {
     public List<string> currentRequiredPlayerItems = new List<string>();
     public int currentRequiredBookPages = 0;
 
+    public MonoBehaviour runOnInit;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake() {
         if (!Initialized) {
@@ -31,6 +33,12 @@ public class PhaseInit : MonoBehaviour {
             }
             PlayerPrefs.SetString("CurrentUI", "None");
             Initialized = true;
+        }
+    }
+
+    void Start() {
+        if (runOnInit != null) {
+            runOnInit.Invoke("Run", 0);
         }
     }
 }
