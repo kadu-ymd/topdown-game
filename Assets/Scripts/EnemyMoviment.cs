@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyMoviment : MonoBehaviour
 {
     private AudioSource audioSource;
     public float maxAttention = 2f;
+    NavMeshAgent agent;
 
     public float atention_level;
     private bool stalk;
@@ -20,10 +22,13 @@ public class EnemyMoviment : MonoBehaviour
         if (target == "Player")
         {
             movement = (PlayerMovement.rb.position - rb.position).normalized;
+            agent.SetDestination(PlayerMovement.rb.position);
+            //rb.MovePosition(rb.position + movement*Time.fixedDeltaTime*speed);
         }
         else if (target == "Inicio")
         {
             movement = (initialPosition - rb.position).normalized;
+            agent.SetDestination(initialPosition);
         }
         float Vx = movement.x;
         float Vy = movement.y;
@@ -55,7 +60,7 @@ public class EnemyMoviment : MonoBehaviour
             }
         }
 
-        rb.MovePosition(rb.position + movement*Time.fixedDeltaTime*speed);
+        //rb.MovePosition(rb.position + movement*Time.fixedDeltaTime*speed);
 
         if (target == "Inicio" && Mathf.Abs(Vector2.Distance(initialPosition, rb.position)) < 0.1f)
         {
@@ -67,6 +72,10 @@ public class EnemyMoviment : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         fieldOfView = GetComponentInChildren<FieldOfView>();
