@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PrisonerController
+  m_Controller: {fileID: 9100000, guid: 14d7d8a6f43a89e4889c6f393006a30e, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 70b73c555609b364eac94e71162d9134, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ca2f435c827de8e4f92841944ad17a95, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9eb561bbf69ed4b499392aec6efa493e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9cad22f7056689640b6bc8dff1c1d02b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3f3abe55433d89a46ad82cc547e0e562, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 59b1d258855c1234fa208c638c2df3ea, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 11e21b6785990b841a7ba94907cd310f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 82192dc24cee17c4f997d7bf2662e781, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8d76391c9dd655c4c821524334a492cc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 50bb4adfbbb0b89488abe43a4fa12604, type: 2}
