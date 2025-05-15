@@ -879,6 +879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 345404454}
   - component: {fileID: 345404455}
+  - component: {fileID: 345404456}
   m_Layer: 0
   m_Name: Chairs 3
   m_TagString: Untagged
@@ -951,6 +952,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.2, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &345404456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345404453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!114 &350847702 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -8157401198293640072, guid: ecc744ccfc7446a428b8b1b878400288, type: 3}
@@ -1298,6 +1315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 516699166}
   - component: {fileID: 516699167}
+  - component: {fileID: 516699168}
   m_Layer: 0
   m_Name: Chairs 1
   m_TagString: Untagged
@@ -1370,6 +1388,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.2}
   m_EdgeRadius: 0
+--- !u!114 &516699168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516699165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2289,7 +2323,7 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_UseGeometry: 0
+  m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
@@ -2875,6 +2909,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1025193859}
   - component: {fileID: 1025193860}
+  - component: {fileID: 1025193861}
   m_Layer: 0
   m_Name: Counter
   m_TagString: Untagged
@@ -2958,6 +2993,22 @@ PolygonCollider2D:
       - {x: 1.3123817, y: -0.5597992}
       - {x: 1.3155603, y: -0.36464292}
   m_UseDelaunayMesh: 0
+--- !u!114 &1025193861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025193858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1047027452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3653,7 +3704,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1215943539}
   - component: {fileID: 1215943540}
-  - component: {fileID: 1215943541}
   m_Layer: 0
   m_Name: Blue Chair 2
   m_TagString: Untagged
@@ -3731,22 +3781,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1215943541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215943538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &1220519561
 GameObject:
   m_ObjectHideFlags: 0
@@ -3895,6 +3929,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1323717304}
   - component: {fileID: 1323717305}
+  - component: {fileID: 1323717306}
   m_Layer: 0
   m_Name: Chairs 2
   m_TagString: Untagged
@@ -3967,6 +4002,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.2}
   m_EdgeRadius: 0
+--- !u!114 &1323717306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323717303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!4 &1363020261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9216257637999401251, guid: 167a49f6b264fa941af8ba2dcb4b1d61, type: 3}
@@ -5029,7 +5080,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1591488039}
   - component: {fileID: 1591488040}
-  - component: {fileID: 1591488041}
   m_Layer: 0
   m_Name: Blue Chair 3
   m_TagString: Untagged
@@ -5107,22 +5157,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1591488041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591488038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1 &1596604354
 GameObject:
   m_ObjectHideFlags: 0
@@ -6523,7 +6557,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1687826623}
   - component: {fileID: 1687826624}
-  - component: {fileID: 1687826625}
   m_Layer: 0
   m_Name: Blue Chair 4
   m_TagString: Untagged
@@ -6601,22 +6634,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1687826625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687826622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1001 &1776643923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9389,7 +9406,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2068611745}
   - component: {fileID: 2068611746}
-  - component: {fileID: 2068611747}
   m_Layer: 0
   m_Name: Blue Chair 1
   m_TagString: Untagged
@@ -9467,22 +9483,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2068611747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2068611744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1001 &2586354238520055294
 PrefabInstance:
   m_ObjectHideFlags: 0
