@@ -35,7 +35,7 @@ public class BulletController : MonoBehaviour
             Destroy(other.gameObject); // Destrói o inimigo
             Destroy(gameObject); // Destrói a bala
         }
-        else if (!other.CompareTag("Player"))
+        else if (other.gameObject.layer == 0) // default 
         {
             Destroy(gameObject); // Destrói a bala ao atingir outros objetos
         }
