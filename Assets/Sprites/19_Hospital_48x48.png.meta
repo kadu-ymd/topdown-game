@@ -11148,10 +11148,10 @@ TextureImporter:
       name: 19_Hospital_48x48_438
       rect:
         serializedVersion: 2
-        x: 347
-        y: 434
-        width: 68
-        height: 44
+        x: 348
+        y: 436
+        width: 67
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11324,10 +11324,10 @@ TextureImporter:
       name: 19_Hospital_48x48_446
       rect:
         serializedVersion: 2
-        x: 347
-        y: 386
-        width: 68
-        height: 47
+        x: 348
+        y: 387
+        width: 67
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11412,10 +11412,10 @@ TextureImporter:
       name: 19_Hospital_48x48_450
       rect:
         serializedVersion: 2
-        x: 347
+        x: 348
         y: 338
-        width: 68
-        height: 47
+        width: 67
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
