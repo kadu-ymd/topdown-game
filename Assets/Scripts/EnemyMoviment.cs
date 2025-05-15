@@ -69,7 +69,7 @@ public class EnemyMoviment : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        fieldOfView = GetComponent<FieldOfView>();
+        fieldOfView = GetComponentInChildren<FieldOfView>();
         audioSource = GetComponent<AudioSource>();
         initialPosition = rb.position;
     }
