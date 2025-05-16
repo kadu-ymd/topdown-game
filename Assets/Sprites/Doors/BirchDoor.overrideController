@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BirchDoor
+  m_Controller: {fileID: 9100000, guid: 07da33e86846fc34a813e99ac42a477b, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 7ffa8d0aa6d00064994eee527f23bfce, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a20809eb42215c34a9fa007d632f1615, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e42c7f2e73446e442b5e19a4116a048c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3e5e900f8c6a57d4583e1e8428a68ccf, type: 2}
