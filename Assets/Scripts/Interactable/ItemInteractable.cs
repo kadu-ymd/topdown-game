@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class InteractableItem : MonoBehaviour {
+public class ItemInteractable : MonoBehaviour {
     public ItemDisplayManager itemDisplay;
     public string collectableItemName;
     public bool destroyOnCollect = false;

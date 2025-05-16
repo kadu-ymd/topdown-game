@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale > 0.0)
+        if (PlayerPrefs.GetString("CurrentUI") == "None")
         {
             if (!animator.GetBool("IsShooting"))
             {
@@ -81,12 +81,6 @@ public class PlayerMovement : MonoBehaviour
                 {
                     animator.SetBool("IsShooting", false);
                 }
-            }
-
-            if (Input.GetKeyDown(KeyCode.E) && !animator.GetBool("IsHit"))
-            {
-                animator.SetBool("IsHit", true);
-                StartCoroutine(ResetHitFlag(0.25f));
             }
         }
         else
@@ -138,12 +132,4 @@ public class PlayerMovement : MonoBehaviour
         Shoot();
         animator.SetBool("IsShooting", false);
     }
-
-    System.Collections.IEnumerator ResetHitFlag(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        animator.SetBool("IsHit", false);
-    }
-
-    
 }

@@ -39,23 +39,27 @@ public class ThoughtManager : MonoBehaviour {
     }
 
     void Update() {
-        if (PlayerPrefs.GetString("CurrentUI") == "Thought")
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            if (!skip) skip = true;
-            else HideThought();
-
-        } else if (Input.anyKeyDown) {
-            StartCoroutine(StopThought());
+        if (Input.anyKeyDown) {
+            if (PlayerPrefs.GetString("CurrentUI") == "Thought") {
+                if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E)) {
+                    if (!skip) skip = true;
+                    else HideThought();
+                } else {
+                    StartCoroutine(StopThought());
+                }
+            }
         }
     }
 
     public static void ShowThought(string thoughtText) {
-        thinking = true;
-        thoughtManagerInstance.gameObject.SetActive(true);
-        thoughtTextTMP.text = "";
-        PlayerPrefs.SetString("CurrentUI", "Thought");
-        audioSource.PlayOneShot(thoughtManagerInstance.thoughtSound);
-        thoughtManagerInstance.StartCoroutine(thoughtManagerInstance.RevealText(thoughtText));
+        if (!thinking) {
+            thinking = true;
+            thoughtManagerInstance.gameObject.SetActive(true);
+            thoughtTextTMP.text = "";
+            PlayerPrefs.SetString("CurrentUI", "Thought");
+            audioSource.PlayOneShot(thoughtManagerInstance.thoughtSound);
+            thoughtManagerInstance.StartCoroutine(thoughtManagerInstance.RevealText(thoughtText));
+        }
     }
 
     public void HideThought() {

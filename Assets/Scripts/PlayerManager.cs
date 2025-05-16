@@ -5,19 +5,20 @@ using UnityEngine.Rendering.Universal;
 using System.Collections;
 
 public class PlayerManager : MonoBehaviour {
-    public SpriteRenderer EkeySpriteRenderer;
-    
+    private SpriteRenderer EkeySpriteRenderer;
+    private GameObject interactableCloser;
     private Camera mainCamera;
     private Vector3 lastPlayerPosition;
-
     private Volume globalVolume;
     private ColorAdjustments colorAdjust;
     private float originalExposure;
     private bool originalExposureActive;
+    private Animator animator;
 
     void Start() {
-        this.EkeySpriteRenderer = transform.Find("E key").GetComponent<SpriteRenderer>();
-        this.EkeySpriteRenderer.enabled = false;
+        EkeySpriteRenderer = transform.Find("E key").GetComponent<SpriteRenderer>();
+        EkeySpriteRenderer.enabled = false;
+        animator = GetComponent<Animator>();
 
         mainCamera = Camera.main;
         globalVolume  = GameObject.Find("Global Volume").GetComponent<Volume>();
@@ -25,27 +26,49 @@ public class PlayerManager : MonoBehaviour {
         originalExposure = colorAdjust.postExposure.value;
         originalExposureActive = colorAdjust.active;
     }
-
-    private void OnTriggerStay2D(Collider2D gameObject) {
-        if (gameObject.CompareTag("Interactable")) {
-            this.EkeySpriteRenderer.enabled = true;
+    
+    void Update() {
+        if (interactableCloser != null && Input.GetKeyDown(KeyCode.E)) {
+            if (PlayerPrefs.GetString("CurrentUI") == "None") {
+                animator.SetBool("IsHit", true);
+                StartCoroutine(ResetHitFlag(0.25f));
+                interactableCloser.GetComponent<InteractableManager>().Interact();
+                EkeySpriteRenderer.enabled = false;
+            }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D gameObject) {
-        if (gameObject.CompareTag("Interactable")) {
-            this.EkeySpriteRenderer.enabled = false;
+    private void OnTriggerStay2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Interactable"))
+        {
+            EkeySpriteRenderer.enabled = true;
+            interactableCloser = collider.gameObject;
+
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D gameObject) {
-        if (gameObject.gameObject.CompareTag("Enemy")) {
+    private void OnTriggerExit2D(Collider2D collider) {
+        if (collider.CompareTag("Interactable") && interactableCloser == collider.gameObject) {
+            EkeySpriteRenderer.enabled = false;
+            interactableCloser = null;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("Enemy")) {
             lastPlayerPosition = transform.position;
             StartCoroutine(HandlePlayerDefeat());
         }
     }
+    
+    IEnumerator ResetHitFlag(float delay) {
+        yield return new WaitForSeconds(delay);
+        animator.SetBool("IsHit", false);
+    }
 
-    private IEnumerator HandlePlayerDefeat() {
+    private IEnumerator HandlePlayerDefeat()
+    {
         Time.timeScale = 0f;
 
         lastPlayerPosition.z = mainCamera.transform.position.z;
@@ -59,7 +82,8 @@ public class PlayerManager : MonoBehaviour {
         float shakeFreq = 20f;
         float elapsed = 0f;
 
-        while (elapsed < shakeDuration) {
+        while (elapsed < shakeDuration)
+        {
             elapsed += Time.unscaledDeltaTime;
             float offsetX = Mathf.Sin(Time.unscaledTime * shakeFreq) * shakeMagnitude;
             float offsetY = Mathf.Cos(Time.unscaledTime * shakeFreq) * shakeMagnitude;
@@ -91,10 +115,5 @@ public class PlayerManager : MonoBehaviour {
         }
 
         colorAdjust.postExposure.value = targetExposure;
-    }
-
-
-
-    void Update() {
     }
 }
