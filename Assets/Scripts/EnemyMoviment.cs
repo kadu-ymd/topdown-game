@@ -3,22 +3,22 @@ using UnityEngine.AI;
 
 public class EnemyMoviment : MonoBehaviour
 {
-    private AudioSource audioSource;
+    protected AudioSource audioSource;
     public float maxAttention = 2f;
-    NavMeshAgent agent;
+    protected NavMeshAgent agent;
 
     public float atention_level;
-    private bool stalk;
-    private Vector2 initialPosition;
-    private string target;
+    protected bool stalk;
+    protected Vector2 initialPosition;
+    protected string target;
 
     public float speed;
-    private Rigidbody2D rb;
-    private Animator animator;
-    private FieldOfView fieldOfView;
+    protected Rigidbody2D rb;
+    protected Animator animator;
+    protected FieldOfView fieldOfView;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public virtual void Start()
     {
         // Navigator
         agent = GetComponent<NavMeshAgent>();
@@ -32,28 +32,35 @@ public class EnemyMoviment : MonoBehaviour
         initialPosition = rb.position;
     }
 
-    void FixedUpdate() // Atualização do animator e target
+    public virtual void FixedUpdate() // Atualização do animator e target
     {
         animator.SetBool("Right", false);
         animator.SetBool("Left", false);
         animator.SetBool("Up", false);
         animator.SetBool("Down", false);
 
-        if (stalk) 
+        // State Machine
+        if (target == "Player")
         {
-            animator.SetBool("IsWalking", true);
-            target = "Player";
+            moveToPlayer();
+            if (!stalk)
+            {
+                target = "Inicio";
+            }
         }
-        else if (!stalk && target == "Player")
+        else if (target == "Inicio")
         {
-            target = "Inicio";
+            moveToStart();
+            if (Mathf.Abs(Vector2.Distance(initialPosition, rb.position)) < 0.1f)
+            {
+                target = "Nenhum";
+            }
         }
         else if (target == "Nenhum")
         {
             animator.SetBool("IsWalking", false);
             fieldOfView.angleRotation = 0f;
         }
-        moveToTarget();
     }
 
     // Update is called once per frame
@@ -71,6 +78,8 @@ public class EnemyMoviment : MonoBehaviour
         if (atention_level >= 2) 
         {
             stalk = true;
+            target = "Player";
+            animator.SetBool("IsWalking", true);
         }
         if (atention_level <= 0)
         {
@@ -80,37 +89,32 @@ public class EnemyMoviment : MonoBehaviour
         playAudio();
     }
 
-    private void LateUpdate()
+    protected void LateUpdate()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
     }
 
-    void moveToTarget()
+    protected void moveToPlayer()
     {
-        Vector2 movement = new Vector2(0, 0);
-        if (target == "Player")
-        {
-            movement = (PlayerMovement.rb.position - rb.position).normalized;
-            agent.SetDestination(PlayerMovement.rb.position);
-            //rb.MovePosition(rb.position + movement*Time.fixedDeltaTime*speed);
-        }
-        else if (target == "Inicio")
-        {
-            movement = (initialPosition - rb.position).normalized;
-            agent.SetDestination(initialPosition);
-        }
-
-        if (target == "Inicio" && Mathf.Abs(Vector2.Distance(initialPosition, rb.position)) < 0.1f)
-        {
-            target = "Nenhum";
-        }
+        Vector2 movement = (PlayerMovement.rb.position - rb.position).normalized;
+        agent.SetDestination(PlayerMovement.rb.position);
 
         float Vx = movement.x;
         float Vy = movement.y;
         SetFlagsAnimation(Vx, Vy);
     }
 
-    void SetFlagsAnimation(float Vx, float Vy)
+    protected void moveToStart()
+    {
+        Vector2 movement = (initialPosition - rb.position).normalized;
+        agent.SetDestination(initialPosition);
+
+        float Vx = movement.x;
+        float Vy = movement.y;
+        SetFlagsAnimation(Vx, Vy);
+    }
+
+    protected void SetFlagsAnimation(float Vx, float Vy)
     {
         if (Mathf.Abs(Vx) > Mathf.Abs(Vy)) 
         {
