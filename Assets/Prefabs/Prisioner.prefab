@@ -875,6 +875,7 @@ MonoBehaviour:
   maxAttention: 2
   atention_level: -0.0024489658
   speed: 2
+  DeadBody: {fileID: 8051585258426217967, guid: e8210b00c71931048ac51606c1674f56, type: 3}
 --- !u!82 &6283781710358670200
 AudioSource:
   m_ObjectHideFlags: 0

@@ -17,6 +17,8 @@ public class EnemyMoviment : MonoBehaviour
     protected Animator animator;
     protected FieldOfView fieldOfView;
 
+    public GameObject DeadBody;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public virtual void Start()
     {
@@ -83,7 +85,6 @@ public class EnemyMoviment : MonoBehaviour
             }
             stalk = true;
             target = "Player";
-            Debug.Log("Stalk");
         }
         if (atention_level <= 0)
         {
@@ -102,6 +103,15 @@ public class EnemyMoviment : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) {
             target = "Hit";
+        }
+    }
+
+    protected void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bullet"))
+        {
+            Debug.Log("Bullet");
+            SwaptoDead();
         }
     }
 
@@ -163,6 +173,17 @@ public class EnemyMoviment : MonoBehaviour
                     fieldOfView.angleRotation = 0f;
                 }
         }
+    }
+
+    protected void SwaptoDead()
+    {
+        Vector3 currentPosition = transform.position;
+
+        // Instancia o novo inimigo na mesma posição e rotação
+        Instantiate(DeadBody, currentPosition, DeadBody.transform.rotation);
+
+        // Destroi o inimigo atual
+        Destroy(gameObject);
     }
 
     void playAudio() {     
