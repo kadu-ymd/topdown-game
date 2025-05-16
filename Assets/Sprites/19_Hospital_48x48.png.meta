@@ -1455,7 +1455,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -1512,10 +1512,10 @@ TextureImporter:
       name: 19_Hospital_48x48_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 5204
-        width: 89
-        height: 56
+        x: 3
+        y: 5205
+        width: 87
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1534,10 +1534,10 @@ TextureImporter:
       name: 19_Hospital_48x48_1
       rect:
         serializedVersion: 2
-        x: 98
-        y: 5201
-        width: 89
-        height: 59
+        x: 99
+        y: 5202
+        width: 87
+        height: 57
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1798,10 +1798,10 @@ TextureImporter:
       name: 19_Hospital_48x48_13
       rect:
         serializedVersion: 2
-        x: 47
-        y: 4991
-        width: 47
-        height: 29
+        x: 48
+        y: 4992
+        width: 45
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1820,10 +1820,10 @@ TextureImporter:
       name: 19_Hospital_48x48_14
       rect:
         serializedVersion: 2
-        x: 95
-        y: 4991
-        width: 47
-        height: 29
+        x: 96
+        y: 4992
+        width: 45
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1865,9 +1865,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4934
-        width: 46
-        height: 29
+        y: 4935
+        width: 45
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1886,10 +1886,10 @@ TextureImporter:
       name: 19_Hospital_48x48_17
       rect:
         serializedVersion: 2
-        x: 47
-        y: 4943
-        width: 47
-        height: 29
+        x: 48
+        y: 4944
+        width: 45
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1908,10 +1908,10 @@ TextureImporter:
       name: 19_Hospital_48x48_18
       rect:
         serializedVersion: 2
-        x: 95
-        y: 4943
-        width: 47
-        height: 29
+        x: 96
+        y: 4944
+        width: 45
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1930,10 +1930,10 @@ TextureImporter:
       name: 19_Hospital_48x48_19
       rect:
         serializedVersion: 2
-        x: 149
-        y: 4880
-        width: 89
-        height: 104
+        x: 150
+        y: 4881
+        width: 87
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1952,10 +1952,10 @@ TextureImporter:
       name: 19_Hospital_48x48_20
       rect:
         serializedVersion: 2
-        x: 245
-        y: 4880
-        width: 89
-        height: 104
+        x: 246
+        y: 4881
+        width: 87
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1974,10 +1974,10 @@ TextureImporter:
       name: 19_Hospital_48x48_21
       rect:
         serializedVersion: 2
-        x: 341
-        y: 4880
-        width: 89
-        height: 104
+        x: 342
+        y: 4881
+        width: 87
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1996,10 +1996,10 @@ TextureImporter:
       name: 19_Hospital_48x48_22
       rect:
         serializedVersion: 2
-        x: 437
-        y: 4880
-        width: 88
-        height: 104
+        x: 438
+        y: 4881
+        width: 87
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2018,10 +2018,10 @@ TextureImporter:
       name: 19_Hospital_48x48_23
       rect:
         serializedVersion: 2
-        x: 527
-        y: 4880
-        width: 47
-        height: 80
+        x: 528
+        y: 4881
+        width: 45
+        height: 78
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2040,10 +2040,10 @@ TextureImporter:
       name: 19_Hospital_48x48_24
       rect:
         serializedVersion: 2
-        x: 575
-        y: 4880
-        width: 47
-        height: 80
+        x: 576
+        y: 4881
+        width: 45
+        height: 78
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2062,10 +2062,10 @@ TextureImporter:
       name: 19_Hospital_48x48_25
       rect:
         serializedVersion: 2
-        x: 623
-        y: 4880
-        width: 47
-        height: 80
+        x: 624
+        y: 4881
+        width: 45
+        height: 78
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2084,10 +2084,10 @@ TextureImporter:
       name: 19_Hospital_48x48_26
       rect:
         serializedVersion: 2
-        x: 671
-        y: 4880
-        width: 47
-        height: 80
+        x: 672
+        y: 4881
+        width: 45
+        height: 78
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2106,10 +2106,10 @@ TextureImporter:
       name: 19_Hospital_48x48_27
       rect:
         serializedVersion: 2
-        x: 719
-        y: 4880
-        width: 47
-        height: 80
+        x: 720
+        y: 4881
+        width: 45
+        height: 78
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2128,10 +2128,10 @@ TextureImporter:
       name: 19_Hospital_48x48_28
       rect:
         serializedVersion: 2
-        x: 47
-        y: 4895
-        width: 47
-        height: 29
+        x: 48
+        y: 4896
+        width: 45
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2151,9 +2151,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4838
-        width: 46
-        height: 29
+        y: 4839
+        width: 45
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2172,10 +2172,10 @@ TextureImporter:
       name: 19_Hospital_48x48_30
       rect:
         serializedVersion: 2
-        x: 47
-        y: 4838
-        width: 47
-        height: 29
+        x: 48
+        y: 4839
+        width: 45
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2216,10 +2216,10 @@ TextureImporter:
       name: 19_Hospital_48x48_32
       rect:
         serializedVersion: 2
-        x: 482
-        y: 4709
-        width: 29
-        height: 131
+        x: 483
+        y: 4710
+        width: 27
+        height: 129
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2238,10 +2238,10 @@ TextureImporter:
       name: 19_Hospital_48x48_33
       rect:
         serializedVersion: 2
-        x: 548
-        y: 4709
-        width: 29
-        height: 131
+        x: 549
+        y: 4710
+        width: 27
+        height: 129
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2260,10 +2260,10 @@ TextureImporter:
       name: 19_Hospital_48x48_34
       rect:
         serializedVersion: 2
-        x: 581
-        y: 4736
-        width: 89
-        height: 104
+        x: 582
+        y: 4737
+        width: 87
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2283,9 +2283,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4742
-        width: 46
-        height: 29
+        y: 4743
+        width: 45
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2304,10 +2304,10 @@ TextureImporter:
       name: 19_Hospital_48x48_36
       rect:
         serializedVersion: 2
-        x: 683
-        y: 4559
-        width: 74
-        height: 242
+        x: 684
+        y: 4560
+        width: 72
+        height: 240
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2524,10 +2524,10 @@ TextureImporter:
       name: 19_Hospital_48x48_46
       rect:
         serializedVersion: 2
-        x: 587
-        y: 4574
-        width: 77
-        height: 104
+        x: 588
+        y: 4575
+        width: 75
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2854,10 +2854,10 @@ TextureImporter:
       name: 19_Hospital_48x48_61
       rect:
         serializedVersion: 2
-        x: 14
-        y: 4415
-        width: 35
-        height: 38
+        x: 15
+        y: 4416
+        width: 33
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2876,10 +2876,10 @@ TextureImporter:
       name: 19_Hospital_48x48_62
       rect:
         serializedVersion: 2
-        x: 65
-        y: 4397
-        width: 62
-        height: 56
+        x: 66
+        y: 4398
+        width: 60
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2898,10 +2898,10 @@ TextureImporter:
       name: 19_Hospital_48x48_63
       rect:
         serializedVersion: 2
-        x: 143
-        y: 4415
-        width: 41
-        height: 41
+        x: 144
+        y: 4416
+        width: 39
+        height: 39
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2920,10 +2920,10 @@ TextureImporter:
       name: 19_Hospital_48x48_64
       rect:
         serializedVersion: 2
-        x: 197
-        y: 4379
-        width: 38
-        height: 47
+        x: 198
+        y: 4380
+        width: 36
+        height: 45
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3140,10 +3140,10 @@ TextureImporter:
       name: 19_Hospital_48x48_74
       rect:
         serializedVersion: 2
-        x: 5
-        y: 4325
-        width: 44
-        height: 80
+        x: 6
+        y: 4368
+        width: 42
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3206,10 +3206,10 @@ TextureImporter:
       name: 19_Hospital_48x48_77
       rect:
         serializedVersion: 2
-        x: 143
-        y: 4325
-        width: 41
-        height: 80
+        x: 144
+        y: 4368
+        width: 39
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3250,10 +3250,10 @@ TextureImporter:
       name: 19_Hospital_48x48_79
       rect:
         serializedVersion: 2
-        x: 251
-        y: 4322
-        width: 35
-        height: 65
+        x: 252
+        y: 4323
+        width: 33
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3272,10 +3272,10 @@ TextureImporter:
       name: 19_Hospital_48x48_80
       rect:
         serializedVersion: 2
-        x: 299
-        y: 4322
-        width: 35
-        height: 65
+        x: 300
+        y: 4323
+        width: 33
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3295,9 +3295,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 339
-        y: 4328
-        width: 44
-        height: 65
+        y: 4329
+        width: 42
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3316,10 +3316,10 @@ TextureImporter:
       name: 19_Hospital_48x48_82
       rect:
         serializedVersion: 2
-        x: 386
-        y: 4322
-        width: 35
-        height: 65
+        x: 387
+        y: 4323
+        width: 33
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3338,10 +3338,10 @@ TextureImporter:
       name: 19_Hospital_48x48_83
       rect:
         serializedVersion: 2
-        x: 434
-        y: 4322
-        width: 35
-        height: 65
+        x: 435
+        y: 4323
+        width: 33
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4394,10 +4394,10 @@ TextureImporter:
       name: 19_Hospital_48x48_131
       rect:
         serializedVersion: 2
-        x: 8
-        y: 3794
-        width: 23
-        height: 164
+        x: 9
+        y: 3795
+        width: 21
+        height: 162
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4416,10 +4416,10 @@ TextureImporter:
       name: 19_Hospital_48x48_132
       rect:
         serializedVersion: 2
-        x: 59
-        y: 3794
-        width: 23
-        height: 164
+        x: 60
+        y: 3795
+        width: 21
+        height: 162
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4570,10 +4570,10 @@ TextureImporter:
       name: 19_Hospital_48x48_139
       rect:
         serializedVersion: 2
-        x: 623
-        y: 3773
-        width: 44
-        height: 164
+        x: 624
+        y: 3774
+        width: 42
+        height: 162
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4944,10 +4944,10 @@ TextureImporter:
       name: 19_Hospital_48x48_156
       rect:
         serializedVersion: 2
-        x: 551
-        y: 3749
-        width: 74
-        height: 53
+        x: 552
+        y: 3750
+        width: 72
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5428,10 +5428,10 @@ TextureImporter:
       name: 19_Hospital_48x48_178
       rect:
         serializedVersion: 2
-        x: 527
-        y: 3455
-        width: 92
-        height: 50
+        x: 528
+        y: 3456
+        width: 90
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5450,10 +5450,10 @@ TextureImporter:
       name: 19_Hospital_48x48_179
       rect:
         serializedVersion: 2
-        x: 623
-        y: 3455
-        width: 92
-        height: 50
+        x: 624
+        y: 3456
+        width: 90
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5530,28 +5530,6 @@ TextureImporter:
       bones: []
       spriteID: 90e42b99e205ce760800000000000000
       internalID: 7488448441487609353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 19_Hospital_48x48_183
-      rect:
-        serializedVersion: 2
-        x: 719
-        y: 3350
-        width: 49
-        height: 77
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9f9994d3e249d4ba0800000000000000
-      internalID: -6103058993699513863
       vertices: []
       indices: 
       edges: []
@@ -5648,10 +5626,10 @@ TextureImporter:
       name: 19_Hospital_48x48_188
       rect:
         serializedVersion: 2
-        x: 554
-        y: 3359
-        width: 35
-        height: 29
+        x: 555
+        y: 3360
+        width: 33
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5890,10 +5868,10 @@ TextureImporter:
       name: 19_Hospital_48x48_199
       rect:
         serializedVersion: 2
-        x: 2
-        y: 3188
-        width: 44
-        height: 53
+        x: 3
+        y: 3189
+        width: 42
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5912,10 +5890,10 @@ TextureImporter:
       name: 19_Hospital_48x48_200
       rect:
         serializedVersion: 2
-        x: 50
-        y: 3188
-        width: 44
-        height: 53
+        x: 51
+        y: 3189
+        width: 42
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6168,28 +6146,6 @@ TextureImporter:
       bones: []
       spriteID: 408a56920c76db880800000000000000
       internalID: -8593598438927128572
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 19_Hospital_48x48_212
-      rect:
-        serializedVersion: 2
-        x: 689
-        y: 3038
-        width: 17
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98da9beff5835a6b0800000000000000
-      internalID: -5285756602702778999
       vertices: []
       indices: 
       edges: []
@@ -7694,10 +7650,10 @@ TextureImporter:
       name: 19_Hospital_48x48_281
       rect:
         serializedVersion: 2
-        x: 146
-        y: 1901
-        width: 89
-        height: 89
+        x: 147
+        y: 1902
+        width: 87
+        height: 87
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7716,10 +7672,10 @@ TextureImporter:
       name: 19_Hospital_48x48_282
       rect:
         serializedVersion: 2
-        x: 239
-        y: 1901
-        width: 47
-        height: 89
+        x: 240
+        y: 1902
+        width: 45
+        height: 87
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7782,10 +7738,10 @@ TextureImporter:
       name: 19_Hospital_48x48_285
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1757
-        width: 89
-        height: 89
+        x: 3
+        y: 1758
+        width: 87
+        height: 87
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7804,10 +7760,10 @@ TextureImporter:
       name: 19_Hospital_48x48_286
       rect:
         serializedVersion: 2
-        x: 95
-        y: 1757
-        width: 47
-        height: 89
+        x: 96
+        y: 1758
+        width: 45
+        height: 87
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8134,10 +8090,10 @@ TextureImporter:
       name: 19_Hospital_48x48_301
       rect:
         serializedVersion: 2
-        x: 11
-        y: 1595
-        width: 65
-        height: 83
+        x: 12
+        y: 1596
+        width: 63
+        height: 81
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -8156,10 +8112,10 @@ TextureImporter:
       name: 19_Hospital_48x48_302
       rect:
         serializedVersion: 2
-        x: 98
-        y: 1598
-        width: 56
-        height: 77
+        x: 99
+        y: 1599
+        width: 54
+        height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11676,9 +11632,9 @@ TextureImporter:
       name: 19_Hospital_48x48_462
       rect:
         serializedVersion: 2
-        x: 433
-        y: 4751
-        width: 47
+        x: 432
+        y: 4752
+        width: 48
         height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -11698,10 +11654,10 @@ TextureImporter:
       name: 19_Hospital_48x48_463
       rect:
         serializedVersion: 2
-        x: 193
-        y: 4751
-        width: 46
-        height: 76
+        x: 192
+        y: 4752
+        width: 48
+        height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11722,7 +11678,7 @@ TextureImporter:
         serializedVersion: 2
         x: 145
         y: 4755
-        width: 48
+        width: 47
         height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -11743,9 +11699,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 156
-        y: 4807
-        width: 29
-        height: 31
+        y: 4809
+        width: 27
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11764,9 +11720,9 @@ TextureImporter:
       name: 19_Hospital_48x48_466
       rect:
         serializedVersion: 2
-        x: 94
+        x: 96
         y: 4764
-        width: 50
+        width: 48
         height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -11786,10 +11742,10 @@ TextureImporter:
       name: 19_Hospital_48x48_467
       rect:
         serializedVersion: 2
-        x: 241
-        y: 4709
-        width: 40
-        height: 112
+        x: 240
+        y: 4710
+        width: 42
+        height: 111
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11808,10 +11764,10 @@ TextureImporter:
       name: 19_Hospital_48x48_468
       rect:
         serializedVersion: 2
-        x: 241
-        y: 4709
-        width: 146
-        height: 62
+        x: 240
+        y: 4710
+        width: 147
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11854,8 +11810,8 @@ TextureImporter:
         serializedVersion: 2
         x: 240
         y: 4710
-        width: 191
-        height: 61
+        width: 192
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11866,6 +11822,50 @@ TextureImporter:
       bones: []
       spriteID: d73cc84be7543cb489a2d5a4a395a57e
       internalID: 1349296061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_Hospital_48x48_183
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 3759
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf59626c4c5b7e45ac1c21481492fe8
+      internalID: -6103058993699513863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 19_Hospital_48x48_471
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 3774
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8204298c6d154c34f8dbbffc2deeeb62
+      internalID: 55458176
       vertices: []
       indices: 
       edges: []
