@@ -7,11 +7,13 @@ public class Password : MonoBehaviour
     [SerializeField] TextMeshProUGUI SecondDigit;
     [SerializeField] TextMeshProUGUI ThirdDigit;
     private int position;
+    private string answer;
+    private bool correct;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+     answer = "123";   
     }
 
     public int GetPressedNumber() 
@@ -24,6 +26,18 @@ public class Password : MonoBehaviour
             }
         }
         return -1;
+    }
+
+    public void testPassword()
+    {
+        string test =  ThirdDigit.text + SecondDigit.text + FirstDigit.text;
+        if (test == answer) {
+            Debug.Log("Correct");
+        }
+        else
+        {
+            Debug.Log("Wrong");
+        }
     }
 
     public void UpdatePassword(int position, string value)
@@ -52,6 +66,10 @@ public class Password : MonoBehaviour
         {
             position--;
             UpdatePassword(position, "");
+        }
+        else if (Input.GetKeyDown(KeyCode.Return) | Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            testPassword();
         }
     }
 }
