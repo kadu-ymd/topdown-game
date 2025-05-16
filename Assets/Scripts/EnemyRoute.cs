@@ -29,7 +29,11 @@ public class EnemyRoute : EnemyMoviment
     public override void FixedUpdate() // Atualização do animator e target
     {
         // State Machine
-        if (target == "Player")
+        if (target == "Hit")
+        {
+            animator.SetTrigger("Hit");
+        }
+        else if (target == "Player")
         {
             moveToPlayer();
             if (!stalk)

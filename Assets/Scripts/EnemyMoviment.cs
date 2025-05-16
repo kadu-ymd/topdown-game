@@ -35,7 +35,11 @@ public class EnemyMoviment : MonoBehaviour
     public virtual void FixedUpdate() // Atualização do animator e target
     {
         // State Machine
-        if (target == "Player")
+        if (target == "Hit")
+        {
+            animator.SetTrigger("Hit");
+        }
+        else if (target == "Player")
         {
             moveToPlayer();
             if (!stalk)
@@ -70,12 +74,16 @@ public class EnemyMoviment : MonoBehaviour
             atention_level -= Time.deltaTime;
         }
 
-        if (atention_level >= 2 && !animator.GetBool("IsWalking")) 
+        if (atention_level >= 2) 
         {
+            if (!animator.GetBool("IsWalking"))
+            {
+                animator.SetBool("IsWalking", true);
+                animator.SetTrigger("Down");
+            }
             stalk = true;
             target = "Player";
-            animator.SetBool("IsWalking", true);
-            animator.SetTrigger("Down");
+            Debug.Log("Stalk");
         }
         if (atention_level <= 0)
         {
@@ -88,6 +96,13 @@ public class EnemyMoviment : MonoBehaviour
     protected void LateUpdate()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
+    }
+
+    protected void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player")) {
+            target = "Hit";
+        }
     }
 
     protected void moveToPlayer()
