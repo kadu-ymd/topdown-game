@@ -385,7 +385,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Numpad_Dark_0: -5975344583946097229
+      Numpad_Dark_1: -9124950140199145953
+      Numpad_Dark_2: -6492902549964591676
+      Numpad_Dark_3: -7181741679103814149
+      Numpad_Dark_4: -6083333750713549333
+      Numpad_Dark_5: 7870702896057967765
+      Numpad_Dark_6: -6893389102517888856
+      Numpad_Dark_7: 4747949711244213731
+      Numpad_Dark_8: -1771936902015180974
+      Numpad_Dark_9: 4909561147017255124
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

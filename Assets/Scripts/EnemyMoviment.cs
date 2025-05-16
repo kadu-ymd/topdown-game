@@ -56,19 +56,14 @@ public class EnemyMoviment : MonoBehaviour
         moveToTarget();
     }
 
-    private void LateUpdate()
-    {
-        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
-    }
-
     // Update is called once per frame
     void Update() // atualização do stalk
     {
-        if (FieldOfView.canSeePlayer && atention_level < 2) 
+        if (fieldOfView.canSeePlayer && atention_level < 2) 
         {
             atention_level += Time.deltaTime;
         }
-        else if (!FieldOfView.canSeePlayer && atention_level > 0)
+        else if (!fieldOfView.canSeePlayer && atention_level > 0)
         {
             atention_level -= Time.deltaTime;
         }
@@ -83,6 +78,11 @@ public class EnemyMoviment : MonoBehaviour
         }
 
         playAudio();
+    }
+
+    private void LateUpdate()
+    {
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
     }
 
     void moveToTarget()

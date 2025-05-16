@@ -116,7 +116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e8f37f3fa881d14da1c2ec0638fc563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuPrefab: {fileID: 0}
   defaultExitDisplayText: 
 --- !u!1 &5911994185483677556
 GameObject:
@@ -135,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7894016318815386669
 RectTransform:
   m_ObjectHideFlags: 0

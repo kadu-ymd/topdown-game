@@ -82,4 +82,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea16825348e39714c847929e7b229f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onIteractionText: "N\xE3o h\xE1 nada aqui, preciso continuar procurando..."
+  onIteractionText: "N\xE3o h\xE1 nada de \xFAtil aqui, preciso continuar procurando..."

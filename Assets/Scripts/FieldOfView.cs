@@ -7,7 +7,7 @@ public class FieldOfView : MonoBehaviour
     public float angle;
     
     public LayerMask obstructionMask;
-    public static bool canSeePlayer;
+    public bool canSeePlayer;
     public float angleRotation;
 
     Vector2 RotateVector(Vector2 original, float angleDegrees)

@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: ce1032823d6fe42499b1d391602c99c8
+guid: 0dbc467eaeeab924fb88863472d045cd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2466263573176181269
-    second: animated_door_big_5_locked_48x48_0
+      213: 2659834691030101428
+    second: animated_door_5_48x48_0
+  - first:
+      213: -5439470932796632029
+    second: animated_door_5_48x48_1
+  - first:
+      213: -1392244180440014464
+    second: animated_door_5_48x48_2
+  - first:
+      213: -1145160560060572393
+    second: animated_door_5_48x48_3
+  - first:
+      213: 3806680888594033732
+    second: animated_door_5_48x48_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 48
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,7 +112,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: animated_door_big_5_locked_48x48_0
+      name: animated_door_5_48x48_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,14 +127,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 512e6a927ade93220800000000000000
-      internalID: 2466263573176181269
+      spriteID: 4bd2c102f81a9e420800000000000000
+      internalID: 2659834691030101428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animated_door_big_5_locked_48x48_1
+      name: animated_door_5_48x48_1
       rect:
         serializedVersion: 2
         x: 48
@@ -135,16 +147,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 46e872b881d2984459a6bd1f81b0a8be
-      internalID: -12043539
+      spriteID: 3241894910e1384b0800000000000000
+      internalID: -5439470932796632029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animated_door_big_5_locked_48x48_2
+      name: animated_door_5_48x48_2
       rect:
         serializedVersion: 2
         x: 96
@@ -157,16 +169,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c7b80aa73fe64c74a92841fff0af0e6a
-      internalID: 1853000474
+      spriteID: 081a4485b41cdace0800000000000000
+      internalID: -1392244180440014464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animated_door_big_5_locked_48x48_3
+      name: animated_door_5_48x48_3
       rect:
         serializedVersion: 2
         x: 144
@@ -179,16 +191,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 31633d9381dc7e6438403ff1c01e0991
-      internalID: -844591316
+      spriteID: 71d5dc6b9829b10f0800000000000000
+      internalID: -1145160560060572393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: animated_door_big_5_locked_48x48_4
+      name: animated_door_5_48x48_4
       rect:
         serializedVersion: 2
         x: 192
@@ -201,10 +213,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: eb7b6913d41a4f443acb363e28248418
-      internalID: -1464680738
+      spriteID: 44c6ae9791c04d430800000000000000
+      internalID: 3806680888594033732
       vertices: []
       indices: 
       edges: []
@@ -213,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 078f78f7cc726ff4bbb18713bb01eb4c
+    spriteID: 852930aab6f3de048a06352b86e9dac4
     internalID: 0
     vertices: []
     indices: 
@@ -223,11 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      animated_door_big_5_locked_48x48_0: 2466263573176181269
-      animated_door_big_5_locked_48x48_1: -12043539
-      animated_door_big_5_locked_48x48_2: 1853000474
-      animated_door_big_5_locked_48x48_3: -844591316
-      animated_door_big_5_locked_48x48_4: -1464680738
+      animated_door_5_48x48_0: 2659834691030101428
+      animated_door_5_48x48_1: -5439470932796632029
+      animated_door_5_48x48_2: -1392244180440014464
+      animated_door_5_48x48_3: -1145160560060572393
+      animated_door_5_48x48_4: 3806680888594033732
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
