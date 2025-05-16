@@ -23,15 +23,11 @@ public class EnemyRoute : EnemyMoviment
         going = true;
 
         animator.SetBool("IsWalking", true);
+        animator.SetTrigger("Down");
     }
 
     public override void FixedUpdate() // Atualização do animator e target
     {
-        animator.SetBool("Right", false);
-        animator.SetBool("Left", false);
-        animator.SetBool("Up", false);
-        animator.SetBool("Down", false);
-
         // State Machine
         if (target == "Player")
         {

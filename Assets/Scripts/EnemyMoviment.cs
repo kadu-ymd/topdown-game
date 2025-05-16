@@ -34,11 +34,6 @@ public class EnemyMoviment : MonoBehaviour
 
     public virtual void FixedUpdate() // Atualização do animator e target
     {
-        animator.SetBool("Right", false);
-        animator.SetBool("Left", false);
-        animator.SetBool("Up", false);
-        animator.SetBool("Down", false);
-
         // State Machine
         if (target == "Player")
         {
@@ -54,11 +49,11 @@ public class EnemyMoviment : MonoBehaviour
             if (Mathf.Abs(Vector2.Distance(initialPosition, rb.position)) < 0.1f)
             {
                 target = "Nenhum";
+                animator.SetBool("IsWalking", false);
             }
         }
         else if (target == "Nenhum")
         {
-            animator.SetBool("IsWalking", false);
             fieldOfView.angleRotation = 0f;
         }
     }
@@ -75,11 +70,12 @@ public class EnemyMoviment : MonoBehaviour
             atention_level -= Time.deltaTime;
         }
 
-        if (atention_level >= 2) 
+        if (atention_level >= 2 && !animator.GetBool("IsWalking")) 
         {
             stalk = true;
             target = "Player";
             animator.SetBool("IsWalking", true);
+            animator.SetTrigger("Down");
         }
         if (atention_level <= 0)
         {
@@ -120,27 +116,37 @@ public class EnemyMoviment : MonoBehaviour
         {
             if (Vx > 0)
             {
-                animator.SetBool("Right", true);
-                fieldOfView.angleRotation = 90f;
+                if (Mathf.Abs(fieldOfView.angleRotation - 90f) > 0.1f)
+                {
+                    animator.SetTrigger("Right");
+                    fieldOfView.angleRotation = 90f;
+                }
             }
             else
             {
-                animator.SetBool("Left", true);
-                fieldOfView.angleRotation = -90f;
+                if (Mathf.Abs(fieldOfView.angleRotation + 90f) > 0.1f)
+                {
+                    animator.SetTrigger("Left");
+                    fieldOfView.angleRotation = -90f;
+                }
             }
         }
         else
         {
             if (Vy > 0)
             {
-                animator.SetBool("Up", true);
-                fieldOfView.angleRotation = 180f;
+                if (Mathf.Abs(fieldOfView.angleRotation - 180f) > 0.1f)
+                {
+                    animator.SetTrigger("Up");
+                    fieldOfView.angleRotation = 180f;
+                }
             }
             else
-            {
-                animator.SetBool("Down", true);
-                fieldOfView.angleRotation = 0f;
-            }
+                if (Mathf.Abs(fieldOfView.angleRotation) > 0.1f)
+                {
+                    animator.SetTrigger("Down");
+                    fieldOfView.angleRotation = 0f;
+                }
         }
     }
 
