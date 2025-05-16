@@ -643,6 +643,7 @@ MonoBehaviour:
   maxAttention: 2
   atention_level: 0
   speed: 0
+  DeadBody: {fileID: 3128817541427951761, guid: 58ed1ba815353c543b98439953695973, type: 3}
 --- !u!1 &6522853640271619203
 GameObject:
   m_ObjectHideFlags: 0
