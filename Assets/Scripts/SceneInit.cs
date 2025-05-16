@@ -19,6 +19,8 @@ public class PhaseInit : MonoBehaviour {
     public MonoBehaviour runOnInit;
     private bool isInitialScene = true; // Começa como true para a primeira execução
 
+    private Volume globalVolume;
+    private ColorAdjustments colorAdjust;
     private Vignette vignette;
 
     void Awake() {
@@ -42,17 +44,20 @@ public class PhaseInit : MonoBehaviour {
 
     void Start()
     {
+        globalVolume = GameObject.Find("Global Volume").GetComponent<Volume>();
+        globalVolume.profile.TryGet<ColorAdjustments>(out colorAdjust);
+        
 
         if (isInitialScene) {
             GameObject postProcessingObject = GameObject.Find("PostProcessingVolume");
             if (postProcessingObject != null){
-                var volume = postProcessingObject.GetComponent<Volume>();
+                var volume = postProcessingObject.GetComponent<Volume>();            
                 volume.profile.TryGet<Vignette>(out vignette);
                 StartCoroutine(WakingUpEffect());
             }
         }
         else {
-            RunInitialization();
+            StartCoroutine(FadeIn());
         }
     }
 
@@ -102,6 +107,25 @@ public class PhaseInit : MonoBehaviour {
 
         vignette.intensity.value = 0; // Garante que fique completamente transparente
         isInitialScene = false;
+        RunInitialization();
+    }
+
+    private IEnumerator FadeIn() {
+        float duration = 1f; 
+        float startExposure = -10f; // Inicia escuro
+        float targetExposure = colorAdjust.postExposure.value;
+        float elapsed = 0f;
+
+        colorAdjust.postExposure.value = startExposure;
+
+        while (elapsed < duration) {
+            elapsed += Time.deltaTime;
+            float t = Mathf.SmoothStep(0f, 1f, elapsed / duration);
+            colorAdjust.postExposure.value = Mathf.Lerp(startExposure, targetExposure, t);
+            yield return null;
+        }
+
+        colorAdjust.postExposure.value = targetExposure; // Garante valor final correto
         RunInitialization();
     }
 }
