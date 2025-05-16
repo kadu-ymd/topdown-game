@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Thoughts:
   - "Ai que dor de cabe\xE7a..."
-  - Que gosto ruim na minha boca,,,
+  - Que gosto ruim na minha boca...
   - ... ... ...
   - "Hm? Que lugar \xE9 esse?"
   - Como eu vim parar aqui?
@@ -707,6 +707,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8676571548472692084, guid: 76982666e0e642b4aa2b27a2cc2e039e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1112,7 +1116,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5208334, y: 1.6670737}
+    oldSize: {x: 1.5208334, y: 1.7291666}
     newSize: {x: 1.5208334, y: 1.6879121}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2292,7 +2296,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2296169, y: 2.4791667}
+    oldSize: {x: 1.2291666, y: 2.4791667}
     newSize: {x: 1.2296169, y: 2.4791667}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2980,7 +2984,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9583333, y: 1.2503053}
+    oldSize: {x: 0.9583333, y: 1.25}
     newSize: {x: 1, y: 1.2503053}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
