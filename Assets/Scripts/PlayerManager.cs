@@ -69,6 +69,7 @@ public class PlayerManager : MonoBehaviour {
 
     private IEnumerator HandlePlayerDefeat()
     {
+        yield return new WaitForSeconds(0.2f);
         Time.timeScale = 0f;
 
         lastPlayerPosition.z = mainCamera.transform.position.z;
