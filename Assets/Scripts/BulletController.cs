@@ -32,7 +32,6 @@ public class BulletController : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject); // Destrói o inimigo
             Destroy(gameObject); // Destrói a bala
         }
         else if (other.gameObject.layer == 0) // default 
