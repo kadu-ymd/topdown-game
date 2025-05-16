@@ -22,6 +22,7 @@ public class PhaseInit : MonoBehaviour {
     private Volume globalVolume;
     private ColorAdjustments colorAdjust;
     private Vignette vignette;
+    private float targetExposure;
 
     void Awake() {
         if (!Initialized) {
@@ -46,8 +47,9 @@ public class PhaseInit : MonoBehaviour {
     {
         globalVolume = GameObject.Find("Global Volume").GetComponent<Volume>();
         globalVolume.profile.TryGet<ColorAdjustments>(out colorAdjust);
-        
-
+        targetExposure = colorAdjust.postExposure.value;
+        colorAdjust.postExposure.value = -10f;
+        StartCoroutine(FadeIn());
         if (isInitialScene) {
             GameObject postProcessingObject = GameObject.Find("PostProcessingVolume");
             if (postProcessingObject != null){
@@ -55,9 +57,6 @@ public class PhaseInit : MonoBehaviour {
                 volume.profile.TryGet<Vignette>(out vignette);
                 StartCoroutine(WakingUpEffect());
             }
-        }
-        else {
-            StartCoroutine(FadeIn());
         }
     }
 
@@ -112,11 +111,8 @@ public class PhaseInit : MonoBehaviour {
 
     private IEnumerator FadeIn() {
         float duration = 1f; 
-        float startExposure = -10f; // Inicia escuro
-        float targetExposure = colorAdjust.postExposure.value;
+        float startExposure = colorAdjust.postExposure.value; // já será -10
         float elapsed = 0f;
-
-        colorAdjust.postExposure.value = startExposure;
 
         while (elapsed < duration) {
             elapsed += Time.deltaTime;
@@ -125,7 +121,7 @@ public class PhaseInit : MonoBehaviour {
             yield return null;
         }
 
-        colorAdjust.postExposure.value = targetExposure; // Garante valor final correto
+        colorAdjust.postExposure.value = targetExposure;
         RunInitialization();
     }
 }
