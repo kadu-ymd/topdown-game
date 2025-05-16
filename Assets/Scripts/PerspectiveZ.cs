@@ -17,7 +17,6 @@ public class PerspectiveZ : MonoBehaviour
                 if (sprite == otherSprite) continue;
 
                 if (IsSmallerAndOverlapping(sprite, otherSprite)) {
-                    Debug.Log($"Sprite {sprite.name} é menor e está sobreposto a {otherSprite.name}");
                     spriteTranform.position = new Vector3(spriteTranform.position.x, spriteTranform.position.y, otherSprite.transform.position.y - 0.1f);
                 }
             }
