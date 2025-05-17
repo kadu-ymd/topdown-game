@@ -12,6 +12,10 @@ public class PlayerMovement : MonoBehaviour
     private AudioSource playerAudioSource;
     public AudioClip walkingSound;
 
+    private bool shootInput = false; // Controla o disparo a partir do teclado
+    private bool canPerformActions = true; // Controla se o player pode se mover e interagir
+    private bool canShoot = true; // Controla se o jogador pode disparar
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,9 +37,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (PlayerPrefs.GetString("CurrentUI") == "None")
         {
-            if (!animator.GetBool("IsShooting"))
+            if (canPerformActions)
             {
-
                 float horizontal = Input.GetAxisRaw("Horizontal");
                 float vertical = Input.GetAxisRaw("Vertical");
 
@@ -72,14 +75,17 @@ public class PlayerMovement : MonoBehaviour
 
             if (PlayerPrefs.GetInt("Gun") == 1) 
             {
-                if (Input.GetKeyDown(KeyCode.Space) && !animator.GetBool("IsShooting"))
+                if (Input.GetKeyDown(KeyCode.Space) && canShoot)
                 {
+                    canShoot = false;
+                    shootInput = true;
                     animator.SetBool("IsShooting", true);
-                    StartCoroutine(DelayedShoot(0.5f)); // Espera 0:50s da animação de tiro
+                    canPerformActions = false;
+                    StartCoroutine(DelayedShoot());
                 } 
                 else if (Input.GetKeyUp(KeyCode.Space))
                 {
-                    animator.SetBool("IsShooting", false);
+                    shootInput = false;
                 }
             }
         }
@@ -111,25 +117,34 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate() 
     {
-        if (!animator.GetBool("IsShooting"))
+        if (!canPerformActions || animator.GetBool("IsShooting"))
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+        else
         {
             Vector2 movement = new Vector2(
                 animator.GetFloat("Horizontal"),
                 animator.GetFloat("Vertical")
             );
-
             rb.linearVelocity = movement * speed;
-        } else {
-            rb.linearVelocity = Vector2.zero; // Para o personagem enquanto atira
         }
 
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
     }
 
-    System.Collections.IEnumerator DelayedShoot(float delay)
+    System.Collections.IEnumerator DelayedShoot()
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(0.5f);
         Shoot();
         animator.SetBool("IsShooting", false);
+
+        // Espera o Animator entrar em idle antes de permitir ações novamente
+        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("idle-direction"))
+        {
+            yield return null; 
+        }
+        canPerformActions = true;
+        canShoot = true;
     }
 }
