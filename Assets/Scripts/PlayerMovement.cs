@@ -12,9 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private AudioSource playerAudioSource;
     public AudioClip walkingSound;
 
-    private bool shootInput = false; // Controla o disparo a partir do teclado
     private bool canPerformActions = true; // Controla se o player pode se mover e interagir
-    private bool canShoot = true; // Controla se o jogador pode disparar
+    private bool canShoot = true; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -78,14 +77,9 @@ public class PlayerMovement : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space) && canShoot)
                 {
                     canShoot = false;
-                    shootInput = true;
                     animator.SetBool("IsShooting", true);
                     canPerformActions = false;
                     StartCoroutine(DelayedShoot());
-                } 
-                else if (Input.GetKeyUp(KeyCode.Space))
-                {
-                    shootInput = false;
                 }
             }
         }
