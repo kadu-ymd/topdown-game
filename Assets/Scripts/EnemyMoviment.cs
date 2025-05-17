@@ -17,7 +17,9 @@ public class EnemyMoviment : MonoBehaviour
     protected Animator animator;
     protected FieldOfView fieldOfView;
 
-    public GameObject DeadBody;
+    public GameObject deadBodyPrefab;
+    public GameObject memoryPrefab;
+    public string memoryName;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public virtual void Start()
@@ -32,6 +34,18 @@ public class EnemyMoviment : MonoBehaviour
         fieldOfView = GetComponentInChildren<FieldOfView>();
         audioSource = GetComponent<AudioSource>();
         initialPosition = rb.position;
+
+        if (string.IsNullOrEmpty(memoryName))
+        {
+            if (!PlayerPrefs.HasKey(memoryName))
+            {
+                PlayerPrefs.SetInt(memoryName, 0);
+            }
+            if (memoryPrefab == null)
+            {
+                Debug.LogError("Memory prefab não atribuído no inspetor.");
+            }
+        }
     }
 
     public virtual void FixedUpdate() // Atualização do animator e target
@@ -180,7 +194,14 @@ public class EnemyMoviment : MonoBehaviour
         Vector3 currentPosition = transform.position;
 
         // Instancia o novo inimigo na mesma posição e rotação
-        Instantiate(DeadBody, currentPosition, DeadBody.transform.rotation);
+        Instantiate(deadBodyPrefab, currentPosition, deadBodyPrefab.transform.rotation);
+
+        // Instancia a memória na mesma posição e rotação
+        if (!string.IsNullOrEmpty(memoryName) && PlayerPrefs.GetInt(memoryName) == 0)
+        {
+            Instantiate(memoryPrefab, currentPosition, memoryPrefab.transform.rotation);
+            PlayerPrefs.SetInt(memoryName, 1);
+        }
 
         // Destroi o inimigo atual
         Destroy(gameObject);
