@@ -1,14 +1,29 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class BookManager : MonoBehaviour
 {
     private int pageCount;
     private GameObject folhas;
+    private AudioSource audioSource;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         folhas = GameObject.Find("Folhas");
         pageCount = 1;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.RightArrow) && PlayerPrefs.GetString("CurrentUI") == "ItemDisplay")
+        {
+            NextPage();
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && PlayerPrefs.GetString("CurrentUI") == "ItemDisplay")
+        {
+            PrevPage();
+        }
     }
 
     public void PrevPage()
@@ -23,14 +38,13 @@ public class BookManager : MonoBehaviour
             if (folha.name == "Folha" + pageCount)
             {
                 folha.gameObject.SetActive(true);
+                audioSource.Play();
             }
             else
             {
                 folha.gameObject.SetActive(false);
             }
         }
-
-        Debug.Log(pageCount);
     }
 
     public void NextPage()
@@ -45,13 +59,12 @@ public class BookManager : MonoBehaviour
             if (folha.name == "Folha" + pageCount)
             {
                 folha.gameObject.SetActive(true);
+                audioSource.Play();
             }
             else
             {
                 folha.gameObject.SetActive(false);
             }
         }
-
-        Debug.Log(pageCount);
     }
 }
