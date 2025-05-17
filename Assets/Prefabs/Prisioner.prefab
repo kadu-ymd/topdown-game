@@ -875,7 +875,9 @@ MonoBehaviour:
   maxAttention: 2
   atention_level: -0.0024489658
   speed: 2
-  DeadBody: {fileID: 8051585258426217967, guid: e8210b00c71931048ac51606c1674f56, type: 3}
+  deadBodyPrefab: {fileID: 8051585258426217967, guid: e8210b00c71931048ac51606c1674f56, type: 3}
+  memoryPrefab: {fileID: 4492253540437420899, guid: ea00c05904de82041ae38d3e7e5c651c, type: 3}
+  memoryName: 
 --- !u!82 &6283781710358670200
 AudioSource:
   m_ObjectHideFlags: 0
