@@ -41,7 +41,7 @@ public class EnemyMoviment : MonoBehaviour
             {
                 PlayerPrefs.SetInt(memoryName, 0);
             }
-            if (memoryPrefab == null)
+            if (memoryPrefab == null && !string.IsNullOrEmpty(memoryName))
             {
                 Debug.LogError("Memory prefab não atribuído no inspetor.");
             }
@@ -124,7 +124,6 @@ public class EnemyMoviment : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
-            Debug.Log("Bullet");
             SwaptoDead();
         }
     }

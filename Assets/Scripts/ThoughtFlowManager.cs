@@ -9,7 +9,6 @@ public class ThoughtFlowManager : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (running && !ThoughtManager.thinking) {
-            Debug.Log("Thought " + currentThought + " of " + Thoughts.Length);
             if (currentThought < Thoughts.Length) {
                 ThoughtManager.ShowThought(Thoughts[currentThought]);
                 currentThought++;
@@ -20,7 +19,6 @@ public class ThoughtFlowManager : MonoBehaviour
     }
 
     public void Run() {
-        Debug.Log("ThoughtFlowManager started");
         running = true;
     }
 

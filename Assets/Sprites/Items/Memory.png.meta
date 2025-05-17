@@ -1,0 +1,427 @@
+fileFormatVersion: 2
+guid: 4f7834bd07597fe4088b3b8bc7e7968f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8010841551413034264
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_0
+  - first:
+      213: -2287290480773826896
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_1
+  - first:
+      213: -5127611183846290094
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_2
+  - first:
+      213: 5881936246545219591
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_3
+  - first:
+      213: -1043761590936682765
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_4
+  - first:
+      213: -4382900821139957412
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_5
+  - first:
+      213: -2523024715282781078
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_6
+  - first:
+      213: -4975038540272190970
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_7
+  - first:
+      213: -1890258692823022107
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_8
+  - first:
+      213: 1447566092116362961
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_9
+  - first:
+      213: -550193750463826386
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_10
+  - first:
+      213: 5890225932576928739
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_11
+  - first:
+      213: -6431996699020287921
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_12
+  - first:
+      213: -553245700396096025
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_13
+  - first:
+      213: 1622432248698429381
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_14
+  - first:
+      213: 5805906632778663823
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_15
+  - first:
+      213: 1951933207944424884
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_16
+  - first:
+      213: -4958339967607596969
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_17
+  - first:
+      213: 3258552421824847246
+    second: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 245
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e246106d06c3d090800000000000000
+      internalID: -8010841551413034264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_1
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 520
+        width: 245
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b6f7532d69e140e0800000000000000
+      internalID: -2287290480773826896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_2
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 520
+        width: 245
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d8588abc017d8b0800000000000000
+      internalID: -5127611183846290094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_3
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 520
+        width: 245
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70082d63ad5d0a150800000000000000
+      internalID: 5881936246545219591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 245
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3feb506fc50d381f0800000000000000
+      internalID: -1043761590936682765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_5
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 260
+        width: 245
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c595f2ebceecc23c0800000000000000
+      internalID: -4382900821139957412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_6
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 260
+        width: 245
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6ce906936a6cfcd0800000000000000
+      internalID: -2523024715282781078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_7
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 260
+        width: 245
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ab2377ecc15fab0800000000000000
+      internalID: -4975038540272190970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 245
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e580b0ebb374c5e0800000000000000
+      internalID: -1890258692823022107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_9
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 0
+        width: 245
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d60f75f0b9c61410800000000000000
+      internalID: 1447566092116362961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_10
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 0
+        width: 245
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26b6f1f2b15d58f0800000000000000
+      internalID: -550193750463826386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: db20de3048363fe4aa7bbceb3b37d5cf
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_0: -8010841551413034264
+      Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_1: -2287290480773826896
+      Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_10: -550193750463826386
+      Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_2: -5127611183846290094
+      Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_3: 5881936246545219591
+      Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_4: -1043761590936682765
+      Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_5: -4382900821139957412
+      Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_6: -2523024715282781078
+      Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_7: -4975038540272190970
+      Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_8: -1890258692823022107
+      Mobile - Hello Kitty and Friends Happiness Parade - Cold Button Effect_9: 1447566092116362961
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
