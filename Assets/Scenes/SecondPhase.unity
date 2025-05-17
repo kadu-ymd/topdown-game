@@ -1105,6 +1105,73 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &151673236
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1003434466}
+    m_Modifications:
+    - target: {fileID: 362749001338844572, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+      propertyPath: onIteractionText
+      value: "Essa \xE9 a entrada desse lugar, mas est\xE1 trancada... N\xE3o acho
+        que deixam "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2245003525977635383, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+      propertyPath: m_Name
+      value: InteractableMessager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+--- !u!4 &151673237 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+  m_PrefabInstance: {fileID: 151673236}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &153207072
 GameObject:
   m_ObjectHideFlags: 0
@@ -4166,6 +4233,7 @@ GameObject:
   - component: {fileID: 317513671}
   - component: {fileID: 317513670}
   - component: {fileID: 317513672}
+  - component: {fileID: 317513673}
   m_Layer: 0
   m_Name: Desk
   m_TagString: Untagged
@@ -4290,6 +4358,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.9173687, y: 0.1}
   m_EdgeRadius: 0
+--- !u!114 &317513673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317513669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea16825348e39714c847929e7b229f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onIteractionText: "N\xE3o h\xE1 nada aqui, preciso continuar procurando..."
 --- !u!1 &318226850
 GameObject:
   m_ObjectHideFlags: 0
@@ -7194,7 +7275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3384509234702407358, guid: 76982666e0e642b4aa2b27a2cc2e039e, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0.79859036
       objectReference: {fileID: 0}
     - target: {fileID: 3554334807907925374, guid: 76982666e0e642b4aa2b27a2cc2e039e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9031,6 +9112,7 @@ GameObject:
   - component: {fileID: 1003434466}
   - component: {fileID: 1003434465}
   - component: {fileID: 1003434467}
+  - component: {fileID: 1003434468}
   m_Layer: 0
   m_Name: Entrance Door
   m_TagString: Untagged
@@ -9107,6 +9189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1488090788}
+  - {fileID: 151673237}
   m_Father: {fileID: 1327932366}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &1003434467
@@ -9155,6 +9238,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.9736152, y: 0.2986412}
   m_EdgeRadius: 0
+--- !u!114 &1003434468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003434464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea16825348e39714c847929e7b229f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onIteractionText: "N\xE3o h\xE1 nada aqui, preciso continuar procurando..."
 --- !u!1 &1010989903
 GameObject:
   m_ObjectHideFlags: 0
@@ -11914,6 +12010,7 @@ GameObject:
   - component: {fileID: 1312608419}
   - component: {fileID: 1312608421}
   - component: {fileID: 1312608420}
+  - component: {fileID: 1312608422}
   m_Layer: 0
   m_Name: Desk
   m_TagString: Untagged
@@ -12038,6 +12135,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1312608422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312608418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea16825348e39714c847929e7b229f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onIteractionText: "N\xE3o h\xE1 nada aqui, preciso continuar procurando..."
 --- !u!1 &1317491966
 GameObject:
   m_ObjectHideFlags: 0
