@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool shootInput = false; // Controla o disparo a partir do teclado
     private bool canPerformActions = true; // Controla se o player pode se mover e interagir
+    private bool canShoot = true; // Controla se o jogador pode disparar
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -74,8 +75,9 @@ public class PlayerMovement : MonoBehaviour
 
             if (PlayerPrefs.GetInt("Gun") == 1) 
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space) && canShoot)
                 {
+                    canShoot = false;
                     shootInput = true;
                     animator.SetBool("IsShooting", true);
                     canPerformActions = false;
@@ -143,5 +145,6 @@ public class PlayerMovement : MonoBehaviour
             yield return null; 
         }
         canPerformActions = true;
+        canShoot = true;
     }
 }
