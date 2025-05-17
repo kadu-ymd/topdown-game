@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 public class EnemyRoute : EnemyMoviment
 {
-    private List<Vector2> routePoints;
+    public List<Vector2> route = new List<Vector2>();
+    private List<Vector2> routePoints = new List<Vector2>();
     private int patrolPosition;
     private bool going;
 
@@ -13,11 +14,10 @@ public class EnemyRoute : EnemyMoviment
     {
         base.Start();
 
-        // Route
-        routePoints = new List<Vector2>();
-        Vector2 offset = new Vector2(0f, 5f);
+        
         routePoints.Add(rb.position);
-        routePoints.Add(rb.position - offset);
+        for (int i = 0; i < route.Count; i++)
+            routePoints.Add(route[i]);
 
         target = "Patrol";
         going = true;
@@ -26,7 +26,7 @@ public class EnemyRoute : EnemyMoviment
         animator.SetTrigger("Down");
     }
 
-    public override void FixedUpdate() // Atualização do animator e target
+    public override void FixedUpdate() // Atualizaï¿½ï¿½o do animator e target
     {
         // State Machine
         if (target == "Hit")

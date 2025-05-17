@@ -10,7 +10,6 @@ public class PinpadDoorManager : MonoBehaviour
     public AudioClip openSound;
     public AudioClip closeSound;
     public string lockedText = "A porta está trancada, preciso de uma senha de três dígitos para abri-la...";
-    public string password;
     public GameObject pinpadCanvas;
     private Pinpad pinpad;
     private bool isOpen = false;
