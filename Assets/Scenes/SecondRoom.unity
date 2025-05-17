@@ -119,6 +119,86 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &9863485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9863488}
+  - component: {fileID: 9863487}
+  - component: {fileID: 9863486}
+  m_Layer: 0
+  m_Name: NavMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &9863486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9863485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70bd44a44cd62c64fbfc1eea95b24880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideByGrid: 0
+  m_UseMeshPrefab: {fileID: 0}
+  m_CompressBounds: 0
+  m_OverrideVector: {x: 1, y: 1, z: 1}
+--- !u!114 &9863487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9863485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04976799df50f54ba128eff723155a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 1
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_MinRegionArea: 0
+  m_HideEditorLogs: 0
+  m_NavMeshData: {fileID: 23800000, guid: d256596d52a3fbb43b7ef323b73b9ce9, type: 2}
+--- !u!4 &9863488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9863485}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 2.3543887, y: 8.463571, z: 0.020089015}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &70091684
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 303315095}
   - component: {fileID: 303315096}
+  - component: {fileID: 303315097}
   m_Layer: 0
   m_Name: Chairs 2
   m_TagString: Untagged
@@ -491,6 +572,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.2}
   m_EdgeRadius: 0
+--- !u!114 &303315097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303315094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &318226850
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,7 +863,10 @@ PrefabInstance:
     - {fileID: 2475185147639939129, guid: c626c994f4f361649a4dbf0c45eaeef6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6968140111074352637, guid: c626c994f4f361649a4dbf0c45eaeef6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1363041206}
   m_SourcePrefab: {fileID: 100100000, guid: c626c994f4f361649a4dbf0c45eaeef6, type: 3}
 --- !u!1 &516699165
 GameObject:
@@ -778,6 +878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 516699166}
   - component: {fileID: 516699167}
+  - component: {fileID: 516699168}
   m_Layer: 0
   m_Name: Chairs 1
   m_TagString: Untagged
@@ -850,6 +951,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.2}
   m_EdgeRadius: 0
+--- !u!114 &516699168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516699165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1001 &518423097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1254,6 +1371,7 @@ GameObject:
   - component: {fileID: 773334060}
   - component: {fileID: 773334062}
   - component: {fileID: 773334063}
+  - component: {fileID: 773334064}
   m_Layer: 0
   m_Name: Wheelchair
   m_TagString: Untagged
@@ -1377,6 +1495,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &773334064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773334059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &810868289
 GameObject:
   m_ObjectHideFlags: 0
@@ -2079,6 +2213,7 @@ GameObject:
   - component: {fileID: 1249619441}
   - component: {fileID: 1249619443}
   - component: {fileID: 1249619442}
+  - component: {fileID: 1249619444}
   m_Layer: 0
   m_Name: Door 2
   m_TagString: Untagged
@@ -2177,6 +2312,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1249619444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249619440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1361248865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,6 +2412,27 @@ MonoBehaviour:
   - {x: 0.17785871, y: -0.5973911, z: 0}
   - {x: 0.170367, y: 0.5524415, z: 0}
   - {x: -0.00555104, y: 0.5599332, z: 0}
+--- !u!1 &1363041204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6968140111074352637, guid: c626c994f4f361649a4dbf0c45eaeef6, type: 3}
+  m_PrefabInstance: {fileID: 369339047}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1363041206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363041204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1449431712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,6 +2445,7 @@ GameObject:
   - component: {fileID: 1449431715}
   - component: {fileID: 1449431714}
   - component: {fileID: 1449431716}
+  - component: {fileID: 1449431717}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -2507,6 +2680,22 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1449431717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449431712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1560191141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2693,6 +2882,7 @@ GameObject:
   - component: {fileID: 1636218986}
   - component: {fileID: 1636218988}
   - component: {fileID: 1636218987}
+  - component: {fileID: 1636218989}
   m_Layer: 0
   m_Name: Door 1
   m_TagString: Untagged
@@ -2791,6 +2981,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1636218989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636218985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1651818954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,6 +3008,7 @@ GameObject:
   - component: {fileID: 1651818955}
   - component: {fileID: 1651818956}
   - component: {fileID: 1651818957}
+  - component: {fileID: 1651818958}
   m_Layer: 0
   m_Name: Plant 1
   m_TagString: Untagged
@@ -2925,6 +3132,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &1651818958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651818954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1655916164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2937,6 +3160,7 @@ GameObject:
   - component: {fileID: 1655916168}
   - component: {fileID: 1655916167}
   - component: {fileID: 1655916166}
+  - component: {fileID: 1655916169}
   m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
@@ -3589,6 +3813,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1655916169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655916164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1670464263
 GameObject:
   m_ObjectHideFlags: 0
@@ -3735,6 +3975,7 @@ GameObject:
   - component: {fileID: 1889212855}
   - component: {fileID: 1889212857}
   - component: {fileID: 1889212856}
+  - component: {fileID: 1889212858}
   m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
@@ -4893,6 +5134,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1889212858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889212854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1914385520
 GameObject:
   m_ObjectHideFlags: 0
@@ -4904,6 +5161,7 @@ GameObject:
   - component: {fileID: 1914385521}
   - component: {fileID: 1914385522}
   - component: {fileID: 1914385523}
+  - component: {fileID: 1914385524}
   m_Layer: 0
   m_Name: Plant 2
   m_TagString: Untagged
@@ -5027,6 +5285,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &1914385524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914385520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1001 &1923645487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5102,7 +5376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1564431743952993751, guid: c840477a49441ac41ba03a37c4f21354, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12
+      value: 11.98
       objectReference: {fileID: 0}
     - target: {fileID: 1564431743952993751, guid: c840477a49441ac41ba03a37c4f21354, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5336,3 +5610,4 @@ SceneRoots:
   - {fileID: 561862898}
   - {fileID: 912074156}
   - {fileID: 1670464265}
+  - {fileID: 9863488}
