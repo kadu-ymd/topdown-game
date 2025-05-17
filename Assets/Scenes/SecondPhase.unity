@@ -1453,7 +1453,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9166667, y: 1.8754579}
+    oldSize: {x: 0.9166667, y: 1.875}
     newSize: {x: 0.9166667, y: 1.8754579}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1643,7 +1643,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9795253, y: 1.6666666}
+    oldSize: {x: 0.9375, y: 1.625}
     newSize: {x: 0.9795253, y: 1.6666666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2005,7 +2005,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5422313, y: 2.4791667}
+    oldSize: {x: 1.5416666, y: 2.4791667}
     newSize: {x: 1.5422313, y: 2.4791667}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2139,7 +2139,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3958334, y: 1.9379731}
+    oldSize: {x: 1.3958334, y: 1.9375}
     newSize: {x: 1.3958334, y: 1.9379731}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2807,7 +2807,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.9173687, y: 1.0416666}
+    oldSize: {x: 1.875, y: 1}
     newSize: {x: 1.9173687, y: 1.0416666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3240,7 +3240,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.91700244, y: 1.0416666}
+    oldSize: {x: 0.9166667, y: 1.0416666}
     newSize: {x: 0.91700244, y: 1.0416666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3437,7 +3437,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.7923229, y: 1.3541666}
+    oldSize: {x: 1.7916666, y: 1.3541666}
     newSize: {x: 1.7923229, y: 1.3541666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4624,7 +4624,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000000ba2703b3543f19c
+  m_ApplyToSortingLayers: 000000000ba2703b3543f19c1b756b6f
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -4983,7 +4983,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6669108, y: 0.8541666}
+    oldSize: {x: 0.6666667, y: 0.8541667}
     newSize: {x: 0.6669108, y: 0.8541666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5202,6 +5202,94 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
   m_PrefabInstance: {fileID: 70328515}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &736059990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 736059991}
+  - component: {fileID: 736059992}
+  m_Layer: 0
+  m_Name: Light 2D Door Contour
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &736059991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736059990}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.33, y: 0.625, z: -15}
+  m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1857395822}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &736059992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736059990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 2
+  m_LightType: 1
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.693
+  m_Color: {r: 0.5493001, g: 0.6036902, b: 0.65808034, a: 1}
+  m_Intensity: 0.2
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 0ba2703b00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0.40204996, y: -0.97415006, z: 0}
+    m_Extent: {x: 1.54895, y: 1.32805, z: 0}
+  m_PointLightInnerAngle: 360.00003
+  m_PointLightOuterAngle: 360.00003
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 3
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.3
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.8301495, y: -2.0015092, z: 0}
+  - {x: -0.608593, y: -1.9051808, z: 0}
+  - {x: -0.63548905, y: -0.1406197, z: 0}
+  - {x: 1.5016202, y: -0.096362054, z: 0}
+  - {x: 1.4812008, y: -1.9175929, z: 0}
+  - {x: 1.6510587, y: -1.9306618, z: 0}
+  - {x: 1.6510587, y: 0.029235672, z: 0}
+  - {x: -0.84715706, y: 0.05343158, z: 0}
 --- !u!4 &736334867 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
@@ -5418,7 +5506,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.7923229, y: 1.3541666}
+    oldSize: {x: 1.7916666, y: 1.3541666}
     newSize: {x: 1.7923229, y: 1.3541666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5922,7 +6010,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.91700244, y: 1.0416666}
+    oldSize: {x: 0.9166667, y: 1.0416666}
     newSize: {x: 0.91700244, y: 1.0416666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6124,7 +6212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &851186345
 Transform:
   m_ObjectHideFlags: 0
@@ -6530,7 +6618,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3546627, y: 1.7291667}
+    oldSize: {x: 1.3125, y: 1.6875}
     newSize: {x: 1.3546627, y: 1.7291667}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6609,7 +6697,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3958334, y: 1.9379731}
+    oldSize: {x: 1.3958334, y: 1.9375}
     newSize: {x: 1.3958334, y: 1.9379731}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7435,7 +7523,8 @@ Transform:
   m_LocalPosition: {x: 29.11, y: 1.962, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1488090788}
   m_Father: {fileID: 1327932366}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1010989903
@@ -7651,7 +7740,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7919566, y: 0.7916666}
+    oldSize: {x: 0.7916667, y: 0.7916667}
     newSize: {x: 0.7919566, y: 0.7916666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8212,7 +8301,7 @@ Transform:
   m_GameObject: {fileID: 1053343536}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0.11, y: -0.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8238,10 +8327,10 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 61dfb7460ba2703b0d11d39d000000003543f19c
+  m_ApplyToSortingLayers: 61dfb7460ba2703b0d11d39d000000003543f19c1b756b6f
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
+  m_LightOrder: 1
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
@@ -8603,7 +8692,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9795253, y: 1.6666666}
+    oldSize: {x: 0.9375, y: 1.625}
     newSize: {x: 0.9795253, y: 1.6666666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9166,7 +9255,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.7923229, y: 1.3541666}
+    oldSize: {x: 1.7916666, y: 1.3541666}
     newSize: {x: 1.7923229, y: 1.3541666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9538,7 +9627,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9795253, y: 1.8541666}
+    oldSize: {x: 0.9375, y: 1.8125}
     newSize: {x: 0.9795253, y: 1.6666666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9672,7 +9761,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7919566, y: 0.7916666}
+    oldSize: {x: 0.7916667, y: 0.7916667}
     newSize: {x: 0.7919566, y: 0.7916666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9861,7 +9950,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.47934216, y: 3.4166665}
+    oldSize: {x: 0.4375, y: 3.375}
     newSize: {x: 0.47934216, y: 3.4166665}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -10169,7 +10258,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5422313, y: 2.4791667}
+    oldSize: {x: 1.5416666, y: 2.4791667}
     newSize: {x: 1.5422313, y: 2.4791667}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -10249,7 +10338,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.9173687, y: 1.0416666}
+    oldSize: {x: 1.875, y: 1}
     newSize: {x: 1.9173687, y: 1.0416666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11050,7 +11139,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5422313, y: 2.4791667}
+    oldSize: {x: 1.5416666, y: 2.4791667}
     newSize: {x: 1.5422313, y: 2.4791667}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11823,6 +11912,182 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1481631394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1481631395}
+  - component: {fileID: 1481631396}
+  m_Layer: 0
+  m_Name: Light 2D Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1481631395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481631394}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.46, y: -0.82, z: -15}
+  m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1857395822}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1481631396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481631394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 2
+  m_LightType: 1
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.5
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 0ba2703b
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0.59795, y: -0.42015016, z: 0}
+    m_Extent: {x: 5.23505, y: 4.25205, z: 0}
+  m_PointLightInnerAngle: 360.00003
+  m_PointLightOuterAngle: 360.00003
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 3
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 4
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.62109524, y: -0.39439383, z: 0}
+  - {x: -0.1071422, y: -0.5294568, z: 0}
+  - {x: 0.4154964, y: -0.67318267, z: 0}
+  - {x: 0.7682796, y: -0.6470508, z: 0}
+  - {x: 1.3039848, y: -0.5686552, z: 0}
+  - {x: 1.8347452, y: -0.41565958, z: 0}
+  - {x: 1.8282685, y: -0.17476141, z: 0}
+  - {x: -0.6381028, y: -0.16869247, z: 0}
+--- !u!1 &1488090787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1488090788}
+  - component: {fileID: 1488090789}
+  m_Layer: 0
+  m_Name: Light 2D Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1488090788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488090787}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.99998724, w: -0.005051702}
+  m_LocalPosition: {x: 0.51, y: 0.75, z: 1}
+  m_LocalScale: {x: 0.7999998, y: 0.7999998, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1003434466}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180.579}
+--- !u!114 &1488090789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488090787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 2
+  m_LightType: 1
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.5
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 0ba2703b
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0.5913, y: -0.23205018, z: 0}
+    m_Extent: {x: 5.253, y: 4.4401503, z: 0}
+  m_PointLightInnerAngle: 360.00003
+  m_PointLightOuterAngle: 360.00003
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 3
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 4
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.62109524, y: -0.39439383, z: 0}
+  - {x: -0.1071422, y: -0.5294568, z: 0}
+  - {x: 0.4154964, y: -0.67318267, z: 0}
+  - {x: 0.7682796, y: -0.6470508, z: 0}
+  - {x: 1.3039848, y: -0.5686552, z: 0}
+  - {x: 1.8347452, y: -0.41565958, z: 0}
+  - {x: 1.845383, y: 0.20198146, z: 0}
+  - {x: -0.6628251, y: 0.20762819, z: 0}
 --- !u!1 &1502945180
 GameObject:
   m_ObjectHideFlags: 0
@@ -12207,7 +12472,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9166667, y: 1.8754579}
+    oldSize: {x: 0.9166667, y: 1.875}
     newSize: {x: 0.9166667, y: 1.8754579}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -13407,7 +13672,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.91700244, y: 1.1041666}
+    oldSize: {x: 0.875, y: 1.0625}
     newSize: {x: 1.3546627, y: 1.7291667}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -13947,7 +14212,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9166667, y: 1.8754579}
+    oldSize: {x: 0.9166667, y: 1.875}
     newSize: {x: 0.9166667, y: 1.8754579}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -15525,7 +15790,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7919566, y: 0.7916666}
+    oldSize: {x: 0.7916667, y: 0.7916667}
     newSize: {x: 0.7919566, y: 0.7916666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -15720,7 +15985,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.60438794, y: 2.7291665}
+    oldSize: {x: 0.5625, y: 2.6875}
     newSize: {x: 0.60438794, y: 2.7291665}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16023,7 +16288,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7294337, y: 1.6666666}
+    oldSize: {x: 0.7291667, y: 1.6666666}
     newSize: {x: 0.7294337, y: 1.6666666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16421,7 +16686,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8548458, y: 2.1666667}
+    oldSize: {x: 1.8125, y: 2.125}
     newSize: {x: 1.8548458, y: 2.1666667}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16565,7 +16830,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.167094, y: 1.6041666}
+    oldSize: {x: 1.125, y: 1.5625}
     newSize: {x: 1.1045711, y: 1.6041666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16818,7 +17083,9 @@ Transform:
   m_LocalPosition: {x: 10.587, y: 13.939999, z: 16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1481631395}
+  - {fileID: 736059991}
   m_Father: {fileID: 1220519562}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1889212854
@@ -22522,7 +22789,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3958334, y: 1.9379731}
+    oldSize: {x: 1.3958334, y: 1.9375}
     newSize: {x: 1.3958334, y: 1.9379731}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -23259,7 +23526,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.60438794, y: 2.7291665}
+    oldSize: {x: 0.5625, y: 2.6875}
     newSize: {x: 0.60438794, y: 2.7291665}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
