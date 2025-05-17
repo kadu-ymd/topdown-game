@@ -4,6 +4,7 @@ using UnityEngine.AI;
 public class EnemyMoviment : MonoBehaviour
 {
     protected AudioSource audioSource;
+    protected static AudioSource currentPlayingAudio = null;
     public float maxAttention = 2f;
     protected NavMeshAgent agent;
 
@@ -206,18 +207,29 @@ public class EnemyMoviment : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void playAudio() {     
+    void playAudio()
+    {
         float volumePercent = Mathf.Clamp01(atention_level / maxAttention);
         audioSource.volume = volumePercent;
 
-        // Controle de play/stop automático
-        if (volumePercent > 0f && !audioSource.isPlaying)
+        if (volumePercent > 0f)
         {
-            audioSource.Play();
+            if (!audioSource.isPlaying && (currentPlayingAudio == null || !currentPlayingAudio.isPlaying))
+            {
+                audioSource.Play();
+                currentPlayingAudio = audioSource;
+            }
         }
-        else if (volumePercent <= 0f && audioSource.isPlaying)
+        else
         {
-            audioSource.Stop();
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+                if (currentPlayingAudio == audioSource)
+                {
+                    currentPlayingAudio = null;
+                }
+            }
         }
     }
 }
