@@ -120,7 +120,7 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("InitialRoom");
+        SceneManager.LoadScene("1Bedroom");
         Time.timeScale = 1;
     }
 

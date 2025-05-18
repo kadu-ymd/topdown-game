@@ -1475,7 +1475,7 @@ Transform:
   m_GameObject: {fileID: 645326835}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.58955, y: 4.186531, z: 1.5442414}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1611,7 +1611,7 @@ Transform:
   m_GameObject: {fileID: 723462051}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 79.74035, y: 203.98933, z: -3.5226674}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2343,7 +2343,7 @@ MonoBehaviour:
   m_BuildHeightMesh: 0
   m_MinRegionArea: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: 0b50dd2791fced046b766059a058eb00, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 67d5d131b4b1e1244a029f0c084c911b, type: 2}
 --- !u!4 &878910865
 Transform:
   m_ObjectHideFlags: 0
@@ -2352,8 +2352,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878910862}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 17.105906, y: 1.3265897, z: 0.01928162}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -12.494095, y: -7.57341, z: 0.01928162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3829,8 +3829,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220519561}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -29.6, y: -8.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4109,7 +4109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4163181534967280407, guid: 04178f7347d4d674ab0662c4f7c836ee, type: 3}
       propertyPath: nextSceneName
-      value: SecondPhase
+      value: 2EntranceHall
       objectReference: {fileID: 0}
     - target: {fileID: 4163181534967280407, guid: 04178f7347d4d674ab0662c4f7c836ee, type: 3}
       propertyPath: RequiredItemsName.Array.size
@@ -10385,11 +10385,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4136692894546937794, guid: ee04bd488e17af9449848a5adabd6b63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.5
+      value: -19.1
       objectReference: {fileID: 0}
     - target: {fileID: 4136692894546937794, guid: ee04bd488e17af9449848a5adabd6b63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.2
+      value: -4.7
       objectReference: {fileID: 0}
     - target: {fileID: 4136692894546937794, guid: ee04bd488e17af9449848a5adabd6b63, type: 3}
       propertyPath: m_LocalPosition.z

@@ -12,22 +12,22 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/InitialRoom.unity
+    path: Assets/Scenes/1Bedroom.unity
     guid: 45d1698e49fb55f4f8f62a30a088dcdc
   - enabled: 1
-    path: Assets/Scenes/SecondRoom.unity
+    path: Assets/Scenes/1Corridor.unity
     guid: 4ed531167ddaf50449e0ab5dfd65630e
   - enabled: 1
-    path: Assets/Scenes/ThirdRoom.unity
+    path: Assets/Scenes/1PharmHall.unity
     guid: 9b067ffc09d679247bc4f1d7812fa100
   - enabled: 1
-    path: Assets/Scenes/SecondPhase.unity
+    path: Assets/Scenes/2EntranceHall.unity
     guid: df1e3a7ffc9968d4c9bdea948daf3c3c
   - enabled: 1
-    path: Assets/Scenes/StorageRoom.unity
+    path: Assets/Scenes/3StaffArea.unity
     guid: 960a4edcd26121e4fb26181c18eb5286
   - enabled: 1
-    path: Assets/Scenes/ThirdPhase.unity
+    path: Assets/Scenes/3Necroterium.unity
     guid: 0c156dfbbe08bf94d91d0403c0459db0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

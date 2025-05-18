@@ -5,7 +5,6 @@ using System.Collections.Generic;
 public class EnemyRoute : EnemyMoviment
 {
     public List<Vector2> route = new List<Vector2>();
-    private List<Vector2> routePoints = new List<Vector2>();
     private int patrolPosition;
     private bool going;
     public bool cyclicPatrol = false;
@@ -13,10 +12,7 @@ public class EnemyRoute : EnemyMoviment
     {
         base.Start();
 
-        
-        routePoints.Add(rb.position);
-        for (int i = 0; i < route.Count; i++)
-            routePoints.Add(route[i]);
+        route.Insert(0, rb.position);
 
         target = "Patrol";
         going = true;
@@ -57,8 +53,8 @@ public class EnemyRoute : EnemyMoviment
 
     void moveOnPatrol()
     {
-        Vector2 destiny = routePoints[patrolPosition];
-        int nPoints = routePoints.Count;
+        Vector2 destiny = route[patrolPosition];
+        int nPoints = route.Count;
 
         Vector2 movement = (destiny - rb.position).normalized;
         agent.SetDestination(destiny);
