@@ -11,7 +11,7 @@ public class MainMenuManager : MonoBehaviour
 
         if (!PlayerPrefs.HasKey("CurrentUI"))
         {
-            PlayerPrefs.SetString("CurrentUI", "None");
+            PlayerPrefs.SetString("CurrentUI", "MainMenu");
         }
     }
 
@@ -38,7 +38,7 @@ public class MainMenuManager : MonoBehaviour
         if (PlayerPrefs.GetString("CurrentUI") == "SettingsMenu")
         {
             settingsMenuUI.SetActive(false);
-            PlayerPrefs.SetString("CurrentUI", "None");
+            PlayerPrefs.SetString("CurrentUI", "MainMenu");
         }
     }
 
