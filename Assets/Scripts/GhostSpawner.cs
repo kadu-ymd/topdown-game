@@ -10,6 +10,7 @@ public class GhostSpanwer : MonoBehaviour
     private Color ghostInitialColor;
     public float respawnTime = 5f;
     public float fadeDuration = 2f;
+    public bool peaceful = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
@@ -19,6 +20,20 @@ public class GhostSpanwer : MonoBehaviour
         ghostOriginalColor = originalGhostSpriteRenderer.color;
         ghostInitialColor = ghostOriginalColor;
         ghostInitialColor.a = 0f; // Inicialmente invisível
+        if (peaceful)
+        {
+            GhostMoviment ghostMoviment = originalGhost.GetComponent<GhostMoviment>();
+            if (ghostMoviment != null)
+                ghostMoviment.peaceful = true;
+            else
+            {
+                GhostRoute ghostRoute = originalGhost.GetComponent<GhostRoute>();
+                if (ghostRoute != null)
+                    ghostRoute.peaceful = true;
+                else
+                    Debug.LogWarning("O objeto originalGhost não possui um componente GhostMoviment ou GhostRoute.");
+            }
+        }
         SpawnGhost();
         StartCoroutine(Reespawn());
     }

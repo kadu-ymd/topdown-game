@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class EnemyMoviment : MonoBehaviour
@@ -14,7 +15,6 @@ public class EnemyMoviment : MonoBehaviour
     protected Vector2 initialPosition;
     protected string target = "Nenhum";
 
-    public float speed;
     protected Rigidbody2D rb;
     protected Animator animator;
     protected FieldOfView fieldOfView;
@@ -23,6 +23,8 @@ public class EnemyMoviment : MonoBehaviour
     public GameObject memoryPrefab;
     public string memoryName;
 
+    private Coroutine sleepCoroutine;
+    private bool sleepy = false;
     public bool sleeping = false;
     public float sleepingTime = 0f;
     public float awakedTime = 0f;
@@ -58,12 +60,15 @@ public class EnemyMoviment : MonoBehaviour
         // State Machine
         if (target == "Hit")
             animator.SetTrigger("Hit");
-        
-        else if (target == "Player")
-            MoveTo(PlayerMovement.rb.position);
 
+        else if (target == "Player")
+        {
+            sleepy = false;
+            MoveTo(PlayerMovement.rb.position);
+        }
         else if (target == "Inicio")
         {
+            sleepy = false;
             if (stalk)
                 StartStalk();
             else
@@ -82,8 +87,8 @@ public class EnemyMoviment : MonoBehaviour
         else if (target == "Nenhum")
         {
             fieldOfView.angleRotation = 0f;
-            if (sleepingTime > 0 && awakedTime > 0)
-                StartCoroutine(Sleep());
+            if (sleepCoroutine == null && sleepingTime > 0 && awakedTime > 0)
+                sleepCoroutine = StartCoroutine(Sleep());
         }
     }
 
@@ -92,14 +97,20 @@ public class EnemyMoviment : MonoBehaviour
         if (!sleeping)
         {
 
-            if (fieldOfView.canSeePlayer && atention_level < 2)
+            if (fieldOfView.canSeePlayer && atention_level < maxAttention)
+            {
+                sleepy = false;
                 atention_level += Time.deltaTime;
-        
+            }
             else if (!fieldOfView.canSeePlayer && atention_level > 0)
-                atention_level -= Time.deltaTime;
-            
+            {
+                if (stalk)
+                    atention_level -= Time.deltaTime/4;
+                else
+                    atention_level -= Time.deltaTime;
+            }
 
-            if (!stalk && atention_level >= 2) // muda para o estado de perseguicão
+            if (!stalk && atention_level >= maxAttention) // muda para o estado de perseguicão
             {
                 StartStalk();
             }
@@ -138,7 +149,12 @@ public class EnemyMoviment : MonoBehaviour
     protected void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Bullet"))
+        {
+            string sceneName = SceneManager.GetActiveScene().name;
+            PlayerPrefs.SetInt("kills_" + sceneName, PlayerPrefs.GetInt("kills_" + sceneName) + 1);
             SwaptoDead();
+        }
+
     }
 
     protected void MoveTo(Vector2 destiny)
@@ -238,18 +254,17 @@ public class EnemyMoviment : MonoBehaviour
 
     IEnumerator Sleep()
     {
+        sleepy = true;
         yield return new WaitForSeconds(awakedTime);
-        if (target == "Nenhum")
+        if (target == "Nenhum" && sleepy)
         {
-            Debug.Log("Dormi");
             target = "Dormir";
             sleeping = true;
-            atention_level = 0f;
             yield return new WaitForSeconds(sleepingTime);
             sleeping = false;
+            sleepy = false;
             target = "Nenhum";
-            Debug.Log("Acordadei");
         }
-
+        sleepCoroutine = null;
     }
 }

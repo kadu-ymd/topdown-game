@@ -654,7 +654,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!70 &7624824365014967087
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -704,9 +704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13e993e35a2bc14bb6a65c84a5cf64f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAttention: 2
+  maxAttention: 1
   atention_level: -0.0024489658
-  speed: 2
   deadBodyPrefab: {fileID: 3128817541427951761, guid: 58ed1ba815353c543b98439953695973, type: 3}
   memoryPrefab: {fileID: 4492253540437420899, guid: ea00c05904de82041ae38d3e7e5c651c, type: 3}
   memoryName: 
@@ -820,7 +819,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.45833334
-  m_Speed: 2
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
