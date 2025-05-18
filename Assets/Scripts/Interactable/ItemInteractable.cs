@@ -23,17 +23,18 @@ public class ItemInteractable : MonoBehaviour {
         }
     }
 
-    void Interact() {
-        if (string.IsNullOrEmpty(collectableItemName) || PlayerPrefs.GetInt(collectableItemName) == 0) {
-            itemDisplay.EnterDisplay(onIteractionText);
-        } else {
-            ThoughtManager.ShowThought("Não há mais nada de importante aqui.");
-        }
-        if (!string.IsNullOrEmpty(collectableItemName) && PlayerPrefs.GetInt(collectableItemName) == 0) {
-            PlayerPrefs.SetInt(collectableItemName, 1);
-            PlayerPrefs.Save(); 
-
-            if (destroyOnCollect) Destroy(gameObject);
+    void Interact()
+    {
+        if (!string.IsNullOrEmpty(collectableItemName))
+        {
+            if (PlayerPrefs.GetInt(collectableItemName) == 0)
+            {
+                PlayerPrefs.SetInt(collectableItemName, 1);
+                itemDisplay.EnterDisplay(onIteractionText);
+                if (destroyOnCollect) Destroy(gameObject);
+            }
+            else
+                ThoughtManager.ShowThought("Não há mais nada de importante aqui.");
         }
     }
 }

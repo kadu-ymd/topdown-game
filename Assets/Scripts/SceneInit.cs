@@ -15,7 +15,6 @@ public class SceneInit : MonoBehaviour {
         "FirstDuckPaper", "SecondDuckPaper", "ThirdDuckPaper"
     };
     protected string sceneName;
-    protected static bool firstLoad = false;
     public List<string> currentRequiredPlayerItems = new List<string>();
     public MonoBehaviour runOnInit;
 
@@ -30,12 +29,6 @@ public class SceneInit : MonoBehaviour {
         sceneName = SceneManager.GetActiveScene().name;
         if (sceneName == "1Bedroom")
             PlayerPrefs.DeleteAll();
-
-        if (PlayerPrefs.GetString("CurrentScene") != sceneName)
-        {
-            PlayerPrefs.SetString("CurrentScene", sceneName);
-            firstLoad = true;
-        } 
 
         if (!Initialized)
         {

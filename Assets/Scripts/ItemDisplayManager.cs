@@ -2,19 +2,19 @@ using UnityEngine;
 
 public class ItemDisplayManager : MonoBehaviour {
     public string defaultExitDisplayText;
-    private string exitDisplayText;
+    protected string exitDisplayText;
 
-    void Awake() {    
+    protected virtual void Start() {    
         gameObject.SetActive(false);
     }
 
-    void Update() {
+    protected virtual void Update() {
         if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E)) && PlayerPrefs.GetString("CurrentUI") == "ItemDisplay") {
             ExitDisplay();
         }
     }
 
-    public void EnterDisplay(string exitDisplayText = null) {
+    public virtual void EnterDisplay(string exitDisplayText = null) {
         MenuManager.HidePauseButton();
         gameObject.SetActive(true);
         Time.timeScale = 0f;
@@ -25,12 +25,11 @@ public class ItemDisplayManager : MonoBehaviour {
     
     }
 
-    public void ExitDisplay()
+    public virtual void ExitDisplay()
     {
         MenuManager.ShowPauseButton();
         gameObject.SetActive(false);
         Time.timeScale = 1f;
-        BookManager.UpdatedeBookPages();
         PlayerPrefs.SetString("CurrentUI", "None");
 
         if (!string.IsNullOrEmpty(exitDisplayText))

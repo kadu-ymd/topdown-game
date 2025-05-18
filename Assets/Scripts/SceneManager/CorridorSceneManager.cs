@@ -14,7 +14,7 @@ public class CorridorSceneManager : SceneInit
             ThoughtManager.ShowThought("Parece que aquele guarda está cochilando... Se eu for um pouco mais furtivo eu consigo passar...");
         else if (deaths == 3)
             ThoughtManager.ShowThought("Parece que quando a lanterna dele está apagada, ele não me vê... Mas quando ela está acesa, eu sou um alvo fácil...");
-        else if (!firstLoad) 
+        else 
             ThoughtManager.ShowThought("Droga! Fui pego de novo!");
     }
 }

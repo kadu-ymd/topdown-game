@@ -1,21 +1,16 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class BookManager : MonoBehaviour
+public class BookManager : ItemDisplayManager
 {
     private static BookManager BookManagerInstance;
     private int pageCount;
     private GameObject pages;
     private AudioSource audioSource;
     private int maxPages = 1;
-    private string exitDisplayText;
 
     void Awake() {
         if (BookManagerInstance == null) BookManagerInstance = this;
-    }
-
-    void Start()
-    {
         audioSource = GetComponent<AudioSource>();
         pages = GameObject.Find("Folhas");
         pageCount = 1;
@@ -23,7 +18,9 @@ public class BookManager : MonoBehaviour
         UpdatedeBookPages();
     }
 
-    void Update()
+    protected override void Start() {}
+
+    protected override void Update()
     {
         string currentUI = PlayerPrefs.GetString("CurrentUI");
         if (currentUI == "Book")
@@ -37,7 +34,7 @@ public class BookManager : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.LeftArrow))
                 PrevPage();
         }
-        else if (currentUI == "None")
+        else if (currentUI == "None" && PlayerPrefs.GetInt("Book") == 1)
         {
             if (Input.GetKeyDown(KeyCode.Q))
                 EnterDisplay();
@@ -86,6 +83,7 @@ public class BookManager : MonoBehaviour
             newMaxPages = 1;
         PlayerPrefs.SetInt("BookPages", newMaxPages);
         BookManagerInstance.maxPages = newMaxPages;
+        BookManagerInstance.ToPage(newMaxPages);
         return newMaxPages;
     }
 
@@ -96,8 +94,9 @@ public class BookManager : MonoBehaviour
         BookManagerInstance.EnterDisplay(exitDisplayText);
     }
 
-    public void EnterDisplay(string exitDisplayText = null)
+    public override void EnterDisplay(string exitDisplayText = null)
     {
+        UpdatedeBookPages();
         MenuManager.HidePauseButton();
         SetActiveChildren(true);
         Time.timeScale = 0f;
@@ -109,7 +108,7 @@ public class BookManager : MonoBehaviour
             this.exitDisplayText = null;
     }
 
-    public void ExitDisplay()
+    public override void ExitDisplay()
     {
         MenuManager.ShowPauseButton();
         SetActiveChildren(false);
