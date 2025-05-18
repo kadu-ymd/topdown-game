@@ -29,14 +29,16 @@ public class MemoryManager : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         if (goToPlayer)
             transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-        else if (distanceToPlayer > followDistance)
+        else if (distanceToPlayer > followDistance || distanceToPlayer < 0.5f)
             goToPlayer = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Player"))
+        {
             StartCoroutine(Remember());
+            goToPlayer = true;
         }
     }
 
@@ -50,7 +52,8 @@ public class MemoryManager : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        transform.localScale = targetScale; 
+        transform.localScale = targetScale;
+        BookManager.DisplayBookIntoPage(BookManager.UpdatedeBookPages(), "... ... Essa memória dolorosa... Ela não pode ser real, pode?");
         Destroy(gameObject);
     }
 }

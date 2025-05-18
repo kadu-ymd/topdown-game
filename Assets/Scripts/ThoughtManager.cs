@@ -44,8 +44,6 @@ public class ThoughtManager : MonoBehaviour {
                 if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E)) {
                     if (!skip) skip = true;
                     else HideThought();
-                } else {
-                    StartCoroutine(StopThought());
                 }
             }
         }
@@ -67,11 +65,6 @@ public class ThoughtManager : MonoBehaviour {
         PlayerPrefs.SetString("CurrentUI", "None");
         thoughtManagerInstance.skip = false;
         thinking = false;
-    }
-
-    private IEnumerator StopThought() {
-        yield return new WaitForSeconds(thoughtDuration);
-        HideThought();
     }
 
     private IEnumerator RevealText(string text) {

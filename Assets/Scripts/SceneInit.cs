@@ -15,9 +15,8 @@ public class SceneInit : MonoBehaviour {
         "FirstDuckPaper", "SecondDuckPaper", "ThirdDuckPaper"
     };
     protected string sceneName;
-    protected bool firstLoad = false;
+    protected static bool firstLoad = false;
     public List<string> currentRequiredPlayerItems = new List<string>();
-    public int currentRequiredBookPages = 0;
     public MonoBehaviour runOnInit;
 
     private bool isInitialScene = true; // Começa como true para a primeira execução
@@ -36,7 +35,7 @@ public class SceneInit : MonoBehaviour {
         {
             PlayerPrefs.SetString("CurrentScene", sceneName);
             firstLoad = true;
-        }
+        } 
 
         if (!Initialized)
         {
@@ -51,8 +50,8 @@ public class SceneInit : MonoBehaviour {
                         PlayerPrefs.SetInt(collectable, 0);
                 }
             }
-            if (!PlayerPrefs.HasKey("BookPages") || PlayerPrefs.GetInt("BookPages") < currentRequiredBookPages)
-                PlayerPrefs.SetInt("BookPages", currentRequiredBookPages);
+            
+            BookManager.UpdatedeBookPages();
 
             if (!PlayerPrefs.HasKey("TotalDeaths"))
                 PlayerPrefs.SetInt("TotalDeaths", 0);
