@@ -428,6 +428,7 @@ GameObject:
   - component: {fileID: 112029720}
   - component: {fileID: 112029722}
   - component: {fileID: 112029721}
+  - component: {fileID: 112029723}
   m_Layer: 0
   m_Name: Coffins1
   m_TagString: Untagged
@@ -551,6 +552,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &112029723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112029719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!4 &130870511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8222825949107985594, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
@@ -583,6 +600,7 @@ GameObject:
   - component: {fileID: 175554375}
   - component: {fileID: 175554377}
   - component: {fileID: 175554376}
+  - component: {fileID: 175554378}
   m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
@@ -2401,6 +2419,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &175554378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175554374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &188609740 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1491870056843367348, guid: 4c2028b05040f8441aeb1778fa7a6a0c, type: 3}
@@ -2476,6 +2510,7 @@ GameObject:
   - component: {fileID: 270001320}
   - component: {fileID: 270001322}
   - component: {fileID: 270001321}
+  - component: {fileID: 270001323}
   m_Layer: 0
   m_Name: Coffins2
   m_TagString: Untagged
@@ -2599,6 +2634,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &270001323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270001319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &281692975
 GameObject:
   m_ObjectHideFlags: 0
@@ -3539,6 +3590,7 @@ GameObject:
   - component: {fileID: 299220802}
   - component: {fileID: 299220804}
   - component: {fileID: 299220803}
+  - component: {fileID: 299220805}
   m_Layer: 0
   m_Name: Cabinet1
   m_TagString: Interactable
@@ -3663,6 +3715,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &299220805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299220801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &318495407
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,6 +3829,7 @@ GameObject:
   - component: {fileID: 327831708}
   - component: {fileID: 327831710}
   - component: {fileID: 327831709}
+  - component: {fileID: 327831711}
   m_Layer: 0
   m_Name: Coffins2
   m_TagString: Untagged
@@ -3884,6 +3953,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &327831711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327831707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &344154337
 GameObject:
   m_ObjectHideFlags: 0
@@ -4234,6 +4319,86 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5809e3c93a5fe949b2cf9ebb8512c52, type: 3}
+--- !u!1 &419160713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 419160716}
+  - component: {fileID: 419160715}
+  - component: {fileID: 419160714}
+  m_Layer: 0
+  m_Name: NavMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &419160714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419160713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70bd44a44cd62c64fbfc1eea95b24880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideByGrid: 0
+  m_UseMeshPrefab: {fileID: 0}
+  m_CompressBounds: 0
+  m_OverrideVector: {x: 1, y: 1, z: 1}
+--- !u!114 &419160715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419160713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04976799df50f54ba128eff723155a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 1
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_MinRegionArea: 0
+  m_HideEditorLogs: 0
+  m_NavMeshData: {fileID: 23800000, guid: f05d37c5ce0b83243bb990bf37c12255, type: 2}
+--- !u!4 &419160716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419160713}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -10.485465, y: -8.055359, z: -0.0030190872}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &435738705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4649,6 +4814,7 @@ GameObject:
   - component: {fileID: 519137406}
   - component: {fileID: 519137408}
   - component: {fileID: 519137407}
+  - component: {fileID: 519137409}
   m_Layer: 0
   m_Name: Litter2
   m_TagString: Untagged
@@ -4772,6 +4938,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &519137409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519137405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1001 &546324639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6821,6 +7003,7 @@ GameObject:
   - component: {fileID: 1023969075}
   - component: {fileID: 1023969074}
   - component: {fileID: 1023969076}
+  - component: {fileID: 1023969077}
   m_Layer: 0
   m_Name: Sink
   m_TagString: Interactable
@@ -6961,6 +7144,22 @@ MonoBehaviour:
   collectableItemName: 
   destroyOnCollect: 0
   onIteractionText: Uma lista de tarefas? Como isso vai me ajudar?
+--- !u!114 &1023969077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023969072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1025853112
 GameObject:
   m_ObjectHideFlags: 0
@@ -7287,6 +7486,7 @@ GameObject:
   - component: {fileID: 1059851764}
   - component: {fileID: 1059851763}
   - component: {fileID: 1059851765}
+  - component: {fileID: 1059851766}
   m_Layer: 0
   m_Name: Boxes3
   m_TagString: Interactable
@@ -7427,6 +7627,22 @@ MonoBehaviour:
   collectableItemName: 
   destroyOnCollect: 0
   onIteractionText: "N\xE3o parece nada demais... Apenas o relat\xF3rio de uma encomenda."
+--- !u!114 &1059851766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059851761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1079385411
 GameObject:
   m_ObjectHideFlags: 0
@@ -7439,6 +7655,7 @@ GameObject:
   - component: {fileID: 1079385414}
   - component: {fileID: 1079385413}
   - component: {fileID: 1079385415}
+  - component: {fileID: 1079385416}
   m_Layer: 0
   m_Name: Boxes1
   m_TagString: Interactable
@@ -7579,6 +7796,22 @@ MonoBehaviour:
   collectableItemName: 
   destroyOnCollect: 0
   onIteractionText: "N\xE3o parece nada demais... Apenas o relat\xF3rio de uma encomenda."
+--- !u!114 &1079385416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079385411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!4 &1121910665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2962398758085165856, guid: 04178f7347d4d674ab0662c4f7c836ee, type: 3}
@@ -8216,6 +8449,7 @@ GameObject:
   - component: {fileID: 1222642958}
   - component: {fileID: 1222642957}
   - component: {fileID: 1222642959}
+  - component: {fileID: 1222642960}
   m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
@@ -9286,6 +9520,22 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1222642960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222642955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1238845446
 GameObject:
   m_ObjectHideFlags: 0
@@ -9366,6 +9616,7 @@ GameObject:
   - component: {fileID: 1313475105}
   - component: {fileID: 1313475106}
   - component: {fileID: 1313475107}
+  - component: {fileID: 1313475108}
   m_Layer: 0
   m_Name: LitterPart1
   m_TagString: Untagged
@@ -9489,6 +9740,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.9173687, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &1313475108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313475104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1323828672
 GameObject:
   m_ObjectHideFlags: 0
@@ -9500,6 +9767,7 @@ GameObject:
   - component: {fileID: 1323828673}
   - component: {fileID: 1323828675}
   - component: {fileID: 1323828674}
+  - component: {fileID: 1323828676}
   m_Layer: 0
   m_Name: Litter3
   m_TagString: Untagged
@@ -9623,6 +9891,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1323828676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323828672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1360566590
 GameObject:
   m_ObjectHideFlags: 0
@@ -9798,6 +10082,7 @@ GameObject:
   - component: {fileID: 1398023295}
   - component: {fileID: 1398023294}
   - component: {fileID: 1398023293}
+  - component: {fileID: 1398023298}
   m_Layer: 0
   m_Name: ExitDoor
   m_TagString: Untagged
@@ -9962,6 +10247,22 @@ Transform:
   - {fileID: 1121910665}
   m_Father: {fileID: 249098981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1398023298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398023292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1405496333
 GameObject:
   m_ObjectHideFlags: 0
@@ -11256,6 +11557,7 @@ GameObject:
   - component: {fileID: 1624989668}
   - component: {fileID: 1624989670}
   - component: {fileID: 1624989669}
+  - component: {fileID: 1624989671}
   m_Layer: 0
   m_Name: Coffins1
   m_TagString: Untagged
@@ -11379,6 +11681,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1624989671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624989667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1666595399
 GameObject:
   m_ObjectHideFlags: 0
@@ -11619,6 +11937,7 @@ GameObject:
   - component: {fileID: 1740201365}
   - component: {fileID: 1740201367}
   - component: {fileID: 1740201366}
+  - component: {fileID: 1740201368}
   m_Layer: 0
   m_Name: Litter1
   m_TagString: Untagged
@@ -11742,6 +12061,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1740201368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740201364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1766822920
 GameObject:
   m_ObjectHideFlags: 0
@@ -12496,6 +12831,7 @@ GameObject:
   - component: {fileID: 1943812757}
   - component: {fileID: 1943812758}
   - component: {fileID: 1943812759}
+  - component: {fileID: 1943812760}
   m_Layer: 0
   m_Name: Litter5
   m_TagString: Untagged
@@ -12619,6 +12955,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.9173687, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &1943812760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943812756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1991771367
 GameObject:
   m_ObjectHideFlags: 0
@@ -12631,6 +12983,7 @@ GameObject:
   - component: {fileID: 1991771369}
   - component: {fileID: 1991771368}
   - component: {fileID: 1991771371}
+  - component: {fileID: 1991771372}
   m_Layer: 0
   m_Name: Boxes2
   m_TagString: Untagged
@@ -12772,6 +13125,22 @@ MonoBehaviour:
   destroyOnCollect: 0
   onIteractionText: "Que esquisito... Uma conta? N\xE3o quero nem saber o que tem
     nessa caixa..."
+--- !u!114 &1991771372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991771367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2014020482
 GameObject:
   m_ObjectHideFlags: 0
@@ -12951,6 +13320,7 @@ GameObject:
   - component: {fileID: 2025203565}
   - component: {fileID: 2025203566}
   - component: {fileID: 2025203567}
+  - component: {fileID: 2025203568}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -13075,6 +13445,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.65, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &2025203568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025203564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2025306140
 GameObject:
   m_ObjectHideFlags: 0
@@ -13086,6 +13472,7 @@ GameObject:
   - component: {fileID: 2025306141}
   - component: {fileID: 2025306142}
   - component: {fileID: 2025306143}
+  - component: {fileID: 2025306144}
   m_Layer: 0
   m_Name: TrashCan
   m_TagString: Interactable
@@ -13210,6 +13597,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.7651882, y: 0.38155174}
   m_EdgeRadius: 0
+--- !u!114 &2025306144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025306140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2049464295
 GameObject:
   m_ObjectHideFlags: 0
@@ -13393,6 +13796,7 @@ GameObject:
   - component: {fileID: 2070347195}
   - component: {fileID: 2070347196}
   - component: {fileID: 2070347197}
+  - component: {fileID: 2070347198}
   m_Layer: 0
   m_Name: Shelf
   m_TagString: Interactable
@@ -13517,6 +13921,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.81, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &2070347198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070347194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &2074645760
 GameObject:
   m_ObjectHideFlags: 0
@@ -13920,3 +14340,4 @@ SceneRoots:
   - {fileID: 546324639}
   - {fileID: 249098981}
   - {fileID: 1286010690}
+  - {fileID: 419160716}
