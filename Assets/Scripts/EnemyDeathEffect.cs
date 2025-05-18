@@ -6,6 +6,10 @@ using System.Collections;
 
 public class EnemyDeathEffect : MonoBehaviour
 {
+    private AudioSource audioSource;
+    public AudioClip heartbeatClip;
+    public AudioClip tinnitusClip;
+
     private Camera mainCamera;
     private ColorAdjustments colorAdjust;
     private float originalExposure;
@@ -15,6 +19,7 @@ public class EnemyDeathEffect : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         mainCamera = Camera.main;
         globalVolume  = GameObject.Find("Global Volume").GetComponent<Volume>();
         globalVolume.profile.TryGet<ColorAdjustments>(out colorAdjust);
@@ -26,6 +31,10 @@ public class EnemyDeathEffect : MonoBehaviour
 
     IEnumerator OnEnemyDeath()
     {
+        audioSource.clip = heartbeatClip;
+        audioSource.Play();
+        audioSource.PlayOneShot(tinnitusClip);
+
         Debug.Log("Dead");
         yield return StartCoroutine(FadeExposure(-10f, 0.25f));
         yield return StartCoroutine(FadeExposure(originalExposure, 0.2f));

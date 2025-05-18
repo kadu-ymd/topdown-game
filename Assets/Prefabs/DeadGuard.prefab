@@ -175,3 +175,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d000744cd6cab647bb9345bdcb6bb82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heartbeatClip: {fileID: 8300000, guid: 19dd95a1e5dea1c4589f1c9079f9008a, type: 3}
+  tinnitusClip: {fileID: 8300000, guid: 2ca3ec3735cee4e41b29862fb696f500, type: 3}
