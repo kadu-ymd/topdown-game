@@ -36,5 +36,7 @@ public class ItemInteractable : MonoBehaviour {
             else
                 ThoughtManager.ShowThought("Não há mais nada de importante aqui.");
         }
+        else
+            itemDisplay.EnterDisplay(onIteractionText);
     }
 }
