@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     public GameObject settingsMenuUI;
+    public AudioSource buttonClick;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class MainMenuManager : MonoBehaviour
         {
             if (PlayerPrefs.GetString("CurrentUI") == "SettingsMenu")
             {
+                PlaySound();
                 SettingsClose();
             }
         }
@@ -35,6 +37,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void SettingsClose()
     {
+        Debug.Log("SettingsClose");
         if (PlayerPrefs.GetString("CurrentUI") == "SettingsMenu")
         {
             settingsMenuUI.SetActive(false);
@@ -47,4 +50,13 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene("1Bedroom");
         Time.timeScale = 1;
     }
+
+    public void PlaySound()
+    {
+        if (buttonClick != null)
+        {
+            buttonClick.Play();
+        }
+    }
+  
 }
