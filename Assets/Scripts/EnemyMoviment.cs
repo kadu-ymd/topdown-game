@@ -151,7 +151,7 @@ public class EnemyMoviment : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             string sceneName = SceneManager.GetActiveScene().name;
-            PlayerPrefs.SetInt("kills_" + sceneName, PlayerPrefs.GetInt("kills_" + sceneName) + 1);
+            PlayerPrefs.SetInt("Kills_" + sceneName, PlayerPrefs.GetInt("Kills_" + sceneName) + 1);
             SwaptoDead();
         }
 
