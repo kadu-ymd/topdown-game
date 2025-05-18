@@ -38,9 +38,9 @@ public class PhaseInit : MonoBehaviour {
             if (!PlayerPrefs.HasKey("BookPages") || PlayerPrefs.GetInt("BookPages") < currentRequiredBookPages) {
                 PlayerPrefs.SetInt("BookPages", currentRequiredBookPages);
             }
-            PlayerPrefs.SetString("CurrentUI", "None");
             Initialized = true;
         }
+        PlayerPrefs.SetString("CurrentUI", "None");
     }
 
     void Start()

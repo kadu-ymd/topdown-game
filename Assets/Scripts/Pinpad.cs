@@ -35,6 +35,7 @@ public class Pinpad : MonoBehaviour
     public void CheckPassword()
     {
         string attempt = password[^3..];
+        HidePinpad();
         if (unlocked)
         {
             ThoughtManager.ShowThought("A porta já está aberta, por que eu coloquei a senha de novo?...");   
@@ -48,7 +49,6 @@ public class Pinpad : MonoBehaviour
         {
             ThoughtManager.ShowThought("A porta continua trancada, acho que essa não é a senha correta...");
         }
-        HidePinpad();
     }
 
     public void UpdateDisplay()

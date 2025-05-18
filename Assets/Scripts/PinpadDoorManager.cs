@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PinpadDoorManager : MonoBehaviour
 {
@@ -43,10 +44,12 @@ public class PinpadDoorManager : MonoBehaviour
 
     public void Interact()
     {
+
         if (isLocked)
         {
-            pinpad.DisplayPinpad();
             ThoughtManager.ShowThought(lockedText);
+            StartCoroutine(OpenPinpad());
+            animator.ResetTrigger("Interact");
         }
         else
         {
@@ -64,6 +67,13 @@ public class PinpadDoorManager : MonoBehaviour
                 PlaySound(closeSound);
             }
         }
+    }
+
+    IEnumerator OpenPinpad()
+    {
+        while (PlayerPrefs.GetString("CurrentUI") == "Thought")
+            yield return new WaitForEndOfFrame();
+        pinpad.DisplayPinpad();
     }
     
     public void PlayLockedSound()

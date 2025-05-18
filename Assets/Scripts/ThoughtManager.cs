@@ -62,10 +62,10 @@ public class ThoughtManager : MonoBehaviour {
         }
     }
 
-    public void HideThought() {
-        gameObject.SetActive(false);
+    public static void HideThought() {
+        thoughtManagerInstance.gameObject.SetActive(false);
         PlayerPrefs.SetString("CurrentUI", "None");
-        skip = false;
+        thoughtManagerInstance.skip = false;
         thinking = false;
     }
 
