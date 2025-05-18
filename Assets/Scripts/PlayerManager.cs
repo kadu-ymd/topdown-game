@@ -101,7 +101,9 @@ public class PlayerManager : MonoBehaviour {
         yield return new WaitForSecondsRealtime(0.5f);
 
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        string sceneName = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetInt("Deaths_" + sceneName, PlayerPrefs.GetInt("Deaths_" + sceneName) + 1);
+        SceneManager.LoadScene(sceneName);
     }
 
     private IEnumerator FadeExposure(float targetExposure, float duration) {

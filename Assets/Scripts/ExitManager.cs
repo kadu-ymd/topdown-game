@@ -9,18 +9,16 @@ public class ExitManager : MonoBehaviour {
 
     public List<string> RequiredItemsName = new List<string>();
     public string nextSceneName;
+    private string sceneName;
+
     private Volume globalVolume;
     private ColorAdjustments colorAdjust;
 
-    void Awake() {
-        if (SceneManager.GetActiveScene().name == "InitialRoom") {
-            PlayerPrefs.DeleteAll();
-        }
-    }
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
-        if (!Application.CanStreamedLevelBeLoaded(nextSceneName)) {
+        sceneName = SceneManager.GetActiveScene().name;
+        if (!Application.CanStreamedLevelBeLoaded(nextSceneName))
+        {
             Debug.LogError("A cena " + nextSceneName + " não existe ou não está incluída na Build Settings.");
             return;
         }
@@ -43,6 +41,8 @@ public class ExitManager : MonoBehaviour {
                     return;
                 }
             }
+            PlayerPrefs.SetInt("TotalDeaths", PlayerPrefs.GetInt("TotalDeaths") + PlayerPrefs.GetInt("Deaths_" + sceneName));
+            PlayerPrefs.SetInt("TotalKills", PlayerPrefs.GetInt("TotalKills") + PlayerPrefs.GetInt("Kills_" + sceneName));
             StartCoroutine(FadeOutAndLoadScene());
         }
     }

@@ -174,7 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b445a706495a794992fc73dc3d7085c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EkeySpriteRenderer: {fileID: 3899521767878360894}
 --- !u!82 &1648266345609388401
 AudioSource:
   m_ObjectHideFlags: 0

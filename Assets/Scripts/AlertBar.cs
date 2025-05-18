@@ -14,7 +14,7 @@ public class AlertBar : MonoBehaviour
 
     void Update()
     {
-        float atention = Mathf.Clamp01(enemy.atention_level / 2f);
+        float atention = Mathf.Clamp01(enemy.atention_level / enemy.maxAttention);
         slider.value = atention;
 
         SetColor(atention);

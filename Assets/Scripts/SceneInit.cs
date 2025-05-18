@@ -1,49 +1,80 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using System.Collections;
 using System.Collections.Generic;
 
-public class PhaseInit : MonoBehaviour {
+public class SceneInit : MonoBehaviour {
 
-    private static bool Initialized = false;
-    private List<string> AllCollectables = new List<string> {
+    protected static bool Initialized = false;
+    protected List<string> AllCollectables = new List<string> {
         "Book", "Gun",
         "FirstMemory", "SecondMemory",
-        "PharmCard", "MedicKey", "StorageCard",
+        "PharmCard", "MedicKey", "StaffKey",
         "FirstDuckPaper", "SecondDuckPaper", "ThirdDuckPaper"
     };
+    protected string sceneName;
+    protected bool firstLoad = false;
     public List<string> currentRequiredPlayerItems = new List<string>();
     public int currentRequiredBookPages = 0;
-
     public MonoBehaviour runOnInit;
-    private bool isInitialScene = true; // Começa como true para a primeira execução
 
+    private bool isInitialScene = true; // Começa como true para a primeira execução
     private Volume globalVolume;
     private ColorAdjustments colorAdjust;
     private Vignette vignette;
     private float targetExposure;
 
-    void Awake() {
-        if (!Initialized) {
-            foreach (string collectable in AllCollectables) {
-                if (!PlayerPrefs.HasKey(collectable)) {
-                    if ((currentRequiredPlayerItems.Contains(collectable))) {
+    protected void Awake()
+    {
+        sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName == "1Bedroom")
+            PlayerPrefs.DeleteAll();
+
+        if (PlayerPrefs.GetString("CurrentScene") != sceneName)
+        {
+            PlayerPrefs.SetString("CurrentScene", sceneName);
+            firstLoad = true;
+        }
+
+        if (!Initialized)
+        {
+            foreach (string collectable in AllCollectables)
+            {
+                if (!PlayerPrefs.HasKey(collectable))
+                {
+                    if ((currentRequiredPlayerItems.Contains(collectable)))
                         PlayerPrefs.SetInt(collectable, 1);
-                    } else {
+
+                    else
                         PlayerPrefs.SetInt(collectable, 0);
-                    }
                 }
             }
-            if (!PlayerPrefs.HasKey("BookPages") || PlayerPrefs.GetInt("BookPages") < currentRequiredBookPages) {
+            if (!PlayerPrefs.HasKey("BookPages") || PlayerPrefs.GetInt("BookPages") < currentRequiredBookPages)
                 PlayerPrefs.SetInt("BookPages", currentRequiredBookPages);
-            }
+
+            if (!PlayerPrefs.HasKey("TotalDeaths"))
+                PlayerPrefs.SetInt("TotalDeaths", 0);
+
+            if (!PlayerPrefs.HasKey("TotalKills"))
+                PlayerPrefs.SetInt("TotalKills", 0);
+
+            if (!PlayerPrefs.HasKey("Deaths_" + sceneName))
+                PlayerPrefs.SetInt("Deaths_" + sceneName, 0);
+
+            PlayerPrefs.SetString("LastScene", sceneName);
             Initialized = true;
+
         }
         PlayerPrefs.SetString("CurrentUI", "None");
+        PlayerPrefs.SetInt($"Kills_" + sceneName, 0);
+        PlayerPrefs.SetString("LastScene", sceneName);
+        Debug.Log("Estado atual da cena: " + sceneName + " com " + PlayerPrefs.GetInt("Deaths_" + sceneName) + " mortes e " + PlayerPrefs.GetInt("Kills_" + sceneName) + " assassinatos.");
+        Debug.Log("Total: " + PlayerPrefs.GetInt("TotalDeaths") + " mortes e " + PlayerPrefs.GetInt("TotalKills") + " assassinatos.");
     }
 
-    void Start()
+    protected void Start()
     {
         globalVolume = GameObject.Find("Global Volume").GetComponent<Volume>();
         globalVolume.profile.TryGet<ColorAdjustments>(out colorAdjust);
@@ -61,11 +92,10 @@ public class PhaseInit : MonoBehaviour {
     }
 
 
-    private void RunInitialization()
+    protected virtual void RunInitialization()
     {
-        if (runOnInit != null) {
+        if (runOnInit != null)
             runOnInit.Invoke("Run", 0); // Dispara ThoughtFlowManager.Run()
-        }
     }
 
     private IEnumerator WakingUpEffect()
@@ -109,12 +139,14 @@ public class PhaseInit : MonoBehaviour {
         RunInitialization();
     }
 
-    private IEnumerator FadeIn() {
-        float duration = 1f; 
+    private IEnumerator FadeIn()
+    {
+        float duration = 1f;
         float startExposure = colorAdjust.postExposure.value; // já será -10
         float elapsed = 0f;
 
-        while (elapsed < duration) {
+        while (elapsed < duration)
+        {
             elapsed += Time.deltaTime;
             float t = Mathf.SmoothStep(0f, 1f, elapsed / duration);
             colorAdjust.postExposure.value = Mathf.Lerp(startExposure, targetExposure, t);
