@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {  
@@ -12,13 +13,19 @@ public class MenuManager : MonoBehaviour
     private GameObject bookItem;
     private GameObject gunItem;
 
-    void Awake() {
+    private AudioSource musicSource;
+    private Slider musicSlider;
+
+    void Awake() 
+    {
         if (MenuManagerInstance == null) MenuManagerInstance = this;
         menuCanvas.SetActive(true);
     }
 
     void Start()
     {
+        GameObject musicPlayer = GameObject.Find("MusicPlayer");
+
         pauseButton = menuCanvas.transform.Find("PauseButton")?.gameObject;
         pauseMenuUI = menuCanvas.transform.Find("PauseMenu")?.gameObject;
         settingsMenuUI = menuCanvas.transform.Find("SettingsMenu")?.gameObject;

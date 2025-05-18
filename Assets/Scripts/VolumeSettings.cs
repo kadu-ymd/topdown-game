@@ -14,8 +14,15 @@ public class VolumeController : MonoBehaviour
             musicSource = GetComponent<AudioSource>(); // Busca automaticamente
         }
 
-        masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 0.5f);
-        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+        if (!PlayerPrefs.HasKey("MasterVolume") || !PlayerPrefs.HasKey("MusicVolume"))
+        {
+            PlayerPrefs.SetFloat("MasterVolume", 0.4f);
+            PlayerPrefs.SetFloat("MusicVolume", 0.4f);
+        }
+
+        masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 0.4f);
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.4f);
+
         LoadVolume();
     }
 
