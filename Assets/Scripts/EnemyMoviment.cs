@@ -1,16 +1,18 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class EnemyMoviment : MonoBehaviour
 {
     protected AudioSource audioSource;
+    protected static AudioSource currentPlayingAudio = null;
     public float maxAttention = 2f;
     protected NavMeshAgent agent;
 
-    public float atention_level;
+    [HideInInspector] public float atention_level = 0f;
     protected bool stalk;
     protected Vector2 initialPosition;
-    protected string target;
+    protected string target = "Nenhum";
 
     public float speed;
     protected Rigidbody2D rb;
@@ -21,8 +23,11 @@ public class EnemyMoviment : MonoBehaviour
     public GameObject memoryPrefab;
     public string memoryName;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public virtual void Start()
+    private bool sleeping = false;
+    public float sleepingTime = 0f;
+    public float awakedTime = 0f;
+
+    protected virtual void Start()
     {
         // Navigator
         agent = GetComponent<NavMeshAgent>();
@@ -38,74 +43,85 @@ public class EnemyMoviment : MonoBehaviour
         if (string.IsNullOrEmpty(memoryName))
         {
             if (!PlayerPrefs.HasKey(memoryName))
-            {
                 PlayerPrefs.SetInt(memoryName, 0);
-            }
+
             if (memoryPrefab == null && !string.IsNullOrEmpty(memoryName))
-            {
                 Debug.LogError("Memory prefab não atribuído no inspetor.");
-            }
         }
+
+        animator.SetFloat("Vx", 0f);
+        animator.SetFloat("Vy", -1f);
     }
 
-    public virtual void FixedUpdate() // Atualização do animator e target
+    protected virtual void FixedUpdate() // Atualização do animator e target
     {
         // State Machine
         if (target == "Hit")
-        {
             animator.SetTrigger("Hit");
-        }
+        
         else if (target == "Player")
-        {
-            moveToPlayer();
-            if (!stalk)
-            {
-                target = "Inicio";
-            }
-        }
+            MoveTo(PlayerMovement.rb.position);
+
         else if (target == "Inicio")
         {
-            moveToStart();
-            if (Mathf.Abs(Vector2.Distance(initialPosition, rb.position)) < 0.1f)
+            if (stalk)
+                StartStalk();
+            else
             {
-                target = "Nenhum";
-                animator.SetBool("IsWalking", false);
+                MoveTo(initialPosition);
+
+                if (Mathf.Abs(Vector2.Distance(initialPosition, rb.position)) < 0.1f)
+                {
+                    target = "Nenhum";
+                    animator.SetBool("IsWalking", false);
+                    animator.SetFloat("Vx", 0f);
+                    animator.SetFloat("Vy", -1f);
+                }
             }
         }
         else if (target == "Nenhum")
         {
             fieldOfView.angleRotation = 0f;
+            if (sleepingTime > 0 && awakedTime > 0)
+                StartCoroutine(Sleep());
         }
     }
 
-    // Update is called once per frame
-    void Update() // atualização do stalk
+    protected void Update() // atualização do stalk
     {
-        if (fieldOfView.canSeePlayer && atention_level < 2) 
+        if (!sleeping)
         {
-            atention_level += Time.deltaTime;
-        }
-        else if (!fieldOfView.canSeePlayer && atention_level > 0)
-        {
-            atention_level -= Time.deltaTime;
-        }
 
-        if (atention_level >= 2) 
-        {
-            if (!animator.GetBool("IsWalking"))
+            if (fieldOfView.canSeePlayer && atention_level < 2)
+                atention_level += Time.deltaTime;
+        
+            else if (!fieldOfView.canSeePlayer && atention_level > 0)
+                atention_level -= Time.deltaTime;
+            
+
+            if (!stalk && atention_level >= 2) // muda para o estado de perseguicão
             {
-                animator.SetBool("IsWalking", true);
-                animator.SetTrigger("Down");
+                StartStalk();
             }
-            stalk = true;
-            target = "Player";
-        }
-        if (atention_level <= 0)
-        {
-            stalk = false;
-        }
+            else if (stalk && atention_level <= 0)
+            {
+                stalk = false;
+                target = "Inicio";
+            }
 
-        playAudio();
+            playAudio();
+        }
+    }
+
+    protected void StartStalk() {
+        if (!animator.GetBool("IsWalking")) // inicia a animação de andar
+        {
+            animator.SetBool("IsWalking", true);
+            animator.SetTrigger("Down");
+
+        }
+        stalk = true;
+        target = "Player";
     }
 
     protected void LateUpdate()
@@ -115,42 +131,28 @@ public class EnemyMoviment : MonoBehaviour
 
     protected void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")) {
+        if (collision.gameObject.CompareTag("Player"))
             target = "Hit";
-        }
     }
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Bullet"))
-        {
             SwaptoDead();
-        }
     }
 
-    protected void moveToPlayer()
+    protected void MoveTo(Vector2 destiny)
     {
-        Vector2 movement = (PlayerMovement.rb.position - rb.position).normalized;
-        agent.SetDestination(PlayerMovement.rb.position);
-
-        float Vx = movement.x;
-        float Vy = movement.y;
-        SetFlagsAnimation(Vx, Vy);
-    }
-
-    protected void moveToStart()
-    {
-        Vector2 movement = (initialPosition - rb.position).normalized;
-        agent.SetDestination(initialPosition);
-
-        float Vx = movement.x;
-        float Vy = movement.y;
-        SetFlagsAnimation(Vx, Vy);
+        Vector2 movement = (destiny - rb.position).normalized;
+        agent.SetDestination(destiny);
+        SetFlagsAnimation(movement.x, movement.y);
     }
 
     protected void SetFlagsAnimation(float Vx, float Vy)
     {
-        if (Mathf.Abs(Vx) > Mathf.Abs(Vy)) 
+        animator.SetFloat("Vx", Vx);
+        animator.SetFloat("Vy", Vy);
+        if (Mathf.Abs(Vx) > Mathf.Abs(Vy))
         {
             if (Vx > 0)
             {
@@ -180,11 +182,13 @@ public class EnemyMoviment : MonoBehaviour
                 }
             }
             else
+            {
                 if (Mathf.Abs(fieldOfView.angleRotation) > 0.1f)
                 {
                     animator.SetTrigger("Down");
                     fieldOfView.angleRotation = 0f;
                 }
+            }
         }
     }
 
@@ -219,5 +223,22 @@ public class EnemyMoviment : MonoBehaviour
         {
             audioSource.Stop();
         }
+    }
+
+    IEnumerator Sleep()
+    {
+        yield return new WaitForSeconds(awakedTime);
+        if (target == "Nenhum")
+        {
+            Debug.Log("Dormi");
+            target = "Dormir";
+            sleeping = true;
+            atention_level = 0f;
+            yield return new WaitForSeconds(sleepingTime);
+            sleeping = false;
+            target = "Nenhum";
+            Debug.Log("Acordadei");
+        }
+
     }
 }

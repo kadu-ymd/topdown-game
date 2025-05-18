@@ -8,9 +8,8 @@ public class EnemyRoute : EnemyMoviment
     private List<Vector2> routePoints = new List<Vector2>();
     private int patrolPosition;
     private bool going;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public override void Start()
+    public bool cyclicPatrol = false;
+    protected override void Start()
     {
         base.Start();
 
@@ -26,7 +25,7 @@ public class EnemyRoute : EnemyMoviment
         animator.SetTrigger("Down");
     }
 
-    public override void FixedUpdate() // Atualiza��o do animator e target
+    protected override void FixedUpdate() // Atualiza do animator e target
     {
         // State Machine
         if (target == "Hit")
@@ -35,7 +34,7 @@ public class EnemyRoute : EnemyMoviment
         }
         else if (target == "Player")
         {
-            moveToPlayer();
+            MoveTo(PlayerMovement.rb.position);
             if (!stalk)
             {
                 target = "Inicio";
@@ -43,7 +42,7 @@ public class EnemyRoute : EnemyMoviment
         }
         else if (target == "Inicio")
         {
-            moveToStart();
+            MoveTo(initialPosition);
             if (Mathf.Abs(Vector2.Distance(initialPosition, rb.position)) < 0.1f)
             {
                 patrolPosition = 0;
@@ -66,6 +65,7 @@ public class EnemyRoute : EnemyMoviment
 
         if (Mathf.Abs(Vector2.Distance(destiny, rb.position)) < 0.01f)
         {
+
             if (going)
             {
                 patrolPosition++;
@@ -83,8 +83,13 @@ public class EnemyRoute : EnemyMoviment
         }
         else if (patrolPosition >= nPoints)
         {
-            going = false;
-            patrolPosition = patrolPosition-2;
+            if (cyclicPatrol)
+                patrolPosition = 0;
+            else
+            {
+                going = false;
+                patrolPosition = nPoints-2;
+            }
         }
 
         float Vx = movement.x;

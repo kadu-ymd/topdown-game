@@ -3,29 +3,31 @@ using System.Collections;
 
 public class GhostSpanwer : MonoBehaviour
 {
-
+    private GameObject originalGhost;
     private GameObject ghost;
     private SpriteRenderer ghostSpriteRenderer;
     private Color ghostOriginalColor;
     private Color ghostInitialColor;
-    public GameObject ghostPrefab;
     public float respawnTime = 5f;
     public float fadeDuration = 2f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
-        ghost = Instantiate(ghostPrefab, transform.position, transform.rotation);
-        ghostSpriteRenderer = ghost.GetComponent<SpriteRenderer>();
-        ghostOriginalColor = ghostSpriteRenderer.color;
+        originalGhost = GetComponentInChildren<EnemyMoviment>().gameObject;
+        originalGhost.SetActive(false);
+        SpriteRenderer originalGhostSpriteRenderer = originalGhost.GetComponent<SpriteRenderer>();
+        ghostOriginalColor = originalGhostSpriteRenderer.color;
         ghostInitialColor = ghostOriginalColor;
         ghostInitialColor.a = 0f; // Inicialmente invisível
-        StartCoroutine(FadeIn());
+        SpawnGhost();
         StartCoroutine(Reespawn());
     }
 
     public void SpawnGhost() {
-        ghost = Instantiate(ghostPrefab, transform.position, transform.rotation);
+        ghost = Instantiate(originalGhost, transform.position, transform.rotation);
+        ghost.SetActive(true);
         ghostSpriteRenderer = ghost.GetComponent<SpriteRenderer>();
+        ghostSpriteRenderer.color = ghostInitialColor;
         StartCoroutine(FadeIn());
     }
 
