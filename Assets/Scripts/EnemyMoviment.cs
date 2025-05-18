@@ -23,7 +23,7 @@ public class EnemyMoviment : MonoBehaviour
     public GameObject memoryPrefab;
     public string memoryName;
 
-    private bool sleeping = false;
+    public bool sleeping = false;
     public float sleepingTime = 0f;
     public float awakedTime = 0f;
 
