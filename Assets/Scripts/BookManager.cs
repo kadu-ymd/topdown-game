@@ -55,7 +55,6 @@ public class BookManager : ItemDisplayManager
                     if (folha.name == "Folha" + pageCount)
                     {
                         folha.gameObject.SetActive(true);
-                        audioSource.Play();
                     }
                     else
                         folha.gameObject.SetActive(false);
@@ -66,11 +65,13 @@ public class BookManager : ItemDisplayManager
 
     public void PrevPage()
     {
+        audioSource.Play();
         ToPage(pageCount - 1);
     }
 
     public void NextPage()
     {
+        audioSource.Play();
         ToPage(pageCount + 1);
     }
 
@@ -87,20 +88,19 @@ public class BookManager : ItemDisplayManager
             newMaxPages = 1;
         PlayerPrefs.SetInt("BookPages", newMaxPages);
         BookManagerInstance.maxPages = newMaxPages;
-        BookManagerInstance.ToPage(newMaxPages);
         return newMaxPages;
     }
 
     public static void DisplayBookIntoPage(int page, string exitDisplayText = null)
     {
         Debug.Log(exitDisplayText);
-        BookManagerInstance.ToPage(page);
         BookManagerInstance.EnterDisplay(exitDisplayText);
     }
 
     public override void EnterDisplay(string exitDisplayText = null)
     {
         UpdatedeBookPages();
+        BookManagerInstance.ToPage(page);
         MenuManager.HidePauseButton();
         SetActiveChildren(true);
         Time.timeScale = 0f;
@@ -127,6 +127,6 @@ public class BookManager : ItemDisplayManager
     public void SetActiveChildren(bool active) {
         foreach (Transform child in transform) {
             child.gameObject.SetActive(active);
-    }
-}
+        }
+    }   
 }
