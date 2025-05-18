@@ -218,7 +218,7 @@ public class EnemyMoviment : MonoBehaviour
         // Instancia a memória na mesma posição e rotação
         if (!string.IsNullOrEmpty(memoryName) && PlayerPrefs.GetInt(memoryName) == 0)
         {
-            Instantiate(memoryPrefab, currentPosition, memoryPrefab.transform.rotation);
+            Instantiate(memoryPrefab, currentPosition, memoryPrefab.transform.rotation, transform.parent);
             PlayerPrefs.SetInt(memoryName, 1);
         }
 
