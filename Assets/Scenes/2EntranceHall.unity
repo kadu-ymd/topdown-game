@@ -479,6 +479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuardPatrol 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5769561617539078591, guid: 4c11d00cb247f4b4782a4f01ac12c127, type: 3}
+      propertyPath: m_Radius
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8754561777352670145, guid: 4c11d00cb247f4b4782a4f01ac12c127, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23
@@ -7047,6 +7051,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuardPatrol 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5769561617539078591, guid: 4c11d00cb247f4b4782a4f01ac12c127, type: 3}
+      propertyPath: m_Radius
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8754561777352670145, guid: 4c11d00cb247f4b4782a4f01ac12c127, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.5
@@ -9994,7 +10002,7 @@ Transform:
   m_GameObject: {fileID: 1047027452}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 8.1}
+  m_LocalPosition: {x: 0, y: 0, z: -7.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13423,7 +13431,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 5593949393481232842, guid: 9731c02b6a8e873439397105b209660c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
