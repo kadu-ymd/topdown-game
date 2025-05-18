@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5151835091430926003}
   - component: {fileID: 6792672607551997653}
   - component: {fileID: 7980328406112404884}
+  - component: {fileID: -2751717482126556946}
   m_Layer: 0
   m_Name: DeadPrisioner
   m_TagString: Untagged
@@ -134,3 +135,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.01, y: 1.3}
   m_EdgeRadius: 0
+--- !u!114 &-2751717482126556946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8051585258426217967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d000744cd6cab647bb9345bdcb6bb82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
