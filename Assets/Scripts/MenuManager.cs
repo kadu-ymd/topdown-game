@@ -8,6 +8,9 @@ public class MenuManager : MonoBehaviour
     private GameObject pauseButton;
     private GameObject pauseMenuUI;
     private GameObject settingsMenuUI;
+    private GameObject itensCollected;
+    private GameObject bookItem;
+    private GameObject gunItem;
 
     void Awake() {
         if (MenuManagerInstance == null) MenuManagerInstance = this;
@@ -20,9 +23,15 @@ public class MenuManager : MonoBehaviour
         pauseMenuUI = menuCanvas.transform.Find("PauseMenu")?.gameObject;
         settingsMenuUI = menuCanvas.transform.Find("SettingsMenu")?.gameObject;
 
+        itensCollected = menuCanvas.transform.Find("ItensCollected")?.gameObject;
+        bookItem = itensCollected.transform.Find("Book")?.gameObject;
+        gunItem = itensCollected.transform.Find("Gun")?.gameObject;
+
+
         ActivePauseButton(true);
         ActivePauseMenuUI(false);
         ActiveSettingsMenuUI(false);
+        itensCollected.SetActive(true);
 
         if (!PlayerPrefs.HasKey("CurrentUI"))
         {
@@ -52,6 +61,17 @@ public class MenuManager : MonoBehaviour
 
             }
         }
+
+        UpdateItensCollectedDisplay();
+    }
+
+    private void UpdateItensCollectedDisplay()
+    {
+    if (bookItem != null)
+        bookItem.SetActive(PlayerPrefs.GetInt("Book", 0) > 0);
+
+    if (gunItem != null)
+        gunItem.SetActive(PlayerPrefs.GetInt("Gun", 0) > 0);
     }
 
     private void ActivePauseButton(bool show)
@@ -111,6 +131,8 @@ public class MenuManager : MonoBehaviour
         ActivePauseButton(false);
         ActivePauseMenuUI(true);
         PlayerPrefs.SetString("CurrentUI", "PauseMenu");
+
+        UpdateItensCollectedDisplay();
     }
 
     public void MainMenu()
