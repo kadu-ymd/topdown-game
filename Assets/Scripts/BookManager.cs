@@ -47,15 +47,19 @@ public class BookManager : ItemDisplayManager
         if (page > 0 && page <= maxPages)
         {
             pageCount = page;
-            foreach (Transform folha in pages.transform)
-            {
-                if (folha.name == "Folha" + pageCount)
+            
+            if (pages != null)
+            { 
+                foreach (Transform folha in pages.transform)
                 {
-                    folha.gameObject.SetActive(true);
-                    audioSource.Play();
+                    if (folha.name == "Folha" + pageCount)
+                    {
+                        folha.gameObject.SetActive(true);
+                        audioSource.Play();
+                    }
+                    else
+                        folha.gameObject.SetActive(false);
                 }
-                else
-                    folha.gameObject.SetActive(false);
             }
         }
     }
