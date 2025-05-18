@@ -44,10 +44,9 @@ public class SceneInit : MonoBehaviour {
                 }
             }
             
-            BookManager.UpdatedeBookPages();
 
             if (!PlayerPrefs.HasKey("TotalDeaths"))
-                PlayerPrefs.SetInt("TotalDeaths", 0);
+                    PlayerPrefs.SetInt("TotalDeaths", 0);
 
             if (!PlayerPrefs.HasKey("TotalKills"))
                 PlayerPrefs.SetInt("TotalKills", 0);
@@ -68,6 +67,8 @@ public class SceneInit : MonoBehaviour {
 
     protected void Start()
     {
+        BookManager.UpdatedeBookPages();
+
         globalVolume = GameObject.Find("Global Volume").GetComponent<Volume>();
         globalVolume.profile.TryGet<ColorAdjustments>(out colorAdjust);
         targetExposure = colorAdjust.postExposure.value;
