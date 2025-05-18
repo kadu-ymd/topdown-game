@@ -100,7 +100,7 @@ public class BookManager : ItemDisplayManager
     public override void EnterDisplay(string exitDisplayText = null)
     {
         UpdatedeBookPages();
-        BookManagerInstance.ToPage(page);
+        BookManagerInstance.ToPage(maxPages);
         MenuManager.HidePauseButton();
         SetActiveChildren(true);
         Time.timeScale = 0f;
