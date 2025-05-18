@@ -9,6 +9,11 @@ public class VolumeController : MonoBehaviour
 
     void Start()
     {
+        if (musicSource == null)
+        {
+            musicSource = GetComponent<AudioSource>(); // Busca automaticamente
+        }
+
         masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", 0.5f);
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
         LoadVolume();
