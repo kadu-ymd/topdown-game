@@ -28,27 +28,32 @@ public class EndingSceneManager : MonoBehaviour
         Color goodEndingColor = new Color(0, 0, 0);
         Color neutralEndingColor = new Color(0, 0, 0);
 
-        if (killCount <= 1)
-        {
-            goodBGImage.SetActive(true);
+        goodBGImage.SetActive(true);
 
-            SetText(title, "Um novo começo", goodEndingColor);
-            SetText(description, "Você se redimiu.", goodEndingColor);
-        }
-        else if (killCount > 1 && killCount <= 3)
-        {
-            neutralBGImage.SetActive(true);
+        SetText(title, "Você escapou.", goodEndingColor);
+        SetText(description, "Se você pudesse tentar de novo, o que faria de diferente?", goodEndingColor);
 
-            SetText(title, "Neutro", neutralEndingColor);
-            SetText(description, "Por melhor que fosse o sentimento, você resistiu a ele. Talvez ainda exista um pouco de humanidade em você.", neutralEndingColor);
-        }
-        else
-        {
-            badBGImage.SetActive(true);
+        //if (killCount <= 1)
+        //{
+        //    goodBGImage.SetActive(true);
 
-            SetText(title, "Assassino", badEndingColor);
-            SetText(description, "Mesmo perdendo suas memórias, o sentimento de matar é intrínseco ao seu ser.", badEndingColor);
-        }
+        //    SetText(title, "Um novo começo", goodEndingColor);
+        //    SetText(description, "Você se redimiu.", goodEndingColor);
+        //}
+        //else if (killCount > 1 && killCount <= 3)
+        //{
+        //    neutralBGImage.SetActive(true);
+
+        //    SetText(title, "Neutro", neutralEndingColor);
+        //    SetText(description, "Por melhor que fosse o sentimento, você resistiu a ele. Talvez ainda exista um pouco de humanidade em você.", neutralEndingColor);
+        //}
+        //else
+        //{
+        //    badBGImage.SetActive(true);
+
+        //    SetText(title, "Assassino", badEndingColor);
+        //    SetText(description, "Mesmo perdendo suas memórias, o sentimento de matar é intrínseco ao seu ser.", badEndingColor);
+        //}
 
     }
 
