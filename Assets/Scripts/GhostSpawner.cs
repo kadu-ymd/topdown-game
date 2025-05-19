@@ -21,30 +21,34 @@ public class GhostSpawner : MonoBehaviour
         ghostOriginalColor = originalGhostSpriteRenderer.color;
         ghostInitialColor = ghostOriginalColor;
         ghostInitialColor.a = 0f; // Inicialmente invisível
-        if (peaceful)
-        {
-            GhostMoviment ghostMoviment = originalGhost.GetComponent<GhostMoviment>();
-            if (ghostMoviment != null)
-                ghostMoviment.peaceful = true;
-            else
-            {
-                GhostRoute ghostRoute = originalGhost.GetComponent<GhostRoute>();
-                if (ghostRoute != null)
-                    ghostRoute.peaceful = true;
-                else
-                    Debug.LogWarning("O objeto originalGhost não possui um componente GhostMoviment ou GhostRoute.");
-            }
-        }
         originalGhost.SetActive(false);
         StartCoroutine(Reespawn());
     }
 
     public void SpawnGhost() {
         ghost = Instantiate(originalGhost, transform.position, transform.rotation);
-        ghost.SetActive(true);
         ghostSpriteRenderer = ghost.GetComponent<SpriteRenderer>();
         ghostSpriteRenderer.color = ghostInitialColor;
+        if (peaceful)
+            SetPeaceful();
+        ghost.SetActive(true);
         StartCoroutine(FadeIn());
+    }
+
+    public void SetPeaceful() {
+        Debug.Log("Setando o fantasma como pacífico");
+        this.peaceful = peaceful;
+        if (ghost != null) {
+            GhostMoviment ghostMoviment = ghost.GetComponent<GhostMoviment>();
+            GhostRoute ghostRoute = ghost.GetComponent<GhostRoute>();
+            if (ghostMoviment != null)
+                ghostMoviment.peaceful = true;
+            else if (ghostRoute != null)
+                ghostRoute.peaceful = true;
+            else
+                Debug.LogWarning("O objeto ghost não possui um componente GhostMoviment ou GhostRoute.");
+        
+        }
     }
 
     IEnumerator Reespawn() {

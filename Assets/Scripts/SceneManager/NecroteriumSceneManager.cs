@@ -38,6 +38,7 @@ public class NecroteriumSceneManager : SceneInit
                     {
                         true, false, true, false, false, false, false, false, true, false, false, false, true
                     };
+
                 GhostSpawner[] ghostSpawners = FindObjectsOfType<GhostSpawner>();
                 foreach (GhostSpawner ghostSpawner in ghostSpawners)
                 {
@@ -90,7 +91,7 @@ public class NecroteriumSceneManager : SceneInit
         else
         {
             EnableSpawns();
-            Destroy(wife);
+            StartCoroutine(FadeOut());
         }
 
     }

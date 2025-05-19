@@ -14764,15 +14764,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4163181534967280407, guid: 04178f7347d4d674ab0662c4f7c836ee, type: 3}
       propertyPath: nextSceneName
-      value: MainMenu
+      value: EndingScene
       objectReference: {fileID: 0}
     - target: {fileID: 4163181534967280407, guid: 04178f7347d4d674ab0662c4f7c836ee, type: 3}
       propertyPath: RequiredItemsName.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4163181534967280407, guid: 04178f7347d4d674ab0662c4f7c836ee, type: 3}
       propertyPath: 'RequiredItemsName.Array.data[1]'
       value: Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163181534967280407, guid: 04178f7347d4d674ab0662c4f7c836ee, type: 3}
+      propertyPath: 'RequiredItemsName.Array.data[2]'
+      value: FirstMemory
       objectReference: {fileID: 0}
     - target: {fileID: 5093928790224584639, guid: 04178f7347d4d674ab0662c4f7c836ee, type: 3}
       propertyPath: m_Size.x
