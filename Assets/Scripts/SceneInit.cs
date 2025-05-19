@@ -34,14 +34,10 @@ public class SceneInit : MonoBehaviour {
         {
             foreach (string collectable in AllCollectables)
             {
-                if (!PlayerPrefs.HasKey(collectable))
-                {
-                    if ((currentRequiredPlayerItems.Contains(collectable)))
-                        PlayerPrefs.SetInt(collectable, 1);
-
-                    else
-                        PlayerPrefs.SetInt(collectable, 0);
-                }
+                if (currentRequiredPlayerItems.Contains(collectable))
+                    PlayerPrefs.SetInt(collectable, 1);
+                else
+                    PlayerPrefs.SetInt(collectable, 0);
             }
             
 
