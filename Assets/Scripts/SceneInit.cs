@@ -57,8 +57,6 @@ public class SceneInit : MonoBehaviour {
         PlayerPrefs.SetString("CurrentUI", "None");
         PlayerPrefs.SetInt($"Kills_" + sceneName, 0);
         PlayerPrefs.SetString("LastScene", sceneName);
-        Debug.Log("Estado atual da cena: " + sceneName + " com " + PlayerPrefs.GetInt("Deaths_" + sceneName) + " mortes e " + PlayerPrefs.GetInt("Kills_" + sceneName) + " assassinatos.");
-        Debug.Log("Total: " + PlayerPrefs.GetInt("TotalDeaths") + " mortes e " + PlayerPrefs.GetInt("TotalKills") + " assassinatos.");
     }
 
     protected void Start()

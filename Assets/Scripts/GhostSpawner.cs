@@ -36,7 +36,6 @@ public class GhostSpawner : MonoBehaviour
     }
 
     public void SetPeaceful() {
-        Debug.Log("Setando o fantasma como pacífico");
         this.peaceful = peaceful;
         if (ghost != null) {
             GhostMoviment ghostMoviment = ghost.GetComponent<GhostMoviment>();

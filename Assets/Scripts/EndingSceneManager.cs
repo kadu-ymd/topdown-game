@@ -28,7 +28,7 @@ public class EndingSceneManager : MonoBehaviour
         Color goodEndingColor = new Color(0, 0, 0);
         Color neutralEndingColor = new Color(0, 0, 0);
 
-        if (killCount == 1)
+        if (killCount <= 1)
         {
             goodBGImage.SetActive(true);
 
@@ -42,17 +42,12 @@ public class EndingSceneManager : MonoBehaviour
             SetText(title, "Neutro", neutralEndingColor);
             SetText(description, "Por melhor que fosse o sentimento, você resistiu a ele. Talvez ainda exista um pouco de humanidade em você.", neutralEndingColor);
         }
-        else if (killCount >= 5)
+        else
         {
             badBGImage.SetActive(true);
 
             SetText(title, "Assassino", badEndingColor);
             SetText(description, "Mesmo perdendo suas memórias, o sentimento de matar é intrínseco ao seu ser.", badEndingColor);
-        }
-        else
-        {
-            SetText(title, "Algo de errado...", goodEndingColor);
-            SetText(description, "Como você veio parar aqui?", goodEndingColor);
         }
 
     }

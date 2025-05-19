@@ -37,7 +37,6 @@ public class MainMenuManager : MonoBehaviour
 
     public void SettingsClose()
     {
-        Debug.Log("SettingsClose");
         if (PlayerPrefs.GetString("CurrentUI") == "SettingsMenu")
         {
             settingsMenuUI.SetActive(false);
