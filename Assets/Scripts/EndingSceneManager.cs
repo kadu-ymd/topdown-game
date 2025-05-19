@@ -22,8 +22,6 @@ public class EndingSceneManager : MonoBehaviour
         badBGImage.SetActive(false);
         neutralBGImage.SetActive(false);
 
-        SetKillCount(3);
-
         killCount = PlayerPrefs.GetInt("TotalKills");
 
         Color badEndingColor = new Color(255, 255, 255);
@@ -34,35 +32,29 @@ public class EndingSceneManager : MonoBehaviour
         {
             goodBGImage.SetActive(true);
 
-            SetText(title, "Um novo começo", goodEndingColor);
-            SetText(description, "Você se redimiu.", goodEndingColor);
+            SetText(title, "Um novo comeÃ§o", goodEndingColor);
+            SetText(description, "VocÃª se redimiu.", goodEndingColor);
         }
-        else if (killCount > 1 && killCount < 5)
+        else if (killCount > 1 && killCount <= 3)
         {
             neutralBGImage.SetActive(true);
 
             SetText(title, "Neutro", neutralEndingColor);
-            SetText(description, "Por melhor que fosse o sentimento, você resistiu a ele. Talvez ainda exista um pouco de humanidade em você.", neutralEndingColor);
+            SetText(description, "Por melhor que fosse o sentimento, vocÃª resistiu a ele. Talvez ainda exista um pouco de humanidade em vocÃª.", neutralEndingColor);
         }
         else if (killCount >= 5)
         {
             badBGImage.SetActive(true);
 
             SetText(title, "Assassino", badEndingColor);
-            SetText(description, "Mesmo perdendo suas memórias, o sentimento de matar é intrínseco ao seu ser.", badEndingColor);
+            SetText(description, "Mesmo perdendo suas memÃ³rias, o sentimento de matar Ã© intrÃ­nseco ao seu ser.", badEndingColor);
         }
         else
         {
             SetText(title, "Algo de errado...", goodEndingColor);
-            SetText(description, "Como você veio parar aqui?", goodEndingColor);
+            SetText(description, "Como vocÃª veio parar aqui?", goodEndingColor);
         }
 
-    }
-
-    // Função para testes -> não precisa ser chamada
-    private void SetKillCount(int num)
-    {
-        PlayerPrefs.SetInt("TotalKills", num);
     }
 
     public void SetImage(Image img, Sprite sprite)
