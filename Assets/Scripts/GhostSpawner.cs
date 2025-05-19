@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class GhostSpanwer : MonoBehaviour
+public class GhostSpawner : MonoBehaviour
 {
     private GameObject originalGhost;
     private GameObject ghost;
@@ -11,11 +11,12 @@ public class GhostSpanwer : MonoBehaviour
     public float respawnTime = 5f;
     public float fadeDuration = 2f;
     public bool peaceful = false;
+    public bool canSpawn = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start() {
+    void Start()
+    {
         originalGhost = GetComponentInChildren<EnemyMoviment>().gameObject;
-        originalGhost.SetActive(false);
         SpriteRenderer originalGhostSpriteRenderer = originalGhost.GetComponent<SpriteRenderer>();
         ghostOriginalColor = originalGhostSpriteRenderer.color;
         ghostInitialColor = ghostOriginalColor;
@@ -34,7 +35,7 @@ public class GhostSpanwer : MonoBehaviour
                     Debug.LogWarning("O objeto originalGhost não possui um componente GhostMoviment ou GhostRoute.");
             }
         }
-        SpawnGhost();
+        originalGhost.SetActive(false);
         StartCoroutine(Reespawn());
     }
 
@@ -47,7 +48,7 @@ public class GhostSpanwer : MonoBehaviour
     }
 
     IEnumerator Reespawn() {
-        while (ghost != null) {
+        while (ghost != null || !canSpawn) {
             yield return new WaitForEndOfFrame();
         }
         yield return new WaitForSeconds(respawnTime);

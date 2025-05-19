@@ -3,11 +3,10 @@ using UnityEngine.UI;
 using System.Collections;
 using TMPro;
 
-public class ThoughtManager : MonoBehaviour {
+public class WifeManager : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private static ThoughtManager thoughtManagerInstance;
+    private static WifeManager wifeManagerInstance;
     private static TMP_Text thoughtTextTMP;
-    private static TMP_Text NameTextTMP;
     private static RectTransform thoughtTextRectTransform;
     private static AudioSource audioSource;
     public AudioClip thoughtSound;
@@ -17,28 +16,27 @@ public class ThoughtManager : MonoBehaviour {
     private float delay = 0.05f;
 
     void Awake() {
-        if (thoughtManagerInstance == null) thoughtManagerInstance = this;
+        if (wifeManagerInstance == null) wifeManagerInstance = this;
     }
 
     void Start() {
         foreach (TMP_Text TMPtext in GetComponentsInChildren<TMP_Text>()) {
-            if (TMPtext.gameObject.name == "ThoughtText") {
+            if (TMPtext.gameObject.name == "ThoughtText")
+            {
                 thoughtTextTMP = TMPtext;
                 thoughtTextRectTransform = TMPtext.GetComponent<RectTransform>();
-            } else if (TMPtext.gameObject.name == "NameText") {
-                NameTextTMP = TMPtext;
-            }
+                break;
+            } 
         }
 
         if (thoughtTextTMP == null)  Debug.LogError("Thought Text TMP not found. Please ensure it is named 'ThoughtText' in the scene.");
-        if (NameTextTMP == null)  Debug.LogError("Thought Text TMP not found. Please ensure it is named 'NameText' in the scene.");
         gameObject.SetActive(false);
         audioSource = GetComponent<AudioSource>();
     }
 
     void Update() {
         if (Input.anyKeyDown) {
-            if (PlayerPrefs.GetString("CurrentUI") == "Thought") {
+            if (PlayerPrefs.GetString("CurrentUI") == "WifeThought") {
                 if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E)) {
                     if (!skip) skip = true;
                     else HideThought();
@@ -50,18 +48,18 @@ public class ThoughtManager : MonoBehaviour {
     public static void ShowThought(string thoughtText) {
         if (!thinking) {
             thinking = true;
-            thoughtManagerInstance.gameObject.SetActive(true);
+            wifeManagerInstance.gameObject.SetActive(true);
             thoughtTextTMP.text = "";
-            PlayerPrefs.SetString("CurrentUI", "Thought");
-            audioSource.PlayOneShot(thoughtManagerInstance.thoughtSound);
-            thoughtManagerInstance.StartCoroutine(thoughtManagerInstance.RevealText(thoughtText));
+            PlayerPrefs.SetString("CurrentUI", "WifeThought");
+            audioSource.PlayOneShot(wifeManagerInstance.thoughtSound);
+            wifeManagerInstance.StartCoroutine(wifeManagerInstance.RevealText(thoughtText));
         }
     }
 
     public static void HideThought() {
-        thoughtManagerInstance.gameObject.SetActive(false);
+        wifeManagerInstance.gameObject.SetActive(false);
         PlayerPrefs.SetString("CurrentUI", "None");
-        thoughtManagerInstance.skip = false;
+        wifeManagerInstance.skip = false;
         thinking = false;
     }
 
@@ -92,8 +90,8 @@ public class ThoughtManager : MonoBehaviour {
         yield return new WaitForEndOfFrame(); // Espera um frame para atualizar o layout
 
         // Ajusta a posição do scroll gradualmente sem travar
-        thoughtManagerInstance.scrollRect.verticalNormalizedPosition = Mathf.Clamp(
-            thoughtManagerInstance.scrollRect.verticalNormalizedPosition - 0.05f, 0f, 1f
+        wifeManagerInstance.scrollRect.verticalNormalizedPosition = Mathf.Clamp(
+            wifeManagerInstance.scrollRect.verticalNormalizedPosition - 0.05f, 0f, 1f
         );
     }
 }
