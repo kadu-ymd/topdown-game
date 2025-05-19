@@ -6,7 +6,7 @@
 
 ---
 
-Para jogar, acesse-o no itch.io: [link]()
+Para jogar, acesse-o no itch.io: [link](https://rafael-dourado.itch.io/crise-de-identidade)
 
 O arquivo do detonado contendo as resoluções dos *puzzles* em cada nível está na raiz do projeto (Detonado.pdf).
 
