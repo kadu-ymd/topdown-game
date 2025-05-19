@@ -35,16 +35,15 @@ public class EnemyDeathEffect : MonoBehaviour
         audioSource.Play();
         audioSource.PlayOneShot(tinnitusClip);
 
-        Debug.Log("Dead");
+        Vector3 originalPos = mainCamera.transform.position;
         yield return StartCoroutine(FadeExposure(-10f, 0.25f));
         yield return StartCoroutine(FadeExposure(originalExposure, 0.2f));
-        yield return StartCoroutine(CameraShake(0.03f, 0.1f, 10f));
+        yield return StartCoroutine(CameraShake(0.03f, 0.1f, 10f, originalPos));
     }
 
-    private IEnumerator CameraShake(float duration, float magnitude, float frequency)
+    private IEnumerator CameraShake(float duration, float magnitude, float frequency, Vector3 originalPos)
     {
         float elapsed = 0f;
-        Vector3 originalPos = mainCamera.transform.position;
 
         while (elapsed < duration)
         {
