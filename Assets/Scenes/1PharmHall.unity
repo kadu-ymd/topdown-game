@@ -1063,6 +1063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 466950393}
   - component: {fileID: 466950392}
+  - component: {fileID: 466950394}
   m_Layer: 0
   m_Name: Counter Trash Can
   m_TagString: Untagged
@@ -1134,12 +1135,58 @@ Transform:
   m_GameObject: {fileID: 466950391}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.041999817, y: 0.53999996, z: 0.2}
+  m_LocalPosition: {x: 0.02, y: 1.48, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1025193859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &466950394
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466950391}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.875, y: 1.0625}
+    newSize: {x: 0.91700244, y: 1.1041666}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.8, y: 0.01}
+  m_EdgeRadius: 0
 --- !u!1 &516699165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2939,8 +2986,9 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.49067497, y: -0.34871078}
-      - {x: 0.5144081, y: 0.6306977}
-      - {x: -0.44957072, y: 0.6531615}
+      - {x: 0.38497496, y: -0.3502698}
+      - {x: 0.37876606, y: 0.17310476}
+      - {x: -0.4304052, y: 0.16283083}
       - {x: -0.4255156, y: -0.6677749}
       - {x: 1.3005371, y: -0.66664684}
       - {x: 2.567434, y: -0.65598917}
@@ -2991,7 +3039,7 @@ Transform:
   m_GameObject: {fileID: 1047027452}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.01}
+  m_LocalPosition: {x: 0, y: 0, z: -6.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3061,8 +3109,8 @@ Tilemap:
   - first: {x: 23, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3071,8 +3119,8 @@ Tilemap:
   - first: {x: 24, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3091,8 +3139,8 @@ Tilemap:
   - first: {x: 26, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3101,17 +3149,17 @@ Tilemap:
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 97da44fe7311fdf419aa5982fe57292b, type: 2}
-  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 9409a662da1f8c64b80c74b7bc4f7627, type: 2}
   - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 97da44fe7311fdf419aa5982fe57292b, type: 2}
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 87387bbb74385c54a979703b256cd330, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
-    m_Data: {fileID: -398629088, guid: c931f0315e27ab84aab68c7592be8198, type: 3}
-  - m_RefCount: 2
     m_Data: {fileID: -1774607263, guid: c931f0315e27ab84aab68c7592be8198, type: 3}
   - m_RefCount: 1
+    m_Data: {fileID: -398629088, guid: c931f0315e27ab84aab68c7592be8198, type: 3}
+  - m_RefCount: 2
     m_Data: {fileID: -2087263956, guid: c931f0315e27ab84aab68c7592be8198, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 4
