@@ -21,11 +21,16 @@ public class ThoughtManager : MonoBehaviour {
     }
 
     void Start() {
-        foreach (TMP_Text TMPtext in GetComponentsInChildren<TMP_Text>()) {
-            if (TMPtext.gameObject.name == "ThoughtText") {
+        thinking = false;
+        foreach (TMP_Text TMPtext in GetComponentsInChildren<TMP_Text>())
+        {
+            if (TMPtext.gameObject.name == "ThoughtText")
+            {
                 thoughtTextTMP = TMPtext;
                 thoughtTextRectTransform = TMPtext.GetComponent<RectTransform>();
-            } else if (TMPtext.gameObject.name == "NameText") {
+            }
+            else if (TMPtext.gameObject.name == "NameText")
+            {
                 NameTextTMP = TMPtext;
             }
         }
