@@ -14,6 +14,8 @@ public class MainMenuManager : MonoBehaviour
         {
             PlayerPrefs.SetString("CurrentUI", "MainMenu");
         }
+
+
     }
 
     private void Update()
