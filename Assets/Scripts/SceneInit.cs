@@ -11,8 +11,7 @@ public class SceneInit : MonoBehaviour {
     protected List<string> AllCollectables = new List<string> {
         "Book", "Gun",
         "FirstMemory", "SecondMemory",
-        "PharmCard", "MedicKey", "StaffKey",
-        "FirstDuckPaper", "SecondDuckPaper", "ThirdDuckPaper"
+        "PharmCard", "MedicKey", "StaffKey"
     };
     protected string sceneName;
     public List<string> currentRequiredPlayerItems = new List<string>();

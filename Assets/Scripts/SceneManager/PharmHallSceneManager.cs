@@ -4,13 +4,19 @@ public class PharmHallSceneManager : SceneInit
 {
     protected override void RunInitialization()
     {
-        int deaths = PlayerPrefs.GetInt("Deaths_" + sceneName);
 
         PlayerPrefs.SetInt("FirstMemory", 0);
+        PlayerPrefs.SetInt("PharmCard", 0);
+
+        ItemPossiblyInteractable[] itemPlaces = FindObjectsOfType<ItemPossiblyInteractable>();
+        int choice = Random.Range(0, itemPlaces.Length);
+        itemPlaces[choice].haveItem = true;
+
+        int deaths = PlayerPrefs.GetInt("Deaths_" + sceneName);
 
         if (deaths == 0)
             ThoughtManager.ShowThought("Outra sala... Pelo menos a luz não está piscando...");
-        if (deaths == 1)
+        else if (deaths == 1)
             ThoughtManager.ShowThought("Quem é aquele cara? Porque ele veio me perseguindo com tanta raiva? Ele parecia um pouco alterado...");
         else if (deaths > 1 && PlayerPrefs.GetInt("Gun") == 0)
             ThoughtManager.ShowThought("Acho que não vou conseguir passar desse cara só correndo, preciso de algo para me ajudar...");

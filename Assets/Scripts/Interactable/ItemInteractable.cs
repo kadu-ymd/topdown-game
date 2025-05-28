@@ -23,7 +23,7 @@ public class ItemInteractable : MonoBehaviour {
         }
     }
 
-    void Interact()
+    protected void Interact()
     {
         if (!string.IsNullOrEmpty(collectableItemName))
         {
