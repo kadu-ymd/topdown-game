@@ -11,8 +11,6 @@ public class EntranceSceneManager : SceneInit
 
     protected override void RunInitialization()
     {
-
-        PlayerPrefs.SetInt("SecondMemory", 0);
         PlayerPrefs.SetInt("MedicKey", 0);
 
         int firstPasswordDigit = 5;
