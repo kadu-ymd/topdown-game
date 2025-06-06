@@ -1,16 +1,58 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class NecroteriumSceneManager : SceneInit
 {
-    public GameObject wife;
     private List<string> Texts = new List<string> { };
     private List<bool> originTexts = new List<bool> { }; // 1 = Player, 0 = Wife
     private int currentText = 0;
 
+    public GameObject wife;
+    public TMP_Text deadHour;
+    public Pinpad pinpad;
+
+    public Sprite oneBox, treeBoxes, sevenBoxes;
+    public SpriteRenderer boxes1, boxes2, boxes3;
+    private int[,] boxesCombinations = new int[,]
+        { // 0 = 1 caixa ; 1 = 3 caixas ; 2 = 7 caixas
+            {0, 2, 0},
+            {1, 1, 1},
+            {1, 1, 0},
+            {1, 0, 1},
+            {0, 1, 1},
+            {0, 0, 1},
+            {0, 1, 0},
+            {1, 0, 0},
+        };
+    private int[] boxesCount = new int[] { 1, 3, 7 };
+    
     protected override void RunInitialization()
     {
+        int firstPasswordDigit = 4;
+        int secondPasswordDigit = Random.Range(3, 10);
+        int thirdPasswordDigit = Random.Range(0, 10);
+
+        // Mudando a hora da morte na etiqueta
+        deadHour.text = "0" + thirdPasswordDigit.ToString() + ":00 am";
+
+        // Mudando a quantidade de caixas
+        int combination = Random.Range(0, boxesCombinations.GetLength(0));
+        int choicedBoxes1 = boxesCombinations[combination, 0];
+        int choicedBoxes2 = boxesCombinations[combination, 1];
+        int choicedBoxes3 = boxesCombinations[combination, 2];
+
+        Sprite[] boxSprites = new Sprite[] { oneBox, treeBoxes, sevenBoxes };
+        boxes1.sprite = boxSprites[choicedBoxes1];
+        boxes2.sprite = boxSprites[choicedBoxes2];
+        boxes3.sprite = boxSprites[choicedBoxes3];
+
+        secondPasswordDigit = boxesCount[choicedBoxes1] + boxesCount[choicedBoxes2] + boxesCount[choicedBoxes3];
+
+        // Alterando a senha no display
+        pinpad.answer = firstPasswordDigit.ToString() + secondPasswordDigit.ToString() + thirdPasswordDigit.ToString();
+
         if (!PlayerPrefs.HasKey("History"))
             PlayerPrefs.SetInt("History", 0);
 
