@@ -14,19 +14,23 @@ public class PlayerManager : MonoBehaviour {
     private float originalExposure;
     private bool originalExposureActive;
     private Animator animator;
+    public static bool isImunity = false;
 
-    void Start() {
+    void Start()
+    {
         EkeySpriteRenderer = transform.Find("E key").GetComponent<SpriteRenderer>();
         EkeySpriteRenderer.enabled = false;
         animator = GetComponent<Animator>();
 
         mainCamera = Camera.main;
-        globalVolume  = GameObject.Find("Global Volume").GetComponent<Volume>();
+        globalVolume = GameObject.Find("Global Volume").GetComponent<Volume>();
         globalVolume.profile.TryGet<ColorAdjustments>(out colorAdjust);
         originalExposure = colorAdjust.postExposure.value;
         originalExposureActive = colorAdjust.active;
+
+        isImunity = false;
     }
-    
+
     void Update() {
         if (interactableCloser != null && Input.GetKeyDown(KeyCode.E)) {
             if (PlayerPrefs.GetString("CurrentUI") == "None") {
@@ -55,13 +59,17 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Enemy")) {
+    private void OnCollisionStay2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("Enemy") && !isImunity) {
+            EnemyMoviment enemy = collision.gameObject.GetComponent<EnemyMoviment>();
+            if (enemy && enemy.target != "Player" && enemy.target != "Capturar")    
+                return;
             lastPlayerPosition = transform.position;
+            isImunity = true;
             StartCoroutine(HandlePlayerDefeat());
         }
     }
-    
+
     IEnumerator ResetHitFlag(float delay) {
         yield return new WaitForSeconds(delay);
         animator.SetBool("IsHit", false);
@@ -100,10 +108,21 @@ public class PlayerManager : MonoBehaviour {
 
         yield return new WaitForSecondsRealtime(0.5f);
 
-        Time.timeScale = 1f;
-        string sceneName = SceneManager.GetActiveScene().name;
-        PlayerPrefs.SetInt("Deaths_" + sceneName, PlayerPrefs.GetInt("Deaths_" + sceneName) + 1);
-        SceneManager.LoadScene(sceneName);
+        if (PlayerPrefs.GetInt("CanRevive") == 1)
+        {
+            ReviveManager.OpenReviveMenu();
+            yield return new WaitForSeconds(0.001f);
+            StartCoroutine(Imunity(3f));
+            StartCoroutine(FadeExposure(0f, 0.5f)); // fade para claro em 0.5 segundo
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            string sceneName = SceneManager.GetActiveScene().name;
+            PlayerPrefs.SetInt("Deaths_" + sceneName, PlayerPrefs.GetInt("Deaths_" + sceneName) + 1);
+            SceneManager.LoadScene(sceneName);
+        }
+    
     }
 
     private IEnumerator FadeExposure(float targetExposure, float duration) {
@@ -118,5 +137,12 @@ public class PlayerManager : MonoBehaviour {
         }
 
         colorAdjust.postExposure.value = targetExposure;
+    }
+
+    private IEnumerator Imunity(float duration)
+    {
+        isImunity = true;
+        yield return new WaitForSeconds(duration);
+        isImunity = false;
     }
 }

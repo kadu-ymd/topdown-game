@@ -13,7 +13,7 @@ public class EnemyMoviment : MonoBehaviour
     [HideInInspector] public float atention_level = 0f;
     protected bool stalk;
     protected Vector2 initialPosition;
-    protected string target = "Nenhum";
+    [HideInInspector] public string target = "Nenhum";
 
     protected Rigidbody2D rb;
     protected Animator animator;
@@ -25,7 +25,6 @@ public class EnemyMoviment : MonoBehaviour
 
     private Coroutine sleepCoroutine;
     private bool sleepy = false;
-    public bool sleeping = false;
     public float sleepingTime = 0f;
     public float awakedTime = 0f;
 
@@ -58,10 +57,7 @@ public class EnemyMoviment : MonoBehaviour
     protected virtual void FixedUpdate() // Atualização do animator e target
     {
         // State Machine
-        if (target == "Hit")
-            animator.SetTrigger("Hit");
-
-        else if (target == "Player")
+        if (target == "Player")
         {
             sleepy = false;
             MoveTo(PlayerMovement.rb.position);
@@ -94,7 +90,7 @@ public class EnemyMoviment : MonoBehaviour
 
     protected void Update() // atualização do stalk
     {
-        if (!sleeping)
+        if (target != "Inativo")
         {
 
             if (fieldOfView.canSeePlayer && atention_level < maxAttention)
@@ -124,7 +120,8 @@ public class EnemyMoviment : MonoBehaviour
         }
     }
 
-    protected void StartStalk() {
+    protected void StartStalk()
+    {
         if (!animator.GetBool("IsWalking")) // inicia a animação de andar
         {
             animator.SetBool("IsWalking", true);
@@ -140,10 +137,30 @@ public class EnemyMoviment : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
     }
 
+    protected void CollisionWithPlayer()
+    {
+        if (!PlayerManager.isImunity)
+        {
+            if (target == "Player")
+            {
+                target = "Capturar";
+                animator.SetTrigger("Hit");
+            }
+            else if (target != "Inativo")
+            {
+                atention_level += maxAttention * 0.20f;
+            }
+        }
+    }
+    protected void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+            CollisionWithPlayer();
+    }
     protected void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-            target = "Hit";
+            CollisionWithPlayer();
     }
 
     protected void OnTriggerEnter2D(Collider2D other)
@@ -159,8 +176,8 @@ public class EnemyMoviment : MonoBehaviour
 
     protected void MoveTo(Vector2 destiny)
     {
-        Vector2 movement = (destiny - rb.position).normalized;
         agent.SetDestination(destiny);
+        Vector2 movement = agent.velocity.normalized;
         SetFlagsAnimation(movement.x, movement.y);
     }
 
@@ -258,13 +275,32 @@ public class EnemyMoviment : MonoBehaviour
         yield return new WaitForSeconds(awakedTime);
         if (target == "Nenhum" && sleepy)
         {
-            target = "Dormir";
-            sleeping = true;
+            target = "Inativo";
             yield return new WaitForSeconds(sleepingTime);
-            sleeping = false;
             sleepy = false;
             target = "Nenhum";
         }
         sleepCoroutine = null;
+    }
+
+    public void Confuse()
+    {
+        // fazendo ficar parado
+        target = "Inativo";
+        StartCoroutine(Confused());
+        // desativando variaveis de perseguição
+        stalk = false;
+        atention_level = 0f;
+        // resetando movimentos, audios e animações
+        agent.ResetPath();
+        playAudio();
+        animator.ResetTrigger("Hit");
+        animator.Play("Idle");
+
+    }
+    IEnumerator Confused()
+    {
+        yield return new WaitForSeconds(3f);
+        target = "Inicio";
     }
 }

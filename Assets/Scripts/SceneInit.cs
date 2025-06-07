@@ -16,7 +16,7 @@ public class SceneInit : MonoBehaviour {
     protected string sceneName;
     public List<string> currentRequiredPlayerItems = new List<string>();
     public MonoBehaviour runOnInit;
-
+    public bool canRevive = false;
     private bool isInitialScene = true; // Começa como true para a primeira execução
     private Volume globalVolume;
     private ColorAdjustments colorAdjust;
@@ -28,34 +28,36 @@ public class SceneInit : MonoBehaviour {
         sceneName = SceneManager.GetActiveScene().name;
         if (sceneName == "1Bedroom")
             PlayerPrefs.DeleteAll();
-
-        if (!Initialized)
-        {
-            foreach (string collectable in AllCollectables)
+        if (!PlayerPrefs.HasKey("LastScene"))
+            PlayerPrefs.SetString("LastScene", sceneName);
+        
+        if (!Initialized || PlayerPrefs.GetString("LastScene") != sceneName)
             {
-                if (currentRequiredPlayerItems.Contains(collectable))
-                    PlayerPrefs.SetInt(collectable, 1);
-                else
-                    PlayerPrefs.SetInt(collectable, 0);
-            }
-            
+                foreach (string collectable in AllCollectables)
+                {
+                    if (currentRequiredPlayerItems.Contains(collectable))
+                        PlayerPrefs.SetInt(collectable, 1);
+                    else
+                        PlayerPrefs.SetInt(collectable, 0);
+                }
 
-            if (!PlayerPrefs.HasKey("TotalDeaths"))
+
+                if (!PlayerPrefs.HasKey("TotalDeaths"))
                     PlayerPrefs.SetInt("TotalDeaths", 0);
 
-            if (!PlayerPrefs.HasKey("TotalKills"))
-                PlayerPrefs.SetInt("TotalKills", 0);
+                if (!PlayerPrefs.HasKey("TotalKills"))
+                    PlayerPrefs.SetInt("TotalKills", 0);
 
-            if (!PlayerPrefs.HasKey("Deaths_" + sceneName))
-                PlayerPrefs.SetInt("Deaths_" + sceneName, 0);
+                if (!PlayerPrefs.HasKey("Deaths_" + sceneName))
+                    PlayerPrefs.SetInt("Deaths_" + sceneName, 0);
 
-            PlayerPrefs.SetString("LastScene", sceneName);
-            Initialized = true;
+                PlayerPrefs.SetInt("CanRevive", canRevive ? 1 : 0);
+                PlayerPrefs.SetString("LastScene", sceneName);
+                Initialized = true;
 
-        }
+            }
         PlayerPrefs.SetString("CurrentUI", "None");
         PlayerPrefs.SetInt($"Kills_" + sceneName, 0);
-        PlayerPrefs.SetString("LastScene", sceneName);
     }
 
     protected void Start()

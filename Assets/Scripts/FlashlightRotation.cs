@@ -24,11 +24,14 @@ public class FlashlightRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!turnedOff && enemy.sleeping) {
+        bool enemyInative = enemy.target == "Inativo";
+        if (!turnedOff && enemyInative)
+        {
             flashlight.enabled = false;
             turnedOff = true;
         }
-        else if (turnedOff && !enemy.sleeping) {
+        else if (turnedOff && !enemyInative)
+        {
             flashlight.enabled = true;
             turnedOff = false;
         }
