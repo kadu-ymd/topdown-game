@@ -4,18 +4,27 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     public GameObject settingsMenuUI;
+    public GameObject buttonsMenuDefaultUI;
+    public GameObject buttonsMenuContinueUI;
     public AudioSource buttonClick;
 
     private void Start()
     {
         settingsMenuUI.SetActive(false);
 
-        if (!PlayerPrefs.HasKey("CurrentUI"))
-        {
+        if (!PlayerPrefs.HasKey("CurrentUI")) {
             PlayerPrefs.SetString("CurrentUI", "MainMenu");
         }
-
-
+        
+        if (!PlayerPrefs.HasKey("LastScene"))
+        {
+            buttonsMenuDefaultUI.SetActive(true);
+            buttonsMenuContinueUI.SetActive(false);
+        } else
+        {
+            buttonsMenuDefaultUI.SetActive(false);
+            buttonsMenuContinueUI.SetActive(true);
+        }
     }
 
     private void Update()
@@ -59,5 +68,17 @@ public class MainMenuManager : MonoBehaviour
             buttonClick.Play();
         }
     }
-  
+
+    public void ContinueGame()
+    {
+        SceneManager.LoadScene(PlayerPrefs.GetString("LastScene"));
+        Time.timeScale = 1;
+    }
+
+    public void QuitGame()
+    {
+        PlaySound();
+        Application.Quit();
+    }
+
 }
