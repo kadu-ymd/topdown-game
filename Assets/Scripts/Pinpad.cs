@@ -84,10 +84,17 @@ public class Pinpad : MonoBehaviour
 
     public void PressButton(string value)
     {
-        if (value == "Erese" && password.Length > 3)
+        if (value == "Erese")
         {
-            password = password.Remove(password.Length - 1);
-            UpdateDisplay();
+            if (password.Length > 3)
+            {
+                password = password.Remove(password.Length - 1);
+                UpdateDisplay();
+            }
+            else if (password.Length == 3)
+            {
+                HidePinpad();
+            }
         }
         else if (value == "Confirm")
         {
@@ -112,6 +119,7 @@ public class Pinpad : MonoBehaviour
         PlayerPrefs.SetString("CurrentUI", "Pinpad");
         gameObject.SetActive(true);
         password = "   ";
+        Time.timeScale = 0f;
         UpdateDisplay();
     }
 
@@ -120,6 +128,7 @@ public class Pinpad : MonoBehaviour
         PlayerPrefs.SetString("CurrentUI", "None");
         gameObject.SetActive(false);
         password = "   ";
+        Time.timeScale = 1f;
         UpdateDisplay();
     }
 }

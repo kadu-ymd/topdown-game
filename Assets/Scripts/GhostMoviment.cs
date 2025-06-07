@@ -39,8 +39,14 @@ public class GhostMoviment : EnemyMoviment
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!peaceful && collision.gameObject.CompareTag("Player"))
-            target = "Hit";
+        if (!peaceful)
+            base.OnCollisionEnter2D(collision);
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (!peaceful)
+            base.OnCollisionStay2D(collision);
     }
 
     void OnTriggerEnter2D(Collider2D collider)

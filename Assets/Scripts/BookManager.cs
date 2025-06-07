@@ -11,14 +11,16 @@ public class BookManager : ItemDisplayManager
 
     void Awake() {
         if (BookManagerInstance == null) BookManagerInstance = this;
+    }
+
+    protected override void Start()
+    {
         audioSource = GetComponent<AudioSource>();
         pages = GameObject.Find("Folhas");
         pageCount = 1;
-        SetActiveChildren(false);
         UpdatedeBookPages();
+        SetActiveChildren(false);
     }
-
-    protected override void Start() {}
 
     protected override void Update()
     {
@@ -47,19 +49,19 @@ public class BookManager : ItemDisplayManager
         if (page > 0 && page <= maxPages)
         {
             pageCount = page;
-            
+
             if (pages != null)
-            { 
+            {
                 foreach (Transform folha in pages.transform)
                 {
                     if (folha.name == "Folha" + pageCount)
-                    {
                         folha.gameObject.SetActive(true);
-                    }
                     else
                         folha.gameObject.SetActive(false);
                 }
             }
+            else
+                Debug.LogError("Folhas GameObject not found in BookManager.");
         }
     }
 
@@ -91,25 +93,19 @@ public class BookManager : ItemDisplayManager
         return newMaxPages;
     }
 
-    public static void DisplayBookIntoPage(int page, string exitDisplayText = null)
-    {
-        Debug.Log(exitDisplayText);
-        BookManagerInstance.EnterDisplay(exitDisplayText);
-    }
-
-    public override void EnterDisplay(string exitDisplayText = null)
+    public static void EnterDisplay(string exitDisplayText = null)
     {
         UpdatedeBookPages();
-        BookManagerInstance.ToPage(maxPages);
+        BookManagerInstance.ToPage(BookManagerInstance.maxPages);
         MenuManager.HidePauseButton();
-        SetActiveChildren(true);
+        BookManagerInstance.SetActiveChildren(true);
         Time.timeScale = 0f;
         PlayerPrefs.SetString("CurrentUI", "Book");
 
         if (!string.IsNullOrEmpty(exitDisplayText))
-            this.exitDisplayText = exitDisplayText;
+            BookManagerInstance.exitDisplayText = exitDisplayText;
         else
-            this.exitDisplayText = null;
+            BookManagerInstance.exitDisplayText = null;
     }
 
     public override void ExitDisplay()
