@@ -35,6 +35,7 @@ public class ReviveManager : MonoBehaviour
         PlayerPrefs.SetString("CurrentUI", "ReviveMenu");
         ReviveManagerInstance.reviveCanvas.SetActive(true);
         ReviveManagerInstance.proposalCoroutine = ReviveManagerInstance.StartCoroutine(ReviveManagerInstance.ProposalTimer());
+        MenuManager.HidePauseButton(); 
     }
 
     public void CancelRevive()
@@ -56,10 +57,8 @@ public class ReviveManager : MonoBehaviour
             if (enemy.target == "Capturar" || enemy.target == "Player")
                 enemy.Confuse();
         }
-        PlayerPrefs.SetString("CurrentUI", "None");
         reviveCanvas.SetActive(false);
-        Time.timeScale = 1f;
-
+        AdManager.OpenAd();
     }
 
     IEnumerator ProposalTimer()
@@ -73,7 +72,8 @@ public class ReviveManager : MonoBehaviour
             timerSlider.value = Mathf.Clamp01(elapsedTime / proposalDuration);
             yield return new WaitForEndOfFrame();
         }
-
-        CancelRevive();
+        
+        if (PlayerPrefs.GetString("CurrentUI") == "ReviveMenu")
+            CancelRevive();
     }
 }
