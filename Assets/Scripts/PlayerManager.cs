@@ -31,14 +31,21 @@ public class PlayerManager : MonoBehaviour {
         isImunity = false;
     }
 
-    void Update() {
-        if (interactableCloser != null && Input.GetKeyDown(KeyCode.E)) {
+    public void Interact()
+    {
+        if (interactableCloser != null) {
             if (PlayerPrefs.GetString("CurrentUI") == "None") {
                 animator.SetBool("IsHit", true);
                 StartCoroutine(ResetHitFlag(0.25f));
                 interactableCloser.GetComponent<InteractableManager>().Interact();
                 EkeySpriteRenderer.enabled = false;
             }
+        }
+    }
+
+    void Update() {
+        if (interactableCloser != null && Input.GetKeyDown(KeyCode.E)) {
+            Interact();
         }
     }
 
