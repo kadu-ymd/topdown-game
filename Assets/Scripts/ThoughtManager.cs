@@ -10,6 +10,7 @@ public class ThoughtManager : MonoBehaviour {
     private static TMP_Text NameTextTMP;
     private static RectTransform thoughtTextRectTransform;
     private static AudioSource audioSource;
+    private Touch touch;
     public AudioClip thoughtSound;
     public ScrollRect scrollRect;
     public static bool thinking = false;
@@ -48,6 +49,16 @@ public class ThoughtManager : MonoBehaviour {
                     if (!skip) skip = true;
                     else HideThought();
                 }
+            }
+        }
+
+        if (Input.touchCount > 0)
+        {
+            touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began && PlayerPrefs.GetString("CurrentUI") == "Thought")
+            {
+                if (!skip) skip = true;
+                else HideThought();
             }
         }
     }

@@ -4844,6 +4844,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8998425745915334348, guid: 9f02f0ed6ace69d42904d64a23d0dbfd, type: 3}
+      propertyPath: m_text
+      value: "Ao encontrar uma lista, preste aten\xE7\xE3o no significado de cada
+        um dos itens e a ordem em que cada um deles foi especificado. O que isso\_pode\_dizer?"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

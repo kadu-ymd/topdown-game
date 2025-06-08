@@ -27452,6 +27452,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8998425745915334348, guid: 9f02f0ed6ace69d42904d64a23d0dbfd, type: 3}
+      propertyPath: m_text
+      value: "Os post-its podem estar dando dica da ordem da senha na porta. Procure
+        pelos s\xEDmbolos!"
+      objectReference: {fileID: 0}
     - target: {fileID: 9161366612356224057, guid: 9f02f0ed6ace69d42904d64a23d0dbfd, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
