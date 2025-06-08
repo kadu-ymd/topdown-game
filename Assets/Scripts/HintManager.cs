@@ -8,9 +8,13 @@ public class HintManager : MonoBehaviour
     private GameObject pauseButton;
     private GameObject hintButton;
     public GameObject menuCanvas;
+    public GameObject hintCanvas;
+    private bool hintFlag;
 
     private void Start()
     {
+        hintFlag = false;
+        hintCanvas.SetActive(false);
         adDecisionMakerUI.SetActive(false); // Garante que a UI esteja oculta ao iniciar a cena
         pauseButton = menuCanvas.transform.Find("PauseButton")?.gameObject;
         hintButton = menuCanvas.transform.Find("HintButton")?.gameObject;
@@ -25,6 +29,20 @@ public class HintManager : MonoBehaviour
                 PlaySound();
                 CloseDisplay();
             }
+        }
+
+        if (PlayerPrefs.GetString("CurrentUI") == "None" && hintFlag)
+        {
+            ActiveHintCanvas(hintFlag);
+            hintFlag = false;
+        }
+    }
+
+    private void ActiveHintCanvas(bool show)
+    {
+        if (hintCanvas != null)
+        {
+            hintCanvas.SetActive(show);
         }
     }
 
@@ -82,5 +100,17 @@ public class HintManager : MonoBehaviour
         PlaySound();                                    // Toca o som de clique do botão
         adDecisionMakerUI.SetActive(false);             // Fecha a UI de decisão
         AdManager.OpenAd();
+
+        hintFlag = true;
+    }
+
+    public void CloseHintDisplay()
+    {
+        PlaySound();
+        ActiveHintCanvas(hintFlag);
+        PlayerPrefs.SetString("CurrentUI", "None");
+        ActiveHintButton(true);
+        ActivePauseButton(true);
+        Time.timeScale = 1f;
     }
 }
