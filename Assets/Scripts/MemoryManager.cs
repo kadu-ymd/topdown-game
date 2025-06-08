@@ -53,7 +53,7 @@ public class MemoryManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         transform.localScale = targetScale;
-        BookManager.EnterDisplay("... ... Essa memória dolorosa... Ela não pode ser real, pode?");
+        BookManager.OpenBook("... ... Essa memória dolorosa... Ela não pode ser real, pode?");
         Destroy(gameObject);
     }
 }

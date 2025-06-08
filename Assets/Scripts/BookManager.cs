@@ -93,7 +93,12 @@ public class BookManager : ItemDisplayManager
         return newMaxPages;
     }
 
-    public static void EnterDisplay(string exitDisplayText = null)
+    public static void OpenBook(string exitDisplayText = null)
+    {
+        BookManagerInstance.EnterDisplay(exitDisplayText);
+    }
+
+    public override void EnterDisplay(string exitDisplayText = null)
     {
         UpdatedeBookPages();
         BookManagerInstance.ToPage(BookManagerInstance.maxPages);
