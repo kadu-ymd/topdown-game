@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canPerformActions = true; // Controla se o player pode se mover e interagir
     private bool canShoot = true; 
+
+    public FixedJoystick joy;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,15 +41,18 @@ public class PlayerMovement : MonoBehaviour
         {
             if (canPerformActions)
             {
-                float horizontal = Input.GetAxisRaw("Horizontal");
-                float vertical = Input.GetAxisRaw("Vertical");
+                //float horizontal = Input.GetAxisRaw("Horizontal");
+                //float vertical = Input.GetAxisRaw("Vertical");
+
+                float horizontal = joy.Horizontal;
+                float vertical = joy.Vertical;
 
                 // Regra de prioridade para andar em somente uma direção
-                if (vertical != 0) 
+                if (Mathf.Abs(vertical) > Mathf.Abs(horizontal)) 
                 {
                     horizontal = 0;
                 } 
-                else if (horizontal != 0) 
+                else if (Mathf.Abs(vertical) < Mathf.Abs(horizontal)) 
                 {
                     vertical = 0;
                 }
