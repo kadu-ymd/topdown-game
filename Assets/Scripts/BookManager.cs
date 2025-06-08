@@ -36,12 +36,6 @@ public class BookManager : ItemDisplayManager
             else if (Input.GetKeyDown(KeyCode.LeftArrow))
                 PrevPage();
         }
-        else if (currentUI == "None" && PlayerPrefs.GetInt("Book") == 1)
-        {
-            if (Input.GetKeyDown(KeyCode.Q))
-                EnterDisplay();
-        }
-
     }
 
     public void ToPage(int page)
@@ -75,6 +69,15 @@ public class BookManager : ItemDisplayManager
     {
         audioSource.Play();
         ToPage(pageCount + 1);
+    }
+
+    public void OnBookButtonPressed()
+    {
+        string currentUI = PlayerPrefs.GetString("CurrentUI");
+        if (currentUI == "None" && PlayerPrefs.GetInt("Book") == 1)
+        {
+            EnterDisplay();
+        }
     }
 
     public static int UpdatedeBookPages()

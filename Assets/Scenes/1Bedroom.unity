@@ -3838,6 +3838,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3421267256946100937, guid: ee04bd488e17af9449848a5adabd6b63, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3899521767878360894, guid: ee04bd488e17af9449848a5adabd6b63, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3882,6 +3886,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4681364236288835508, guid: ee04bd488e17af9449848a5adabd6b63, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6182371202752988760, guid: 6c3859e6c1c1e3c40b262b1070492097, type: 3}
     - target: {fileID: 5921646769085076364, guid: ee04bd488e17af9449848a5adabd6b63, type: 3}
       propertyPath: m_Sprite
       value: 

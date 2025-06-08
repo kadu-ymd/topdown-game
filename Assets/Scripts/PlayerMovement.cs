@@ -77,17 +77,6 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetFloat("LastVertical", vertical);
                 }     
             }
-
-            if (PlayerPrefs.GetInt("Gun") == 1) 
-            {
-                if (Input.GetKeyDown(KeyCode.Space) && canShoot)
-                {
-                    canShoot = false;
-                    animator.SetBool("IsShooting", true);
-                    canPerformActions = false;
-                    StartCoroutine(DelayedShoot());
-                }
-            }
         }
         else
         {
@@ -113,6 +102,17 @@ public class PlayerMovement : MonoBehaviour
 
         BulletController controller = bullet.GetComponent<BulletController>();
         controller.direction = shootDirection;
+    }
+
+    public void OnButtonShoot()
+    {
+        if (PlayerPrefs.GetInt("Gun") == 1 && PlayerPrefs.GetString("CurrentUI") == "None") 
+        {
+            canShoot = false;
+            animator.SetBool("IsShooting", true);
+            canPerformActions = false;
+            StartCoroutine(DelayedShoot());
+        }
     }
 
     void FixedUpdate() 
