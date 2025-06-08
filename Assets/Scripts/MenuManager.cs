@@ -7,14 +7,12 @@ public class MenuManager : MonoBehaviour
     private static MenuManager MenuManagerInstance;
     public GameObject menuCanvas;
     private GameObject pauseButton;
+    private GameObject hintButton;
     private GameObject pauseMenuUI;
     private GameObject settingsMenuUI;
     private GameObject itensCollected;
     private GameObject bookItem;
     private GameObject gunItem;
-
-    private AudioSource musicSource;
-    private Slider musicSlider;
 
     void Awake() 
     {
@@ -27,6 +25,7 @@ public class MenuManager : MonoBehaviour
         GameObject musicPlayer = GameObject.Find("MusicPlayer");
 
         pauseButton = menuCanvas.transform.Find("PauseButton")?.gameObject;
+        hintButton = menuCanvas.transform.Find("HintButton")?.gameObject;
         pauseMenuUI = menuCanvas.transform.Find("PauseMenu")?.gameObject;
         settingsMenuUI = menuCanvas.transform.Find("SettingsMenu")?.gameObject;
 
@@ -88,6 +87,15 @@ public class MenuManager : MonoBehaviour
             pauseButton.SetActive(show);
         }
     }
+
+    private void ActiveHintButton(bool show)
+    {
+        if (hintButton != null)
+        {
+            hintButton.SetActive(show);
+        }
+    }
+
     private void ActivePauseMenuUI(bool show)
     {
         if (pauseMenuUI != null)
@@ -107,6 +115,7 @@ public class MenuManager : MonoBehaviour
     {
         Time.timeScale = 1;
         ActivePauseButton(true);
+        ActiveHintButton(true);
         ActivePauseMenuUI(false);
         PlayerPrefs.SetString("CurrentUI", "None");
     }
@@ -136,6 +145,7 @@ public class MenuManager : MonoBehaviour
     {
         Time.timeScale = 0;
         ActivePauseButton(false);
+        ActiveHintButton(false);
         ActivePauseMenuUI(true);
         PlayerPrefs.SetString("CurrentUI", "PauseMenu");
 
