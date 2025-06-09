@@ -43,15 +43,6 @@ public class ThoughtManager : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.anyKeyDown) {
-            if (PlayerPrefs.GetString("CurrentUI") == "Thought") {
-                if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E)) {
-                    if (!skip) skip = true;
-                    else HideThought();
-                }
-            }
-        }
-
         if (Input.touchCount > 0)
         {
             touch = Input.GetTouch(0);

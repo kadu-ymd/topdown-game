@@ -20,18 +20,6 @@ public class Pinpad : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public int GetPressedNumber()
-    {
-        for (int number = 0; number <= 9; number++)
-        {
-            if (Input.GetKeyDown(number.ToString()) | Input.GetKeyDown(KeyCode.Keypad0 + number))
-            {
-                return number;
-            }
-        }
-        return -1;
-    }
-
     public void CheckPassword()
     {
         string attempt = password[^3..];
@@ -56,30 +44,6 @@ public class Pinpad : MonoBehaviour
         FirstDigit.text = password[^1].ToString();
         SecondDigit.text = password[^2].ToString();
         ThirdDigit.text = password[^3].ToString();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        int number = GetPressedNumber();
-        if (number != -1 && password.Length < 6)
-        {
-            password += number.ToString();
-            UpdateDisplay();
-        }
-        else if (Input.GetKeyDown(KeyCode.Backspace) && password.Length > 3)
-        {
-            password = password.Remove(password.Length - 1);
-            UpdateDisplay();
-        }
-        else if (Input.GetKeyDown(KeyCode.Return) | Input.GetKeyDown(KeyCode.KeypadEnter))
-        {
-            CheckPassword();
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            HidePinpad();
-        }
     }
 
     public void PressButton(string value)

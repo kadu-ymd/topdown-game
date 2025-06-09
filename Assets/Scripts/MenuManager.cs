@@ -45,28 +45,7 @@ public class MenuManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            string currentMenu = PlayerPrefs.GetString("CurrentUI");
-            if (currentMenu == "None")
-            {
-                PauseGame();
-                currentMenu = "PauseMenu";
-            }
-            else if (currentMenu == "PauseMenu")
-            {
-                ResumeGame();
-                currentMenu = "None";
-            }
-            else if (currentMenu == "SettingsMenu")
-            {
-                SettingsClose();
-                currentMenu = "PauseMenu";
-
-            }
-        }
         ActiveActionButtons(PlayerPrefs.GetString("CurrentUI") == "None");
-
     }
 
     private void ActiveActionButtons(bool show)

@@ -22,15 +22,6 @@ public class HintManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape)) // Ao apertar ESC, o display fecha
-        {
-            if (adDecisionMakerUI.activeSelf)
-            {
-                PlaySound();
-                CloseDisplay();
-            }
-        }
-
         if (PlayerPrefs.GetString("CurrentUI") == "None" && hintFlag)
         {
             ActiveHintCanvas(hintFlag);

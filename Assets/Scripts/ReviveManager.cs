@@ -19,16 +19,6 @@ public class ReviveManager : MonoBehaviour
         reviveCanvas.SetActive(false);
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            string currentMenu = PlayerPrefs.GetString("CurrentUI");
-            if (currentMenu == "ReviveMenu")
-                CancelRevive();
-        }
-    }
-
     public static void OpenReviveMenu()
     {
         Time.timeScale = 0f;

@@ -9,6 +9,7 @@ public class WifeManager : MonoBehaviour {
     private static TMP_Text thoughtTextTMP;
     private static RectTransform thoughtTextRectTransform;
     private static AudioSource audioSource;
+    private Touch touch;
     public AudioClip thoughtSound;
     public ScrollRect scrollRect;
     public static bool thinking = false;
@@ -34,13 +35,15 @@ public class WifeManager : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
     }
 
-    void Update() {
-        if (Input.anyKeyDown) {
-            if (PlayerPrefs.GetString("CurrentUI") == "WifeThought") {
-                if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E)) {
-                    if (!skip) skip = true;
-                    else HideThought();
-                }
+    void Update()
+    {
+        if (Input.touchCount > 0)
+        {
+            touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began && PlayerPrefs.GetString("CurrentUI") == "Thought")
+            {
+                if (!skip) skip = true;
+                else HideThought();
             }
         }
     }

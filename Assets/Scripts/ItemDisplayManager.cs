@@ -8,12 +8,6 @@ public class ItemDisplayManager : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
-    protected virtual void Update() {
-        if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E)) && PlayerPrefs.GetString("CurrentUI") == "ItemDisplay") {
-            ExitDisplay();
-        }
-    }
-
     public virtual void EnterDisplay(string exitDisplayText = null) {
         MenuManager.HidePauseButton();
         gameObject.SetActive(true);

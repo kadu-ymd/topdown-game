@@ -22,22 +22,6 @@ public class BookManager : ItemDisplayManager
         SetActiveChildren(false);
     }
 
-    protected override void Update()
-    {
-        string currentUI = PlayerPrefs.GetString("CurrentUI");
-        if (currentUI == "Book")
-        {
-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Q))
-                ExitDisplay();
-
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
-                NextPage();
-
-            else if (Input.GetKeyDown(KeyCode.LeftArrow))
-                PrevPage();
-        }
-    }
-
     public void ToPage(int page)
     {
         if (page > 0 && page <= maxPages)

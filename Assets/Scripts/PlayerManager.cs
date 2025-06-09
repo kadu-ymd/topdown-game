@@ -46,12 +46,6 @@ public class PlayerManager : MonoBehaviour {
         }
     }
 
-    void Update() {
-        if (interactableCloser != null && Input.GetKeyDown(KeyCode.E)) {
-            Interact();
-        }
-    }
-
     private void OnTriggerStay2D(Collider2D collider)
     {
         if (collider.CompareTag("Interactable"))
