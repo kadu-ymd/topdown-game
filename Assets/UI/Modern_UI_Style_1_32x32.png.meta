@@ -11843,10 +11843,10 @@ TextureImporter:
       name: Modern_UI_Style_1_32x32_428
       rect:
         serializedVersion: 2
-        x: 353
-        y: 703
-        width: 32
-        height: 30
+        x: 354
+        y: 704
+        width: 30
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
