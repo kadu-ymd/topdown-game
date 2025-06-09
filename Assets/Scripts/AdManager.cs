@@ -9,9 +9,10 @@ public class AdManager : MonoBehaviour
     public GameObject adCanvas;
     public GameObject closeButton;
     public Slider timerSlider;
-
     public float adDuration = 15f;
     public float skipTime = 5f;
+
+    private Coroutine adCoroutine;
 
     void Awake()
     {
@@ -25,11 +26,13 @@ public class AdManager : MonoBehaviour
         PlayerPrefs.SetString("CurrentUI", "Ad");
         AdManagerInstance.adCanvas.SetActive(true);
         AdManagerInstance.closeButton.SetActive(false);
-        AdManagerInstance.StartCoroutine(AdManagerInstance.Ad());
+        AdManagerInstance.adCoroutine = AdManagerInstance.StartCoroutine(AdManagerInstance.Ad());
         MenuManager.HidePauseButton(); 
     }
     public void CloseAd()
     {
+        if (adCoroutine != null)
+            StopCoroutine(adCoroutine);
         Time.timeScale = 1f;
         adCanvas.SetActive(false);
         PlayerPrefs.SetString("CurrentUI", "None");
@@ -44,7 +47,7 @@ public class AdManager : MonoBehaviour
         {
             elapsedTime += Time.unscaledDeltaTime;
             timerSlider.value = Mathf.Clamp01(elapsedTime / adDuration);
-            if (!closeButton.activeSelf && elapsedTime >= skipTime)
+            if (!closeButton.activeSelf && elapsedTime >= skipTime && PlayerPrefs.GetString("CurrentUI") == "Ad")
                 closeButton.SetActive(true);
             yield return new WaitForEndOfFrame();
         }

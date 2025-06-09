@@ -35,21 +35,20 @@ public class WifeManager : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
     }
 
-    void Update()
+
+    public static void SkipThought()
     {
-        if (Input.touchCount > 0)
+        if (PlayerPrefs.GetString("CurrentUI") == "WifeThought")
         {
-            touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began && PlayerPrefs.GetString("CurrentUI") == "Thought")
-            {
-                if (!skip) skip = true;
-                else HideThought();
-            }
+            if (!wifeManagerInstance.skip) wifeManagerInstance.skip = true;
+            else HideThought();
         }
     }
 
-    public static void ShowThought(string thoughtText) {
-        if (!thinking) {
+    public static void ShowThought(string thoughtText)
+    {
+        if (!thinking)
+        {
             thinking = true;
             wifeManagerInstance.gameObject.SetActive(true);
             thoughtTextTMP.text = "";
@@ -61,9 +60,10 @@ public class WifeManager : MonoBehaviour {
 
     public static void HideThought() {
         wifeManagerInstance.gameObject.SetActive(false);
-        PlayerPrefs.SetString("CurrentUI", "None");
         wifeManagerInstance.skip = false;
         thinking = false;
+        if (PlayerPrefs.GetString("CurrentUI") == "WifeThought")
+            PlayerPrefs.SetString("CurrentUI", "None");
     }
 
     private IEnumerator RevealText(string text) {

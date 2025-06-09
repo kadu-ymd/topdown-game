@@ -42,15 +42,12 @@ public class ThoughtManager : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
     }
 
-    void Update() {
-        if (Input.touchCount > 0)
+    public static void SkipThought()
+    {
+        if (PlayerPrefs.GetString("CurrentUI") == "Thought")
         {
-            touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began && PlayerPrefs.GetString("CurrentUI") == "Thought")
-            {
-                if (!skip) skip = true;
-                else HideThought();
-            }
+            if (!thoughtManagerInstance.skip) thoughtManagerInstance.skip = true;
+            else HideThought();
         }
     }
 
@@ -67,9 +64,10 @@ public class ThoughtManager : MonoBehaviour {
 
     public static void HideThought() {
         thoughtManagerInstance.gameObject.SetActive(false);
-        PlayerPrefs.SetString("CurrentUI", "None");
         thoughtManagerInstance.skip = false;
         thinking = false;
+        if (PlayerPrefs.GetString("CurrentUI") == "Thought")
+            PlayerPrefs.SetString("CurrentUI", "None");
     }
 
     private IEnumerator RevealText(string text) {

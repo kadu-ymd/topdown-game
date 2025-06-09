@@ -21,6 +21,7 @@ public class ReviveManager : MonoBehaviour
 
     public static void OpenReviveMenu()
     {
+        ThoughtManager.HideThought();
         Time.timeScale = 0f;
         PlayerPrefs.SetString("CurrentUI", "ReviveMenu");
         ReviveManagerInstance.reviveCanvas.SetActive(true);
