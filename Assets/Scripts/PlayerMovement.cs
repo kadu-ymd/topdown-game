@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement PlayerMovementInstance;
     public GameObject bulletPrefab;
     public Transform bulletSrcPoint;
 
@@ -16,13 +17,19 @@ public class PlayerMovement : MonoBehaviour
     private bool canPerformActions = true; // Controla se o player pode se mover e interagir
     private bool canShoot = true; 
 
-    public FixedJoystick joy;
+    private FixedJoystick joy;
+
+    void Awake()
+    {
+        if (PlayerMovementInstance == null) PlayerMovementInstance = this;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        joy = MenuManager.MenuManagerInstance.joyStick.GetComponent<FixedJoystick>();
 
         playerAudioSource = GetComponent<AudioSource>();
         playerAudioSource.clip = walkingSound;
@@ -104,14 +111,14 @@ public class PlayerMovement : MonoBehaviour
         controller.direction = shootDirection;
     }
 
-    public void OnButtonShoot()
+    public static void OnButtonShoot()
     {
         if (PlayerPrefs.GetInt("Gun") == 1 && PlayerPrefs.GetString("CurrentUI") == "None") 
         {
-            canShoot = false;
-            animator.SetBool("IsShooting", true);
-            canPerformActions = false;
-            StartCoroutine(DelayedShoot());
+            PlayerMovementInstance.canShoot = false;
+            PlayerMovementInstance.animator.SetBool("IsShooting", true);
+            PlayerMovementInstance.canPerformActions = false;
+            PlayerMovementInstance.StartCoroutine(PlayerMovementInstance.DelayedShoot());
         }
     }
 

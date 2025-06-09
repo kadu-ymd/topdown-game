@@ -5,7 +5,8 @@ using UnityEngine.Rendering.Universal;
 using System.Collections;
 
 public class PlayerManager : MonoBehaviour {
-    private SpriteRenderer EkeySpriteRenderer;
+
+    public static PlayerManager PlayerManagerInstance;
     private GameObject interactableCloser;
     private Camera mainCamera;
     private Vector3 lastPlayerPosition;
@@ -16,10 +17,13 @@ public class PlayerManager : MonoBehaviour {
     private Animator animator;
     public static bool isImunity = false;
 
+    void Awake()
+    {
+        if (PlayerManagerInstance == null) PlayerManagerInstance = this;
+    }
+
     void Start()
     {
-        EkeySpriteRenderer = transform.Find("E key").GetComponent<SpriteRenderer>();
-        EkeySpriteRenderer.enabled = false;
         animator = GetComponent<Animator>();
 
         mainCamera = Camera.main;
@@ -33,12 +37,11 @@ public class PlayerManager : MonoBehaviour {
 
     public void Interact()
     {
-        if (interactableCloser != null) {
+        if (PlayerManagerInstance.interactableCloser != null) {
             if (PlayerPrefs.GetString("CurrentUI") == "None") {
-                animator.SetBool("IsHit", true);
-                StartCoroutine(ResetHitFlag(0.25f));
-                interactableCloser.GetComponent<InteractableManager>().Interact();
-                EkeySpriteRenderer.enabled = false;
+                PlayerManagerInstance.animator.SetBool("IsHit", true);
+                PlayerManagerInstance.StartCoroutine(PlayerManagerInstance.ResetHitFlag(0.25f));
+                PlayerManagerInstance.interactableCloser.GetComponent<InteractableManager>().Interact();
             }
         }
     }
@@ -53,15 +56,14 @@ public class PlayerManager : MonoBehaviour {
     {
         if (collider.CompareTag("Interactable"))
         {
-            EkeySpriteRenderer.enabled = true;
+            MenuManager.ActiveInteractButton(true);
             interactableCloser = collider.gameObject;
-
         }
     }
 
     private void OnTriggerExit2D(Collider2D collider) {
         if (collider.CompareTag("Interactable") && interactableCloser == collider.gameObject) {
-            EkeySpriteRenderer.enabled = false;
+            MenuManager.ActiveInteractButton(false);
             interactableCloser = null;
         }
     }
@@ -84,7 +86,10 @@ public class PlayerManager : MonoBehaviour {
 
     private IEnumerator HandlePlayerDefeat()
     {
+        MenuManager.HidePauseButton();
+        PlayerPrefs.SetString("CurrentUI", "Defeat");
         yield return new WaitForSeconds(0.2f);
+
         Time.timeScale = 0f;
 
         lastPlayerPosition.z = mainCamera.transform.position.z;

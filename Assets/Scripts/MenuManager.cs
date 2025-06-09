@@ -3,18 +3,20 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
-{  
-    private static MenuManager MenuManagerInstance;
+{
+    [HideInInspector] public static MenuManager MenuManagerInstance;
     public GameObject menuCanvas;
     private GameObject pauseButton;
     private GameObject hintButton;
     private GameObject pauseMenuUI;
     private GameObject settingsMenuUI;
-    private GameObject itensCollected;
-    private GameObject bookItem;
-    private GameObject gunItem;
+    public GameObject bookButton;
+    public GameObject gunButton;
+    public GameObject joyStick;
+    public GameObject interactButton;
 
-    void Awake() 
+
+    void Awake()
     {
         if (MenuManagerInstance == null) MenuManagerInstance = this;
         menuCanvas.SetActive(true);
@@ -29,15 +31,11 @@ public class MenuManager : MonoBehaviour
         pauseMenuUI = menuCanvas.transform.Find("PauseMenu")?.gameObject;
         settingsMenuUI = menuCanvas.transform.Find("SettingsMenu")?.gameObject;
 
-        itensCollected = menuCanvas.transform.Find("ItensCollected")?.gameObject;
-        bookItem = itensCollected.transform.Find("Book")?.gameObject;
-        gunItem = itensCollected.transform.Find("Gun")?.gameObject;
-
 
         ActivePauseButton(true);
+        ActiveInteractButton(false);
         ActivePauseMenuUI(false);
         ActiveSettingsMenuUI(false);
-        itensCollected.SetActive(true);
 
         if (!PlayerPrefs.HasKey("CurrentUI"))
         {
@@ -67,48 +65,46 @@ public class MenuManager : MonoBehaviour
 
             }
         }
+        ActiveActionButtons(PlayerPrefs.GetString("CurrentUI") == "None");
 
-        UpdateItensCollectedDisplay();
     }
 
-    private void UpdateItensCollectedDisplay()
+    private void ActiveActionButtons(bool show)
     {
-    if (bookItem != null)
-        bookItem.SetActive(PlayerPrefs.GetInt("Book", 0) > 0);
+        if (bookButton != null)
+            bookButton.SetActive(show && PlayerPrefs.GetInt("Book", 0) > 0);
 
-    if (gunItem != null)
-        gunItem.SetActive(PlayerPrefs.GetInt("Gun", 0) > 0);
+        if (gunButton != null)
+            gunButton.SetActive(show && PlayerPrefs.GetInt("Gun", 0) > 0);
+
+        if (joyStick != null)
+            joyStick.SetActive(show);
+
+        if (interactButton != null && !show)
+            interactButton.SetActive(show);
     }
 
     private void ActivePauseButton(bool show)
     {
         if (pauseButton != null)
-        {
             pauseButton.SetActive(show);
-        }
     }
 
     private void ActiveHintButton(bool show)
     {
         if (hintButton != null)
-        {
             hintButton.SetActive(show);
-        }
     }
 
     private void ActivePauseMenuUI(bool show)
     {
         if (pauseMenuUI != null)
-        {
             pauseMenuUI.SetActive(show);
-        }
     }
     private void ActiveSettingsMenuUI(bool show)
     {
         if (settingsMenuUI != null)
-        {
             settingsMenuUI.SetActive(show);
-        }
     }
 
     public void ResumeGame()
@@ -134,8 +130,8 @@ public class MenuManager : MonoBehaviour
         {
             pauseMenuUI.SetActive(true);
             PlayerPrefs.SetString("CurrentUI", "PauseMenu");
-        } 
-        else 
+        }
+        else
         {
             PlayerPrefs.SetString("CurrentUI", "None");
         }
@@ -149,7 +145,7 @@ public class MenuManager : MonoBehaviour
         ActivePauseMenuUI(true);
         PlayerPrefs.SetString("CurrentUI", "PauseMenu");
 
-        UpdateItensCollectedDisplay();
+        ActiveActionButtons(true);
     }
 
     public void MainMenu()
@@ -168,12 +164,23 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    public static void ShowPauseButton() 
+    public static void ShowPauseButton()
     {
         MenuManagerInstance.ActivePauseButton(true);
+        MenuManagerInstance.ActiveHintButton(true);
+        MenuManagerInstance.ActiveActionButtons(true);
     }
-    public static void HidePauseButton() 
+    public static void HidePauseButton()
     {
         MenuManagerInstance.ActivePauseButton(false);
+        MenuManagerInstance.ActiveHintButton(false);
+        MenuManagerInstance.ActiveActionButtons(false);
+    }
+    
+    public static void ActiveInteractButton(bool active)
+    {
+        if (MenuManagerInstance.interactButton != null)
+            MenuManagerInstance.interactButton.SetActive(active);
+        
     }
 }
